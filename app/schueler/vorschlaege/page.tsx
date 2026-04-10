@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import RoutingGuard from "@/components/layout/RoutingGuard";
+import { getVerbesserungsvorschlaege, alleScoresGenugend } from "@/lib/scoring";
 import { SubthemaScore, GespeicherteAntworten, VerbesserungsvorschlaegeDaten, Subthema } from "@/lib/types";
 
 // Import data
@@ -15,6 +17,17 @@ export default function VorschlaegePage() {
   const [scores, setScores] = useState<SubthemaScore[]>([]);
   const [loading, setLoading] = useState(true);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [vorschlaege, setVorschlaege] = useState<
+    Array<{
+      subthema: Subthema;
+      score: SubthemaScore;
+      vorschlag: {
+        titel: string;
+        text: string;
+        tipps: string[];
+       };
+    }>
+  >([]);
 
   useEffect(() => {
       // Lade Antworten aus LocalStorage
@@ -28,21 +41,21 @@ export default function VorschlaegePage() {
 
     const antwortenData: GespeicherteAntworten = JSON.parse(gespeicherte);
 
-      // Berechne Scores
-    const berechneteScores: SubthemaScore[] = fragebogenData.fragen
+      // Scores berechnen
+    const berechneteScores = fragebogenData.fragen
         .filter((frage) => frage.type === "skala")
         .map((frage) => {
         const antworten = antwortenData.antworten.filter(
-            (a) => a.frageId === frage.id
-          );
+              (a) => a.frageId === frage.id
+            );
         const erreichterScore = antworten.reduce(
-            (sum, a) => sum + a.wert * frage.gewichtung,
-            0
-          );
+              (sum, a) => sum + a.wert * frage.gewichtung,
+              0
+            );
         const maxScore = antworten.reduce(
-            (sum, a) => sum + 5 * frage.gewichtung,
-            0
-          );
+              (sum, a) => sum + 5 * frage.gewichtung,
+              0
+            );
         const prozent = maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
 
         return {
@@ -51,159 +64,163 @@ export default function VorschlaegePage() {
           maxScore: Math.round(maxScore),
           prozent,
           hatVerbesserungspotenzial: prozent < 90,
-           };
-         });
+            };
+          });
 
     setScores(berechneteScores);
-    setShowSuccess(!berechneteScores.some((s) => s.hatVerbesserungspotenzial));
+    setShowSuccess(alleScoresGenugend(berechneteScores));
+
+      // Vorschläge holen
+    const vorschlaegeListe = getVerbesserungsvorschlaege(
+      berechneteScores,
+      fragebogenData.verbesserungsvorschlaege as VerbesserungsvorschlaegeDaten["verbesserungsvorschlaege"]
+    );
+    setVorschlaege(vorschlaegeListe);
+
     setLoading(false);
        }, [router]);
 
-  const verbesserungsvorschlaege = fragebogenData.verbesserungsvorschlaege as VerbesserungsvorschlaegeDaten["verbesserungsvorschlaege"];
-
-  const sortierteScores = [...scores].sort((a, b) => a.prozent - b.prozent);
-  const vorschlaege = sortierteScores.filter((score) => score.hatVerbesserungspotenzial);
-
   if (loading) {
     return (
-          <div className="min-h-screen bg-[#faf9f6] flex items-center justify-center">
-            <div className="text-[#8a847a]">Lade...</div>
-          </div>
-         );
-    }
+           <RoutingGuard requiredAnswers={true}>
+             <div className="min-h-screen bg-[#faf9f6] flex items-center justify-center">
+               <div className="text-[#8a847a]">Lade...</div>
+             </div>
+           </RoutingGuard>
+          );
+     }
 
   if (showSuccess) {
     return (
-          <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
-            <Header
-            title="Glückwunsch!"
-            subtitle="Du bist auf einem guten Weg!"
-              />
+          <RoutingGuard requiredAnswers={true}>
+            <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
+              <Header
+              title="Glückwunsch!"
+              subtitle="Du bist auf einem guten Weg!"
+                />
 
-            <main className="flex-1 px-6 py-12">
-              <div className="max-w-2xl mx-auto text-center">
-                <div className="mb-12">
-                  <svg
-                  viewBox="0 0 120 120"
-                  className="w-32 h-32 mx-auto mb-6"
-                  fill="none"
-                  >
-                    {/* Star icon */}
-                    <path
-                    d="M 60 20 L 72 48 L 102 48 L 78 66 L 86 94 L 60 78 L 34 94 L 42 66 L 18 48 L 48 48 Z"
-                    stroke="#4a403a"
-                    strokeWidth="2"
+              <main className="flex-1 px-6 py-12">
+                <div className="max-w-2xl mx-auto text-center">
+                  <div className="mb-12">
+                    <svg
+                    viewBox="0 0 120 120"
+                    className="w-32 h-32 mx-auto mb-6"
                     fill="none"
-                    />
-                  </svg>
-                  <h2
-                  className="text-3xl md:text-4xl font-light tracking-tight mb-4"
-                  style={{ fontFamily: '"Playfair Display", serif' }}
-                  >
-                  Super gemacht!
-                  </h2>
-                  <p className="text-[#6b665f] text-lg leading-relaxed">
-                  Alle deine Werte liegen bei 90% oder höher. Du hast ein
-                  sehr positives Klassenklima!
-                  </p>
-                </div>
+                       >
+                       {/* Star icon */}
+                       <path
+                      d="M 60 20 L 72 48 L 102 48 L 78 66 L 86 94 L 60 78 L 34 94 L 42 66 L 18 48 L 48 48 Z"
+                      stroke="#4a403a"
+                      strokeWidth="2"
+                      fill="none"
+                       />
+                     </svg>
+                     <h2
+                    className="text-3xl md:text-4xl font-light tracking-tight mb-4"
+                    style={{ fontFamily: '"Playfair Display", serif' }}
+                       >
+                    Super gemacht!
+                     </h2>
+                     <p className="text-[#6b665f] text-lg leading-relaxed">
+                    Alle deine Werte liegen bei 90% oder höher. Du hast ein
+                    sehr positives Klassenklima!
+                     </p>
+                   </div>
 
-                <Link href="/schueler">
-                  <button className="bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg">
-                  Zurück zur Übersicht
-                  </button>
-                </Link>
-              </div>
-            </main>
+                   <Link href="/schueler">
+                     <button className="bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg">
+                    Zurück zur Übersicht
+                     </button>
+                   </Link>
+                 </div>
+               </main>
 
-            <Footer />
-          </div>
-         );
-    }
+               <Footer />
+             </div>
+           </RoutingGuard>
+           );
+      }
 
   return (
-        <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
-          <Header
+       <RoutingGuard requiredAnswers={true}>
+         <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
+           <Header
           title="Deine Vorschläge"
           subtitle="Hier sind Tipps für dich"
-           />
+              />
 
-          <main className="flex-1 px-6 py-12">
-            <div className="max-w-2xl mx-auto">
-              <div className="mb-12">
-                <h2
+           <main className="flex-1 px-6 py-12">
+             <div className="max-w-2xl mx-auto">
+               <div className="mb-12">
+                 <h2
                 className="text-2xl md:text-3xl font-light tracking-tight mb-4"
                 style={{ fontFamily: '"Playfair Display", serif' }}
-                  >
+                   >
                 Hier sind deine persönlichen Tipps
-                </h2>
-                <p className="text-[#6b665f] leading-relaxed">
+                 </h2>
+                 <p className="text-[#6b665f] leading-relaxed">
                 Die Vorschläge sind nach Wichtigkeit sortiert. Beginne mit dem
                 ersten Tipp und arbeite dich nach unten vor.
-                </p>
-              </div>
+                 </p>
+               </div>
 
-              <div className="space-y-8">
-                {vorschlaege.map((score) => {
-                  const vorschlag = verbesserungsvorschlaege[score.subthema]?.unter90;
-                  if (!vorschlag) return null;
-
-                  return (
-                    <div
-                    key={score.subthema}
+               <div className="space-y-8">
+                 {vorschlaege.map((item) => (
+                   <div
+                    key={item.subthema}
                     className="bg-white border border-[#e8e5df] rounded-2xl p-8"
-                      >
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-[#6b665f] font-normal">{score.subthema}</span>
-                        <span
-                        className="text-3xl font-light"
-                        style={{ fontFamily: '"Playfair Display", serif' }}
-                          >
-                          {score.prozent}%
-                        </span>
-                      </div>
+                       >
+                     <div className="flex items-center justify-between mb-4">
+                       <span className="text-[#6b665f] font-normal">{item.score.subthema}</span>
+                       <span
+                      className="text-3xl font-light"
+                      style={{ fontFamily: '"Playfair Display", serif' }}
+                         >
+                        {item.score.prozent}%
+                       </span>
+                     </div>
 
-                      <h3
+                     <h3
                       className="text-xl font-light tracking-tight mb-4"
                       style={{ fontFamily: '"Playfair Display", serif' }}
-                        >
-                        {vorschlag.titel}
-                      </h3>
+                         >
+                      {item.vorschlag.titel}
+                     </h3>
 
-                      <p className="text-[#6b665f] leading-relaxed mb-6">
-                        {vorschlag.text}
-                      </p>
+                     <p className="text-[#6b665f] leading-relaxed mb-6">
+                      {item.vorschlag.text}
+                     </p>
 
-                      <div className="space-y-3">
-                        <p className="text-[#6b665f] text-sm font-normal mb-3">
-                        Tipps:
-                        </p>
-                        {vorschlag.tipps.map((tip, index) => (
-                          <div
+                     <div className="space-y-3">
+                       <p className="text-[#6b665f] text-sm font-normal mb-3">
+                      Tipps:
+                       </p>
+                       {item.vorschlag.tipps.map((tip, index) => (
+                         <div
                           key={index}
                           className="flex items-start gap-3 text-[#6b665f] text-sm"
-                            >
-                            <span className="text-[#4a403a] mt-0.5">▹</span>
-                            <span>{tip}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+                             >
+                          <span className="text-[#4a403a] mt-0.5">▹</span>
+                          <span>{tip}</span>
+                         </div>
+                       ))}
+                     </div>
+                   </div>
+                 ))}
+               </div>
 
-              <div className="mt-16">
-                <Link href="/schueler">
-                  <button className="w-full bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg text-center">
+               <div className="mt-16">
+                 <Link href="/schueler">
+                   <button className="w-full bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg text-center">
                   Zurück zur Übersicht
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </main>
+                   </button>
+                 </Link>
+               </div>
+             </div>
+           </main>
 
-          <Footer />
-        </div>
-    );
+           <Footer />
+         </div>
+       </RoutingGuard>
+       );
 }

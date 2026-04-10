@@ -19,47 +19,47 @@ export default function Home() {
         <header className="relative py-20 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1
-              className="text-6xl md:text-7xl font-light tracking-tight mb-6 animate-fade-in-up"
-              style={{ fontFamily: '"Playfair Display", serif' }}
+             className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6 animate-fade-in-up"
+             style={{ fontFamily: '"Playfair Display", serif' }}
             >
-              Klassenklima
+             Klassenklima
             </h1>
             <p
-              className="text-xl text-[#6b665f] font-normal leading-relaxed animate-fade-in"
-              style={{ animationDelay: "200ms" }}
+             className="text-lg md:text-xl text-[#6b665f] font-normal leading-relaxed animate-fade-in"
+             style={{ animationDelay: "200ms" }}
             >
-              Eine kleine App für ein grosses Thema
+             Eine kleine App für ein grosses Thema
             </p>
           </div>
         </header>
 
         {/* Main Content */}
-        <main className="relative flex-1 flex items-center justify-center px-6 py-12">
+        <main className="relative flex-1 flex items-center justify-center px-4 py-12">
           <div className="max-w-4xl w-full">
             {/* Welcome Message */}
-            <div className="text-center mb-20">
+            <div className="text-center mb-16 md:mb-20">
               <h2
-                className="text-3xl md:text-4xl font-light tracking-tight mb-6 animate-fade-in-up"
-                style={{ animationDelay: "100ms" }}
+               className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 animate-fade-in-up"
+               style={{ animationDelay: "100ms" }}
               >
-                Wer bist du?
+               Wer bist du?
               </h2>
-              <p className="text-[#6b665f] text-lg font-normal animate-fade-in">
-                Wähle deine Rolle
+              <p className="text-[#6b665f] text-base md:text-lg font-normal animate-fade-in">
+               Wähle deine Rolle
               </p>
             </div>
 
             {/* Role Selection Cards */}
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
               {/* Teacher Card */}
               <Link
-                href="/lehrer"
-                className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
-                style={{ animationDelay: "300ms" }}
+               href="/lehrer"
+               className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+               style={{ animationDelay: "300ms" }}
               >
-                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-8 py-12">
+                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-6 py-8 md:px-8 md:py-12">
                   {/* Hand-drawn teacher SVG */}
-                  <svg viewBox="0 0 120 120" className="w-24 h-24 mx-auto" fill="none">
+                  <svg viewBox="0 0 120 120" className="w-20 h-20 md:w-24 md:h-24 mx-auto" fill="none">
                     {/* Head */}
                     <ellipse cx="60" cy="45" rx="18" ry="22" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
                     {/* Body */}
@@ -78,24 +78,24 @@ export default function Home() {
                     <path d="M 58 80 L 58 98" stroke="#4a403a" strokeWidth="0.8"/>
                   </svg>
                   <h3
-                    className="text-2xl font-light tracking-tight text-[#2d2a26] mt-6 text-center"
-                    style={{ fontFamily: '"Playfair Display", serif' }}
+                   className="text-xl md:text-2xl font-light tracking-tight text-[#2d2a26] mt-4 md:mt-6 text-center"
+                   style={{ fontFamily: '"Playfair Display", serif' }}
                   >
-                    Lehrkraft
+                   Lehrkraft
                   </h3>
                 </div>
-                <div className="p-8">
-                  <p className="text-[#6b665f] mb-6 leading-relaxed">
-                    Übungen und Studien zum Klassenklima entdecken
+                <div className="p-6 md:p-8">
+                  <p className="text-[#6b665f] mb-4 md:mb-6 leading-relaxed">
+                   Übungen und Studien zum Klassenklima entdecken
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 text-[#6b665f] text-sm">
                       <span className="text-[#b8afa7]">▸</span>
-                      Übungskatalog
+                     Übungskatalog
                     </div>
                     <div className="flex items-center gap-3 text-[#6b665f] text-sm">
                       <span className="text-[#b8afa7]">▸</span>
-                      Wissenswertes
+                     Wissenswertes
                     </div>
                   </div>
                 </div>
@@ -103,13 +103,13 @@ export default function Home() {
 
               {/* Student Card */}
               <Link
-                href="/schueler"
-                className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
-                style={{ animationDelay: "400ms" }}
+               href="/schueler"
+               className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+               style={{ animationDelay: "400ms" }}
               >
-                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-8 py-12">
+                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-6 py-8 md:px-8 md:py-12">
                   {/* Hand-drawn student SVG */}
-                  <svg viewBox="0 0 120 120" className="w-24 h-24 mx-auto" fill="none">
+                  <svg viewBox="0 0 120 120" className="w-20 h-20 md:w-24 md:h-24 mx-auto" fill="none">
                     {/* Head */}
                     <ellipse cx="60" cy="40" rx="16" ry="20" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
                     {/* Body */}
@@ -126,24 +126,24 @@ export default function Home() {
                     <circle cx="68" cy="61" r="1.5" stroke="#4a403a" strokeWidth="1"/>
                   </svg>
                   <h3
-                    className="text-2xl font-light tracking-tight text-[#2d2a26] mt-6 text-center"
-                    style={{ fontFamily: '"Playfair Display", serif' }}
+                   className="text-xl md:text-2xl font-light tracking-tight text-[#2d2a26] mt-4 md:mt-6 text-center"
+                   style={{ fontFamily: '"Playfair Display", serif' }}
                   >
-                    Schüler/in
+                   Schüler/in
                   </h3>
                 </div>
-                <div className="p-8">
-                  <p className="text-[#6b665f] mb-6 leading-relaxed">
-                    Fragebogen ausfüllen und Tipps erhalten
+                <div className="p-6 md:p-8">
+                  <p className="text-[#6b665f] mb-4 md:mb-6 leading-relaxed">
+                   Fragebogen ausfüllen und Tipps erhalten
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 text-[#6b665f] text-sm">
                       <span className="text-[#b8afa7]">▸</span>
-                      Fragebogen
+                     Fragebogen
                     </div>
                     <div className="flex items-center gap-3 text-[#6b665f] text-sm">
                       <span className="text-[#b8afa7]">▸</span>
-                      Verbessertungstipps
+                     Verbessertungstipps
                     </div>
                   </div>
                 </div>
@@ -151,9 +151,9 @@ export default function Home() {
             </div>
 
             {/* Privacy Notice */}
-            <div className="mt-20 max-w-xl mx-auto">
-              <div className="bg-white border border-[#e8e5df] px-8 py-6 text-center rounded-2xl">
-                <p className="text-[#8a847a] text-sm leading-relaxed">
+            <div className="mt-16 md:mt-20 max-w-xl mx-auto">
+              <div className="bg-white border border-[#e8e5df] px-6 py-4 md:px-8 md:py-6 text-center rounded-2xl">
+                <p className="text-[#8a847a] text-xs md:text-sm leading-relaxed">
                   🔒 Deine Daten bleiben auf deinem Gerät
                 </p>
               </div>
@@ -162,13 +162,13 @@ export default function Home() {
         </main>
 
         {/* Footer */}
-        <footer className="relative py-12 px-6 bg-[#f4f1ea]">
-          <div className="max-w-4xl mx-auto text-center text-[#8a847a] text-sm font-normal">
+        <footer className="relative py-8 md:py-12 px-4 md:px-6 bg-[#f4f1ea]">
+          <div className="max-w-4xl mx-auto text-center text-[#8a847a] text-xs md:text-sm font-normal">
             <p style={{ fontFamily: '"Source Sans 3", sans-serif' }}>
-              Klassenklima-WebApp &copy; 2026
+             Klassenklima-WebApp &copy; 2026
             </p>
           </div>
         </footer>
       </div>
-  );
+    );
 }
