@@ -63,13 +63,12 @@ export default function Header({ title, subtitle }: HeaderProps) {
 
         <Link href="/" className="inline-block mb-8">
           <svg
-            viewBox="0 0 160 50"
-            className="w-64 h-20"
+            viewBox="45 8 71 37"
             fill="none"
+            className="w-16 h-8"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* Stylized group forming a community circle */}
-            {/* Central figure with open arms */}
+            {/* Central figure */}
             <circle
               cx="80"
               cy="18"
@@ -92,8 +91,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-
-            {/* Left figure reaching toward center */}
+            {/* Left figure */}
             <circle
               cx="56"
               cy="20"
@@ -116,8 +114,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-
-            {/* Right figure reaching toward center */}
+            {/* Right figure */}
             <circle
               cx="104"
               cy="20"
@@ -140,8 +137,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-
-            {/* Curved line suggesting connection */}
+            {/* Connection arc */}
             <path
               d="M 65 16 Q 80 24 95 16"
               stroke="#4a403a"
@@ -149,21 +145,6 @@ export default function Header({ title, subtitle }: HeaderProps) {
               fill="none"
               strokeLinecap="round"
             />
-
-            {/* Text */}
-            <text
-              x="80"
-              y="48"
-              textAnchor="middle"
-              className="text-[#2d2a26]"
-              style={{
-                fontFamily: '"Playfair Display", serif',
-                fontSize: "28px",
-                fontWeight: 400,
-              }}
-            >
-              Klassenklima
-            </text>
           </svg>
         </Link>
 
