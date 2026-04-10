@@ -24,7 +24,7 @@ export default function FragebogenPage() {
   const [selectedWert, setSelectedWert] = useState<number | null>(null);
 
   const currentFrage = fragen[currentStep];
-  const progress = ((currentStep + 1) / fragen.length) * 100;
+  const progress = (currentStep / fragen.length) * 100;
 
   useEffect(() => {
     if (selectedWert !== null) {

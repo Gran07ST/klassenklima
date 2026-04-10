@@ -40,7 +40,10 @@ const alleSubthemen: (Subthema | "Alle")[] = [
   "Selbstbewusstsein",
 ];
 
-export default function UebungFilter({ uebungen, onFilterChange }: UebungFilterProps) {
+export default function UebungFilter({
+  uebungen,
+  onFilterChange,
+}: UebungFilterProps) {
   const [filter, setFilter] = useState<FilterState>({
     zeit: "Alle",
     alter: "Alle",
@@ -48,15 +51,21 @@ export default function UebungFilter({ uebungen, onFilterChange }: UebungFilterP
   });
 
   const handleFilterChange = (key: keyof FilterState, newValue: string) => {
-    const newFilter = { ...filter, [key]: newValue as FilterState[keyof FilterState] };
+    const newFilter = {
+      ...filter,
+      [key]: newValue as FilterState[keyof FilterState],
+    };
     setFilter(newFilter);
 
     const filtered = uebungen.filter((uebung) => {
-      const zeitMatch = newFilter.zeit === "Alle" || uebung.zeitBadge === newFilter.zeit;
+      const zeitMatch =
+        newFilter.zeit === "Alle" || uebung.zeitBadge === newFilter.zeit;
       const alterMatch =
-        newFilter.alter === "Alle" || uebung.alterBadge.some((a) => a === newFilter.alter);
+        newFilter.alter === "Alle" ||
+        uebung.alterBadge.some((a) => a === newFilter.alter);
       const subthemaMatch =
-        newFilter.subthema === "Alle" || uebung.subthemaBadge.some((s) => s === newFilter.subthema);
+        newFilter.subthema === "Alle" ||
+        uebung.subthemaBadge.some((s) => s === newFilter.subthema);
       return zeitMatch && alterMatch && subthemaMatch;
     });
 
@@ -70,66 +79,66 @@ export default function UebungFilter({ uebungen, onFilterChange }: UebungFilterP
   ].filter(Boolean).length;
 
   return (
-       <div className="mb-8">
-         <div className="flex flex-wrap items-center gap-4">
-           {/* Zeit Filter */}
-           <div className="flex flex-wrap gap-2">
-             {alleZeiten.map((zeit) => (
-               <button
-                key={zeit}
-                onClick={() => handleFilterChange("zeit", zeit)}
-                className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                  filter.zeit === zeit
-                    ? "bg-[#4a403a] text-white border-[#4a403a]"
-                    : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-                }`}
-               >
-                 {zeit}
-               </button>
-             ))}
-           </div>
+    <div className="mb-8">
+      <div className="flex flex-wrap items-center gap-4">
+        {/* Zeit Filter */}
+        <div className="flex flex-wrap gap-2">
+          {alleZeiten.map((zeit) => (
+            <button
+              key={zeit}
+              onClick={() => handleFilterChange("zeit", zeit)}
+              className={`px-4 py-2 text-sm border transition-all duration-300 ${
+                filter.zeit === zeit
+                  ? "bg-[#4a403a] text-white border-[#4a403a]"
+                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
+              }`}
+            >
+              {zeit}
+            </button>
+          ))}
+        </div>
 
-           {/* Alter Filter */}
-           <div className="flex flex-wrap gap-2">
-             {alleAlters.map((alter) => (
-               <button
-                key={alter}
-                onClick={() => handleFilterChange("alter", alter)}
-                className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                  filter.alter === alter
-                    ? "bg-[#4a403a] text-white border-[#4a403a]"
-                    : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-                }`}
-               >
-                 {alter}
-               </button>
-             ))}
-           </div>
+        {/* Alter Filter */}
+        <div className="flex flex-wrap gap-2">
+          {alleAlters.map((alter) => (
+            <button
+              key={alter}
+              onClick={() => handleFilterChange("alter", alter)}
+              className={`px-4 py-2 text-sm border transition-all duration-300 ${
+                filter.alter === alter
+                  ? "bg-[#4a403a] text-white border-[#4a403a]"
+                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
+              }`}
+            >
+              {alter}
+            </button>
+          ))}
+        </div>
 
-           {/* Subthema Filter */}
-           <div className="flex flex-wrap gap-2">
-             {alleSubthemen.map((subthema) => (
-               <button
-                key={subthema}
-                onClick={() => handleFilterChange("subthema", subthema)}
-                className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                  filter.subthema === subthema
-                    ? "bg-[#4a403a] text-white border-[#4a403a]"
-                    : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-                }`}
-               >
-                 {subthema}
-               </button>
-             ))}
-           </div>
+        {/* Subthema Filter */}
+        <div className="flex flex-wrap gap-2">
+          {alleSubthemen.map((subthema) => (
+            <button
+              key={subthema}
+              onClick={() => handleFilterChange("subthema", subthema)}
+              className={`px-4 py-2 text-sm border transition-all duration-300 ${
+                filter.subthema === subthema
+                  ? "bg-[#4a403a] text-white border-[#4a403a]"
+                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
+              }`}
+            >
+              {subthema}
+            </button>
+          ))}
+        </div>
 
-           {/* Active Filter Count */}
-           {activeCount > 0 && (
-             <div className="ml-auto text-[#8a847a] text-sm">
-               {activeCount} Filter{activeCount > 1 ? "e" : ""} aktiv
-             </div>
-           )}
-         </div>
-       </div>
-   );
+        {/* Active Filter Count */}
+        {activeCount > 0 && (
+          <div className="ml-auto text-[#8a847a] text-sm">
+            {activeCount} Filter aktiv
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
