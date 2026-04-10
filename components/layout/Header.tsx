@@ -63,38 +63,102 @@ export default function Header({ title, subtitle }: HeaderProps) {
 
         <Link href="/" className="inline-block mb-8">
           <svg
-            viewBox="0 0 120 40"
-            className="w-48 h-16"
+            viewBox="0 0 160 50"
+            className="w-64 h-20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* Simple logo: book icon + text */}
-            <rect
-              x="10"
-              y="10"
-              width="24"
-              height="18"
-              rx="2"
+            {/* Stylized group forming a community circle */}
+            {/* Central figure with open arms */}
+            <circle
+              cx="80"
+              cy="18"
+              r="9"
               stroke="#4a403a"
               strokeWidth="1.5"
               fill="none"
             />
-            <path d="M 18 16 L 28 16" stroke="#4a403a" strokeWidth="0.8" />
-            <path d="M 18 20 L 26 20" stroke="#4a403a" strokeWidth="0.8" />
             <path
-              d="M 36 12 L 36 28 L 44 28"
+              d="M 80 27 L 80 38"
+              stroke="#4a403a"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 80 29 L 66 36 L 80 43 L 94 36 L 80 29"
               stroke="#4a403a"
               strokeWidth="1.5"
               fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
+
+            {/* Left figure reaching toward center */}
+            <circle
+              cx="56"
+              cy="20"
+              r="7"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              fill="none"
+            />
+            <path
+              d="M 56 27 L 56 35"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 56 28 L 46 34 L 56 39 L 66 34 L 56 28"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+
+            {/* Right figure reaching toward center */}
+            <circle
+              cx="104"
+              cy="20"
+              r="7"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              fill="none"
+            />
+            <path
+              d="M 104 27 L 104 35"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 104 28 L 94 34 L 104 39 L 114 34 L 104 28"
+              stroke="#4a403a"
+              strokeWidth="1.2"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+
+            {/* Curved line suggesting connection */}
+            <path
+              d="M 65 16 Q 80 24 95 16"
+              stroke="#4a403a"
+              strokeWidth="1"
+              fill="none"
+              strokeLinecap="round"
+            />
+
             {/* Text */}
             <text
-              x="60"
-              y="28"
+              x="80"
+              y="48"
+              textAnchor="middle"
               className="text-[#2d2a26]"
               style={{
                 fontFamily: '"Playfair Display", serif',
-                fontSize: "24px",
+                fontSize: "28px",
                 fontWeight: 400,
               }}
             >
