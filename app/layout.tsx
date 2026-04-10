@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Klassenklima - Eine App für ein positives Miteinander",
-  description: "Eine WebApp zur Förderung eines positiven Klassenklimas für Lehrkräfte und Schüler/innen",
+  description:
+    "Eine WebApp zur Förderung eines positiven Klassenklimas für Lehrkräfte und Schüler/innen",
 };
 
 export default function RootLayout({
@@ -15,5 +16,5 @@ export default function RootLayout({
     <html lang="de" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
-   );
+  );
 }

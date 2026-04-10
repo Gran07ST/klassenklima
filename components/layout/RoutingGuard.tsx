@@ -8,7 +8,10 @@ interface RoutingGuardProps {
   requiredAnswers?: boolean;
 }
 
-export default function RoutingGuard({ children, requiredAnswers = false }: RoutingGuardProps) {
+export default function RoutingGuard({
+  children,
+  requiredAnswers = false,
+}: RoutingGuardProps) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -20,13 +23,15 @@ export default function RoutingGuard({ children, requiredAnswers = false }: Rout
     if (!requiredAnswers) return;
 
     // Prüfe ob Antworten vorhanden sind
-    const gespeicherte = localStorage.getItem("klassenklima_fragebogen_antworten");
+    const gespeicherte = localStorage.getItem(
+      "klassenklima_fragebogen_antworten",
+    );
 
     if (!gespeicherte) {
       // Keine Antworten vorhanden -> zur Fragebogen-Seite leiten
       router.push("/schueler/fragebogen");
-      }
-    }, [router, pathname, requiredAnswers]);
+    }
+  }, [router, pathname, requiredAnswers]);
 
   return <>{children}</>;
 }

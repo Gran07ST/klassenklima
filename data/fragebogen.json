@@ -1,5 +1,13 @@
 {
-  "subthemen": ["Empathie", "Kommunikation", "Teamfähigkeit", "Selbstregulation", "Konfliktlösung", "Soziale Kompetenz", "Selbstbewusstsein"],
+  "subthemen": [
+    "Empathie",
+    "Kommunikation",
+    "Teamfähigkeit",
+    "Selbstregulation",
+    "Konfliktlösung",
+    "Soziale Kompetenz",
+    "Selbstbewusstsein"
+  ],
   "fragen": [
     {
       "id": "q-001",

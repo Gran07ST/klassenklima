@@ -6,7 +6,10 @@ import { Frage, Antwort, SubthemaScore, Subthema } from "./types";
  * @param fragen - Die Fragen aus dem Fragebogen
  * @returns Array von SubthemaScores
  */
-export function berechneScores(antworten: Antwort[], fragen: Frage[]): SubthemaScore[] {
+export function berechneScores(
+  antworten: Antwort[],
+  fragen: Frage[],
+): SubthemaScore[] {
   // Nur Skala-Fragen verwenden (keine single_choice)
   const skalaFragen = fragen.filter((frage) => frage.type === "skala");
 
@@ -32,7 +35,8 @@ export function berechneScores(antworten: Antwort[], fragen: Frage[]): SubthemaS
     const maxScore = 5 * frage.gewichtung;
 
     // Prozent berechnen
-    const prozent = maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
+    const prozent =
+      maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
 
     return {
       subthema: frage.subthema as Subthema,
@@ -60,7 +64,7 @@ export function getVerbesserungsvorschlaege(
         tipps: string[];
       };
     };
-  }
+  },
 ): Array<{
   subthema: Subthema;
   score: SubthemaScore;
@@ -71,10 +75,14 @@ export function getVerbesserungsvorschlaege(
   };
 }> {
   // Nur Subthemen mit Potenzial (< 90%)
-  const scoresMitPotenzial = scores.filter((score) => score.hatVerbesserungspotenzial);
+  const scoresMitPotenzial = scores.filter(
+    (score) => score.hatVerbesserungspotenzial,
+  );
 
   // Sortiere nach niedrigstem Score zuerst
-  const sortierteScores = [...scoresMitPotenzial].sort((a, b) => a.prozent - b.prozent);
+  const sortierteScores = [...scoresMitPotenzial].sort(
+    (a, b) => a.prozent - b.prozent,
+  );
 
   // Vorschläge hinzufügen
   return sortierteScores
@@ -88,15 +96,19 @@ export function getVerbesserungsvorschlaege(
         vorschlag,
       };
     })
-    .filter((item): item is {
-      subthema: Subthema;
-      score: SubthemaScore;
-      vorschlag: {
-        titel: string;
-        text: string;
-        tipps: string[];
-      };
-    } => item !== null);
+    .filter(
+      (
+        item,
+      ): item is {
+        subthema: Subthema;
+        score: SubthemaScore;
+        vorschlag: {
+          titel: string;
+          text: string;
+          tipps: string[];
+        };
+      } => item !== null,
+    );
 }
 
 /**

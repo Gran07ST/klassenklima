@@ -1,16 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import {
-  Frage,
-  Antwort,
-  SubthemaScore,
-  GespeicherteAntworten,
-} from "@/lib/types";
+import Header from "@/components/layout/Header";
 import { Progress } from "@/components/ui/progress";
+import { Antwort, Frage, GespeicherteAntworten } from "@/lib/types";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 // Import data
 import fragebogenData from "@/data/fragebogen.json";
