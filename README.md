@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Klassenklima
+
+Eine kleine Web-App für ein grosses Thema: Das Klassenklima an Schulen.
+
+## Über das Projekt
+
+Diese App unterstützt Lehrkräfte und Schüler dabei, ein positives Klassenklima zu fördern. Sie besteht aus zwei Bereichen:
+
+### Lehrbereich
+- **Wissen & Studien**: Forschungsergebnisse zum Thema Klassenklima
+- **Übungen**: Übungskatalog zur Förderung sozialer Kompetenzen (filterbar nach Zeit, Alter, Thema)
+
+### Schülerbereich
+- **Fragebogen**: Beantwortet Fragen zum eigenen Klassenklima
+- **Auswertung**: Radar-Diagramm zeigt Ergebnisse in verschiedenen Bereichen
+- **Vorschläge**: Personalisierte Verbesserungsvorschläge basierend auf den Ergebnissen
+
+## Features
+
+- **Datenschutz**: Alle Daten bleiben lokal im Browser (LocalStorage)
+- **Responsive Design**: Funktioniert auf Desktop, Tablet und Mobile
+- **Modernes UI**: Warme, minimalistische Gestaltung mit handgezeichneten SVGs
+- **Keine Server-Notwendig**: Statische Seite, kann überall gehostet werden
+
+## Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts (Radar-Chart)
+- **UI Components**: shadcn/ui
+- **Runtime**: Bun, Node.js, oder andere Next.js-kompatible Runtimes
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Dependencies installieren
+bun install
+# oder
+npm install
+
+# Development-Server starten
 bun dev
+# oder
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Öffne [http://localhost:3000](http://localhost:3000) im Browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build für Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun build
+# oder
+npm run build
+```
 
-## Learn More
+### Start Production-Server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun start
+# oder
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Projektstruktur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+rebecca-projekt/
+├── app/
+│   ├── page.tsx                 # Landing page (Lehrkraft vs. Schüler)
+│   ├── lehrer/
+│   │   ├── page.tsx             # Lehrbereich-Übersicht
+│   │   ├── wissen/
+│   │   │   └── page.tsx         # Studien & Fakten
+│   │   └── uebungen/
+│   │       └── page.tsx         # Übungskatalog
+│   └── schueler/
+│       ├── page.tsx             # Schülerbereich-Übersicht
+│       ├── fragebogen/
+│       │   └── page.tsx         # Fragebogen
+│       ├── auswertung/
+│       │   └── page.tsx         # Ergebnisse (Radar-Chart)
+│       └── vorschlaege/
+│           └── page.tsx         # Verbesserungsvorschläge
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx           # Header mit Logo & Navigation
+│   │   ├── Footer.tsx           # Footer
+│   │   └── RoutingGuard.tsx     # Schutz für geschützte Pages
+│   └── lehrer/
+│       ├── StatCard.tsx         # Statistik-Karte
+│       ├── UebungCard.tsx       # Übungskarte
+│       └── UebungFilter.tsx     # Filter-Komponente
+├── data/
+│   ├── fragebogen.json          # 10 Fragen + Verbesserungsvorschläge
+│   ├── studien.json             # 3 Statistiken + Themenbereiche
+│   └── uebungen.json            # 6+ Übungen
+├── lib/
+│   ├── types.ts                 # TypeScript-Typdefinitionen
+│   └── scoring.ts               # Scoring-Logik für Fragebogen
+└── public/                      # Statische Assets
+```
 
-## Deploy on Vercel
+## Datenstruktur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Fragebogen (`data/fragebogen.json`)
+- 10 Fragen zu 7 Subthemen:
+  - Empathie, Kommunikation, Teamfähigkeit
+  - Selbstregulation, Konfliktlösung
+  - Soziale Kompetenz, Selbstbewusstsein
+- Jede Frage hat Gewichtung und Skalabezeichnungen
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Studien (`data/studien.json`)
+- 3 Statistiken mit Quellen (Hattie, OECD, Wentzel)
+- 4 Themenbereiche mit Details
+
+### Übungen (`data/uebungen.json`)
+- 6+ Übungen mit Metadaten:
+  - Zeitdauer, Alter, Subthema
+  - Material, Beschreibung, Tipps
+
+## Scoring
+
+Die App berechnet prozentuale Werte für jedes Subthema:
+- **≥ 90%**: Gut, kein Verbesserungsbedarf
+- **< 90%**: Verbesserungspotenzial vorhanden
+
+Die Scores werden lokal im Browser gespeichert und für personalisierte Vorschläge verwendet.
+
+## Lizenz
+
+Dieses Projekt ist als Bildungsressource gemeinfrei verfügbar.
+
+---
+
+Entwickelt mit Next.js, TypeScript und Tailwind CSS.
