@@ -47,16 +47,16 @@ export default function UebungFilter({ uebungen, onFilterChange }: UebungFilterP
     subthema: "Alle",
   });
 
-  const handleFilterChange = (key: keyof FilterState, value: string) => {
-    const newFilter = { ...filter, [key]: value as FilterState[keyof FilterState] };
+  const handleFilterChange = (key: keyof FilterState, newValue: string) => {
+    const newFilter = { ...filter, [key]: newValue as FilterState[keyof FilterState] };
     setFilter(newFilter);
 
     const filtered = uebungen.filter((uebung) => {
-      const zeitMatch = value === "Alle" || uebung.zeitBadge === value;
+      const zeitMatch = newFilter.zeit === "Alle" || uebung.zeitBadge === newFilter.zeit;
       const alterMatch =
-        value === "Alle" || uebung.alterBadge.some((a) => a === value);
+        newFilter.alter === "Alle" || uebung.alterBadge.some((a) => a === newFilter.alter);
       const subthemaMatch =
-        value === "Alle" || uebung.subthemaBadge.some((s) => s === value);
+        newFilter.subthema === "Alle" || uebung.subthemaBadge.some((s) => s === newFilter.subthema);
       return zeitMatch && alterMatch && subthemaMatch;
     });
 

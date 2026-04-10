@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Frage, Antwort, SubthemaScore, GespeicherteAntworten } from "@/lib/types";
+import {
+  Frage,
+  Antwort,
+  SubthemaScore,
+  GespeicherteAntworten,
+} from "@/lib/types";
 import { Progress } from "@/components/ui/progress";
 
 // Import data
@@ -16,34 +21,47 @@ export default function FragebogenPage() {
   const [currentStep, setCurrentStep] = useState(0);
   const [antworten, setAntworten] = useState<Antwort[]>([]);
   const [isComplete, setIsComplete] = useState(false);
+  const [selectedWert, setSelectedWert] = useState<number | null>(null);
 
   const currentFrage = fragen[currentStep];
   const progress = ((currentStep + 1) / fragen.length) * 100;
 
-  const handleAnswer = (wert: number) => {
-    const neueAntwort: Antwort = {
-      frageId: currentFrage.id,
-      wert,
-    };
+  useEffect(() => {
+    if (selectedWert !== null) {
+      const timer = setTimeout(() => {
+        const neueAntwort: Antwort = {
+          frageId: currentFrage.id,
+          wert: selectedWert,
+        };
 
-    const neueAntworten = [...antworten, neueAntwort];
-    setAntworten(neueAntworten);
+        const neueAntworten = [...antworten, neueAntwort];
+        setAntworten(neueAntworten);
 
-    // Speichern im LocalStorage
-    const gespeicherteAntworten: GespeicherteAntworten = {
-      zeitstempel: new Date().toISOString(),
-      antworten: neueAntworten,
-    };
-    localStorage.setItem(
-      "klassenklima_fragebogen_antworten",
-      JSON.stringify(gespeicherteAntworten)
-    );
+        // Speichern im LocalStorage
+        const gespeicherteAntworten: GespeicherteAntworten = {
+          zeitstempel: new Date().toISOString(),
+          antworten: neueAntworten,
+        };
+        localStorage.setItem(
+          "klassenklima_fragebogen_antworten",
+          JSON.stringify(gespeicherteAntworten),
+        );
 
-    if (currentStep < fragen.length - 1) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      setIsComplete(true);
+        setSelectedWert(null);
+
+        if (currentStep < fragen.length - 1) {
+          setCurrentStep(currentStep + 1);
+        } else {
+          setIsComplete(true);
+        }
+      }, 600);
+
+      return () => clearTimeout(timer);
     }
+  }, [selectedWert, currentStep, antworten, currentFrage.id, fragen.length]);
+
+  const handleAnswer = (wert: number) => {
+    setSelectedWert(wert);
   };
 
   const handleBack = () => {
@@ -118,10 +136,7 @@ export default function FragebogenPage() {
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
-      <Header
-        title="Fragebogen"
-        subtitle="Beantworte die Fragen ehrlich"
-      />
+      <Header title="Fragebogen" subtitle="Beantworte die Fragen ehrlich" />
 
       <main className="flex-1 px-4 py-8 md:py-12">
         <div className="max-w-2xl mx-auto px-4">
@@ -164,17 +179,17 @@ export default function FragebogenPage() {
                     key={wert}
                     onClick={() => handleAnswer(wert)}
                     className={`py-3 md:py-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 font-normal text-xs md:text-sm ${
-                      antworten[currentStep]?.wert === wert
-                        ? "bg-[#4a403a] text-white border-[#4a403a]"
+                      selectedWert === wert
+                        ? "bg-[#4a403a] text-white border-[#4a403a] scale-105 shadow-lg"
                         : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
                     }`}
                   >
                     {wert}
                   </button>
                 ))}
-                <div className="col-span-5 grid grid-cols-5 gap-2 mt-2 text-xs text-[#8a847a]">
-                  <span className="text-center">{currentFrage.skalaLabels?.["1"]}</span>
-                  <span className="text-center">{currentFrage.skalaLabels?.["5"]}</span>
+                <div className="col-span-5 flex justify-between mt-2 text-xs text-[#8a847a]">
+                  <span>{currentFrage.skalaLabels?.["1"]}</span>
+                  <span>{currentFrage.skalaLabels?.["5"]}</span>
                 </div>
               </div>
             ) : (
@@ -184,8 +199,8 @@ export default function FragebogenPage() {
                     key={option.wert}
                     onClick={() => handleAnswer(option.wert)}
                     className={`p-4 md:p-6 rounded-lg md:rounded-xl border-2 transition-all duration-300 font-normal text-xs md:text-sm text-left ${
-                      antworten[currentStep]?.wert === option.wert
-                        ? "bg-[#4a403a] text-white border-[#4a403a]"
+                      selectedWert === option.wert
+                        ? "bg-[#4a403a] text-white border-[#4a403a] scale-105 shadow-lg"
                         : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
                     }`}
                   >
@@ -217,9 +232,7 @@ export default function FragebogenPage() {
                 <path d="M 19 12 L 5 12" stroke="currentColor" />
                 <path d="M 10 17 L 5 12 L 10 7" stroke="currentColor" />
               </svg>
-              <span className="text-[#6b665f] text-xs font-normal">
-                Zurück
-              </span>
+              <span className="text-[#6b665f] text-xs font-normal">Zurück</span>
             </button>
 
             {currentStep < fragen.length - 1 && (
