@@ -1,0 +1,70 @@
+{
+  "uebungen": [
+    {
+      "id": "ueb-001",
+      "titel": "Das Netz der Verbindungen",
+      "kurzbeschreibung": "Eine warm-up Übung, um die Klasse als Netzwerk zu erleben und Verbindungen zwischen den Mitgliedern sichtbar zu machen.",
+      "anleitung": "Alle Teilnehmer stehen im Kreis. Eine Person hält ein Garnknäuel und nennt ihren Namen. Dann wirft sie das Garn (ohne das Ende loszulassen) an eine andere Person und nennt deren Namen. Diese Person wiederholt den Vorgang. Am Ende entsteht ein Netz, das alle verbindet.\n\nAnschliessend wird diskutiert: Was passiert, wenn man eine Faden loslässt? Wie zeigt das unsere class community?",
+      "zeitBadge": "5–15 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Teamfähigkeit", "Soziale Kompetenz"],
+      "material": "Ein grosses Garnknäuel",
+      "tipps": "Für jüngere Klassen kann die Lehrkraft das Netz am Schluss wieder zusammenrollen und als Metapher für die Klasse verwenden."
+    },
+    {
+      "id": "ueb-002",
+      "titel": "Kompliment-Karte",
+      "kurzbeschreibung": "Jedes Mitglied der Klasse bekommt eine positive Rückmeldung von einem anderen.",
+      "anleitung": "Jeder schreibt seinen Namen auf einen Zettel. Alle Zettel werden in einen Behälter gelegt. Jeder zieht einen Zettel (nicht den eigenen!) und schreibt ein echtes Kompliment dazu. Die Karten werden zurückgegeben.\n\nAbschliessend dürfen Freiwillige erzählen, wie es sich angefühlt hat, ein Kompliment zu bekommen.",
+      "zeitBadge": "15–30 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Empathie", "Selbstbewusstsein"],
+      "material": "Zettel, Stift, Behälter",
+      "tipps": "Erinnere die Klasse an echte, respektvolle Komplimente – nichts Verletzliches oder Spöttisches."
+    },
+    {
+      "id": "ueb-003",
+      "titel": "Gefühls-Wetterbericht",
+      "kurzbeschreibung": "Ein kurzer Check-in, bei dem jede:r ihren aktuellen 'Wetterzustand' teilt.",
+      "anleitung": "Die Lehrkraft fragt: 'Welches Wetter hast du gerade?' Optionen: Sonnig (gut), Bewölkt (okay), Regnerisch (traurig), Stürmisch (wütend). Jede:r nennt kurz ihr 'Wetter' und warum.\n\nDie Lehrkraft fasst zusammen: 'Unser Klassenwetter ist heute gemischt – das ist normal!'",
+      "zeitBadge": "< 5 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
+      "subthemaBadge": ["Selbstregulation", "Kommunikation"],
+      "material": "Keine",
+      "tipps": "Diese Übung kann wöchentlich wiederholt werden – als Ritual am Montagmorgen."
+    },
+    {
+      "id": "ueb-004",
+      "titel": "Das 'Ich mag dich'-Spiel",
+      "kurzbeschreibung": "Ein einfaches Spiel, um positive Aufmerksamkeiten zwischen den Klassenmitgliedern zu fördern.",
+      "anleitung": "Die Klasse sitzt im Kreis. Eine Person beginnt: 'Ich mag an [Name]..., dass er/sie...'. Beispiel: 'Ich mag an Lena, dass sie immer hilft.' Die genannte Person sagt dann: 'Ich mag an [nächste Person]..., dass...' \n\nAlle dürfen nur einmal genannt werden.",
+      "zeitBadge": "5–15 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
+      "subthemaBadge": ["Empathie", "Soziale Kompetenz"],
+      "material": "Keine",
+      "tipps": "Falls jemand nicht genannt wird, kann die Lehrkraft helfen: 'Ich habe noch einen Tipp für [Name]...'"
+    },
+    {
+      "id": "ueb-005",
+      "titel": "Konflikt-Ruheraum",
+      "kurzbeschreibung": "Eine Übung, um Strategien zu entwickeln, wie man sich in Konfliktsituationen ruhig verhalten kann.",
+      "anleitung": "In Kleingruppen (3–4 Personen) diskutieren die Schüler: 'Was hilft dir, wenn du wütend wirst?' Jede Gruppe notiert 3 Ideen (z.B. tief durchatmen, weggehen, mit Lehrkraft sprechen).\n\nAlle Ideen werden gesammelt und an der Tafel festgehalten – als 'Ruheraum-Regeln' für die Klasse.",
+      "zeitBadge": "15–30 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Selbstregulation", "Konfliktlösung"],
+      "material": "Blätter, Stifte, Tafel",
+      "tipps": "Die Regeln können als Poster im Klassenzimmer aufgehängt werden – als Erinnerung für alle."
+    },
+    {
+      "id": "ueb-006",
+      "titel": "Die Dankbarkeits-Ecke",
+      "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
+      "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' gemacht. Dort gibt es ein Notizbuch oder eine Box. Schüler:innen können Zettel mit Dingen hineinschreiben, für die sie dankbar sind (z.B. 'Danke an Tom, der mir beim Heften geholfen hat').\n\nWöchentlich werden einige Zettel vorgelesen (mit Erlaubnis der Autoren).",
+      "zeitBadge": "5–15 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Empathie", "Soziale Kompetenz"],
+      "material": "Notizbuch, Stifte, Box oder Korb",
+      "tipps": "Die Lehrkraft kann auch selbst Zettel einwerfen – als Vorbild."
+    }
+  ]
+}

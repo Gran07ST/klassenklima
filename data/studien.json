@@ -1,0 +1,44 @@
+{
+  "einleitung": "Ein positives Lernklima ist entscheidend für den schulischen Erfolg. Studien zeigen, dass Schülerinnen und Schüler in Klassen mit einem guten Klima motivierter lernen, weniger Ausfallzeiten haben und bessere Noten erzielen.",
+  "statistiken": [
+    {
+      "id": "stat-001",
+      "zahl": "87%",
+      "aussage": "Der Klassenklima hat einen grossen Einfluss auf den Lernerfolg",
+      "quelle": "Hattie, 2009",
+      "details": "John Hatties grosse Meta-Studie zeigt: Das soziale Klima in der Klasse gehört zu den wichtigsten Faktoren für schulischen Erfolg. Ein positives Klassenklima kann den Lernerfolg um bis zu 87% steigern."
+    },
+    {
+      "id": "stat-002",
+      "zahl": "40%",
+      "aussage": "Schülerinnen und Schüler mit starkem Zugehörigkeitsgefühl haben bessere Noten",
+      "quelle": "OECD, 2019",
+      "details": "Die internationale TIMSS-Studie zeigt: Schülerinnen und Schüler, die sich in ihrer Klasse wohl fühlen und eine starke Verbindung zur Klasse haben, erzielen im Durchschnitt 40% bessere Noten – selbst wenn sie vorher schwächere Leistungen gezeigt haben."
+    },
+    {
+      "id": "stat-003",
+      "zahl": "50%",
+      "aussage": "Ein positives Klima reduziert Schulvermeidungsverhalten",
+      "quelle": "Wentzel, 2020",
+      "details": "Forschungen zeigen, dass in Klassen mit einem wertschätzenden Klima die Schulvermeidung um 50% sinkt. Schülerinnen und Schüler fehlen seltener und kommen motivierter zur Schule."
+    }
+  ],
+  "themenBereiche": [
+    {
+      "titel": "Motivation und Leistung",
+      "inhalt": "Ein positives Klassenklima steigert die Lernmotivation. Schülerinnen und Schüler trauen sich mehr, beteiligen sich aktiver im Unterricht und zeigen eine höhere Leistungsbereitschaft."
+    },
+    {
+      "titel": "Wohlbefinden und Gesundheit",
+      "inhalt": "In einem unterstützenden Klassenklima fühlen sich Kinder und Jugendliche wohler. Sie leiden seltener unter Stress, Kopf- oder Bauchschmerzen und kommen gerne zur Schule."
+    },
+    {
+      "titel": "Soziale Kompetenzen",
+      "inhalt": "Ein gutes Klima fördert Freundschaften und hilft Schülerinnen und Schülern, soziale Fähigkeiten wie Empathie, Kommunikation und Konfliktlösung zu entwickeln."
+    },
+    {
+      "titel": "Inklusion und Teilhabe",
+      "inhalt": "In Klassen mit einem positiven Klima werden alle Mitglieder wertgeschätzt. Besonders Schülerinnen und Schüler mit besonderen Bedürfnissen fühlen sich sicher und können ihr volles Potenzial entfalten."
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "subthemen": ["Empathie", "Kommunikation", "Teamfähigkeit", "Selbstregulation", "Konfliktlösung", "Soziale Kompetenz", "Selbstbewusstsein"],
+  "fragen": [
+    {
+      "id": "q-001",
+      "subthema": "Empathie",
+      "type": "skala",
+      "aussage": "Ich kann mich gut in andere Leute hineinversetzen und verstehe, wie sie sich fühlen.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-002",
+      "subthema": "Empathie",
+      "type": "single_choice",
+      "frage": "Was tust du, wenn ein Klassenkamerad traurig ist?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich ignoriere es", "wert": 1 },
+        { "text": "Ich frage, ob alles okay ist", "wert": 3 },
+        { "text": "Ich tröste ihn/sie", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-003",
+      "subthema": "Kommunikation",
+      "type": "skala",
+      "aussage": "Ich kann meine Gedanken und Gefühle klar ausdrücken.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-004",
+      "subthema": "Kommunikation",
+      "type": "single_choice",
+      "frage": "Wie hörst du anderen zu, wenn sie sprechen?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich unterbreche sie oft", "wert": 1 },
+        { "text": "Ich höre zu, denke aber an etwas anderes", "wert": 3 },
+        { "text": "Ich höre aufmerksam zu und nicke", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-005",
+      "subthema": "Teamfähigkeit",
+      "type": "skala",
+      "aussage": "Ich arbeite gerne in einer Gruppe zusammen.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-006",
+      "subthema": "Teamfähigkeit",
+      "type": "single_choice",
+      "frage": "Was machst du, wenn jemand in der Gruppe nicht mitmacht?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich lasse es einfach", "wert": 1 },
+        { "text": "Ich frage, ob alles okay ist", "wert": 3 },
+        { "text": "Ich lade ihn/sie aktiv ein", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-007",
+      "subthema": "Selbstregulation",
+      "type": "skala",
+      "aussage": "Ich kann meine Gefühle kontrollieren, auch wenn ich genervt bin.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-008",
+      "subthema": "Selbstregulation",
+      "type": "single_choice",
+      "frage": "Wie gehst du mit Frustration um, wenn etwas nicht klappt?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich gebe sofort auf", "wert": 1 },
+        { "text": "Ich mache eine Pause und versuche es nochmal", "wert": 3 },
+        { "text": "Ich bleibe ruhig und suche eine Lösung", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-009",
+      "subthema": "Konfliktlösung",
+      "type": "skala",
+      "aussage": "Ich kann Konflikte fair lösen, ohne zu schikanieren.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-010",
+      "subthema": "Konfliktlösung",
+      "type": "single_choice",
+      "frage": "Was tust du, wenn dich jemand ärgert?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich werde schnell wütend und schreie", "wert": 1 },
+        { "text": "Ich versuche ruhig zu bleiben und rede darüber", "wert": 3 },
+        { "text": "Ich höre zu und suche eine Lösung zusammen", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-011",
+      "subthema": "Soziale Kompetenz",
+      "type": "skala",
+      "aussage": "Ich finde schnell Freunde in einer neuen Gruppe.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-012",
+      "subthema": "Soziale Kompetenz",
+      "type": "single_choice",
+      "frage": "Wie gehst du mit neuen Leuten um?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich traue mich nicht anzusprechen", "wert": 1 },
+        { "text": "Ich warte ab, bis jemand auf mich zukommt", "wert": 3 },
+        { "text": "Ich gehe auf sie zu und stelle mich vor", "wert": 5 }
+      ]
+    },
+    {
+      "id": "q-013",
+      "subthema": "Selbstbewusstsein",
+      "type": "skala",
+      "aussage": "Ich traue mir zu, Dinge zu schaffen.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimme gar nicht zu",
+        "5": "Stimme voll zu"
+      }
+    },
+    {
+      "id": "q-014",
+      "subthema": "Selbstbewusstsein",
+      "type": "single_choice",
+      "frage": "Wie gehst du mit Kritik um?",
+      "gewichtung": 1,
+      "optionen": [
+        { "text": "Ich fühle mich sofort schlecht", "wert": 1 },
+        { "text": "Ich nehme sie zur Kenntnis, bin aber traurig", "wert": 3 },
+        { "text": "Ich sehe sie als Chance zu lernen", "wert": 5 }
+      ]
+    }
+  ],
+  "verbesserungsvorschlaege": {
+    "Empathie": {
+      "unter90": {
+        "titel": "Lerne, Gefühle zu erkennen",
+        "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst. Hier sind ein paar Tipps, wie du das üben kannst:",
+        "tipps": [
+          "Achte auf Gesichtsausdrücke: Lächeln, Traurigkeit, Wut – erkenne, was andere fühlen",
+          "Frag nach: 'Wie fühlst du dich?' zeigt, dass du dich interessierst",
+          "Stell dir vor: 'Wie wäre ich, wenn das mit mir passiert wäre?'"
+        ]
+      }
+    },
+    "Kommunikation": {
+      "unter90": {
+        "titel": "Sprich klar und hör zu",
+        "text": "Gute Kommunikation ist wie ein Gespräch im Pingpong – beide müssen mitmachen. Hier sind Tipps:",
+        "tipps": [
+          "Sprich deutlich: Sag, was du meinst, statt zu mutmassen",
+          "Zuhören ist wichtig: Schau den anderen an und nicke",
+          "Unterbrich nicht: Lass andere ausreden, dann bist du auch gehört"
+        ]
+      }
+    },
+    "Teamfähigkeit": {
+      "unter90": {
+        "titel": "Mach mit – gemeinsam geht's besser!",
+        "text": "Teamarbeit macht Spass, wenn alle mitmachen. Hier sind Tipps für gute Zusammenarbeit:",
+        "tipps": [
+          "Biete Hilfe an: 'Brauche du Unterstützung?' zeigt Teamgeist",
+          "Teile Aufgaben: Jeder kann etwas beitragen",
+          "Feiere Erfolge zusammen: 'Wir haben es geschafft!'"
+        ]
+      }
+    },
+    "Selbstregulation": {
+      "unter90": {
+        "titel": "Bleib ruhig, auch wenn's knallt",
+        "text": "Selbstregulation bedeutet, dass du deine Gefühle kontrollieren kannst – auch wenn du wütend oder genervt bist. Hier sind Tipps:",
+        "tipps": [
+          "Atme tief durch: 3x ein- und ausatmen beruhigt",
+          "Mach eine Pause: Weggehen und kurz durchatmen hilft",
+          "Zähle bis 10: Das gibt deinem Gehirn Zeit zu reagieren"
+        ]
+      }
+    },
+    "Konfliktlösung": {
+      "unter90": {
+        "titel": "Streit fair lösen",
+        "text": "Konflikte gehören zum Leben dazu. Wichtig ist, wie ihr sie löst. Hier sind Tipps:",
+        "tipps": [
+          "Ruhig bleiben: Nicht schreien oder schlagen",
+          "Zuhören: Lass den anderen ausreden",
+          "Lösung suchen: 'Wie können wir das zusammen lösen?'"
+        ]
+      }
+    },
+    "Soziale Kompetenz": {
+      "unter90": {
+        "titel": "Freunde finden und halten",
+        "text": "Soziale Kompetenz hilft dir, Freunde zu finden und gute Beziehungen zu pflegen. Hier sind Tipps:",
+        "tipps": [
+          "Lächeln hilft: Ein Lächeln öffnet Türen",
+          "Frag nach Namen: 'Ich bin [dein Name] – und du?'",
+          "Zeig Interesse: Frag nach Hobbys und Hören zu"
+        ]
+      }
+    },
+    "Selbstbewusstsein": {
+      "unter90": {
+        "titel": "An dich glauben – du schaffst das!",
+        "text": "Selbstbewusstsein bedeutet, dass du an dich glaubst und dir zutraust, Dinge zu schaffen. Hier sind Tipps:",
+        "tipps": [
+          "Sag 'Ich kann das': Positive Selbstgespräche helfen",
+          "Kleine Ziele setzen: Jeden Tag etwas Neues ausprobieren",
+          "Fehler sind okay: Aus Fehlern lernt man"
+        ]
+      }
+    }
+  }
+}

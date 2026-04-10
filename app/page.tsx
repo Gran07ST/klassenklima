@@ -1,65 +1,174 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+          <svg viewBox="0 0 400 400" className="w-full h-full">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2d2a26" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+          </svg>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* Header */}
+        <header className="relative py-20 px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1
+              className="text-6xl md:text-7xl font-light tracking-tight mb-6 animate-fade-in-up"
+              style={{ fontFamily: '"Playfair Display", serif' }}
+            >
+              Klassenklima
+            </h1>
+            <p
+              className="text-xl text-[#6b665f] font-normal leading-relaxed animate-fade-in"
+              style={{ animationDelay: "200ms" }}
+            >
+              Eine kleine App für ein grosses Thema
+            </p>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="relative flex-1 flex items-center justify-center px-6 py-12">
+          <div className="max-w-4xl w-full">
+            {/* Welcome Message */}
+            <div className="text-center mb-20">
+              <h2
+                className="text-3xl md:text-4xl font-light tracking-tight mb-6 animate-fade-in-up"
+                style={{ animationDelay: "100ms" }}
+              >
+                Wer bist du?
+              </h2>
+              <p className="text-[#6b665f] text-lg font-normal animate-fade-in">
+                Wähle deine Rolle
+              </p>
+            </div>
+
+            {/* Role Selection Cards */}
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Teacher Card */}
+              <Link
+                href="/lehrer"
+                className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+                style={{ animationDelay: "300ms" }}
+              >
+                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-8 py-12">
+                  {/* Hand-drawn teacher SVG */}
+                  <svg viewBox="0 0 120 120" className="w-24 h-24 mx-auto" fill="none">
+                    {/* Head */}
+                    <ellipse cx="60" cy="45" rx="18" ry="22" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
+                    {/* Body */}
+                    <path d="M 42 70 L 42 95 L 78 95 L 78 70" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
+                    {/* Arms */}
+                    <path d="M 42 72 L 30 82" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    <path d="M 78 72 L 90 82" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    {/* Legs */}
+                    <path d="M 50 95 L 48 110" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    <path d="M 70 95 L 72 110" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    {/* Book */}
+                    <rect x="35" y="80" width="24" height="18" rx="1" stroke="#4a403a" strokeWidth="1.5" fill="#f0ede6"/>
+                    <path d="M 42 84 L 52 84" stroke="#4a403a" strokeWidth="0.8"/>
+                    <path d="M 42 89 L 50 89" stroke="#4a403a" strokeWidth="0.8"/>
+                    {/* Book lines */}
+                    <path d="M 58 80 L 58 98" stroke="#4a403a" strokeWidth="0.8"/>
+                  </svg>
+                  <h3
+                    className="text-2xl font-light tracking-tight text-[#2d2a26] mt-6 text-center"
+                    style={{ fontFamily: '"Playfair Display", serif' }}
+                  >
+                    Lehrkraft
+                  </h3>
+                </div>
+                <div className="p-8">
+                  <p className="text-[#6b665f] mb-6 leading-relaxed">
+                    Übungen und Studien zum Klassenklima entdecken
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                      <span className="text-[#b8afa7]">▸</span>
+                      Übungskatalog
+                    </div>
+                    <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                      <span className="text-[#b8afa7]">▸</span>
+                      Wissenswertes
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Student Card */}
+              <Link
+                href="/schueler"
+                className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+                style={{ animationDelay: "400ms" }}
+              >
+                <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-8 py-12">
+                  {/* Hand-drawn student SVG */}
+                  <svg viewBox="0 0 120 120" className="w-24 h-24 mx-auto" fill="none">
+                    {/* Head */}
+                    <ellipse cx="60" cy="40" rx="16" ry="20" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
+                    {/* Body */}
+                    <path d="M 45 65 L 45 88 L 75 88 L 75 65" stroke="#4a403a" strokeWidth="1.5" fill="#faf9f6"/>
+                    {/* Arms */}
+                    <path d="M 45 68 L 32 78" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    <path d="M 75 68 L 88 78" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    {/* Legs */}
+                    <path d="M 52 88 L 50 105" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    <path d="M 68 88 L 70 105" stroke="#4a403a" strokeWidth="1.5" fill="none"/>
+                    {/* Backpack */}
+                    <rect x="48" y="50" width="24" height="22" rx="2" stroke="#4a403a" strokeWidth="1.5" fill="#f0ede6"/>
+                    <circle cx="52" cy="61" r="1.5" stroke="#4a403a" strokeWidth="1"/>
+                    <circle cx="68" cy="61" r="1.5" stroke="#4a403a" strokeWidth="1"/>
+                  </svg>
+                  <h3
+                    className="text-2xl font-light tracking-tight text-[#2d2a26] mt-6 text-center"
+                    style={{ fontFamily: '"Playfair Display", serif' }}
+                  >
+                    Schüler/in
+                  </h3>
+                </div>
+                <div className="p-8">
+                  <p className="text-[#6b665f] mb-6 leading-relaxed">
+                    Fragebogen ausfüllen und Tipps erhalten
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                      <span className="text-[#b8afa7]">▸</span>
+                      Fragebogen
+                    </div>
+                    <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                      <span className="text-[#b8afa7]">▸</span>
+                      Verbessertungstipps
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Privacy Notice */}
+            <div className="mt-20 max-w-xl mx-auto">
+              <div className="bg-white border border-[#e8e5df] px-8 py-6 text-center rounded-2xl">
+                <p className="text-[#8a847a] text-sm leading-relaxed">
+                  🔒 Deine Daten bleiben auf deinem Gerät
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="relative py-12 px-6 bg-[#f4f1ea]">
+          <div className="max-w-4xl mx-auto text-center text-[#8a847a] text-sm font-normal">
+            <p style={{ fontFamily: '"Source Sans 3", sans-serif' }}>
+              Klassenklima-WebApp &copy; 2026
+            </p>
+          </div>
+        </footer>
+      </div>
   );
 }
