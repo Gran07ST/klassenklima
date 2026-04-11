@@ -90,7 +90,7 @@ export default function WissenPage() {
 
                 {expanded === thema.titel && (
                   <div className="mt-4 ml-4 md:ml-6 border-l-2 border-accent pl-6 md:pl-8 animate-fade-in-up">
-                    <p className=" leading-relaxed">{thema.inhalt}</p>
+                    <p className=" leading-relaxed">{thema.details}</p>
                   </div>
                 )}
               </div>

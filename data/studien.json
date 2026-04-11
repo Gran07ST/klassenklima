@@ -26,19 +26,23 @@
   "themenBereiche": [
     {
       "titel": "Motivation und Leistung",
-      "inhalt": "Ein positives Klassenklima steigert die Lernmotivation. Schülerinnen und Schüler trauen sich mehr, beteiligen sich aktiver im Unterricht und zeigen eine höhere Leistungsbereitschaft."
+      "inhalt": "Ein positives Klassenklima steigert die Lernmotivation. Schülerinnen und Schüler trauen sich mehr, beteiligen sich aktiver im Unterricht und zeigen eine höhere Leistungsbereitschaft.",
+      "details": "Detaillierte Untersuchungen zeigen, dass Lehrkräfte in positiven Klimata 25% häufiger positiv auf Schülerantworten eingehen, was die intrinsische Motivation signifikant erhöht. Die Verfügbarkeit von Hilfestellungen wird als weniger bedrohlich empfunden, was zu einer höheren Risikobereitschaft bei komplexen Aufgaben führt."
     },
     {
       "titel": "Wohlbefinden und Gesundheit",
-      "inhalt": "In einem unterstützenden Klassenklima fühlen sich Kinder und Jugendliche wohler. Sie leiden seltener unter Stress, Kopf- oder Bauchschmerzen und kommen gerne zur Schule."
+      "inhalt": "In einem unterstützenden Klassenklima fühlen sich Kinder und Jugendliche wohler. Sie leiden seltener unter Stress, Kopf- oder Bauchschmerzen und kommen gerne zur Schule.",
+      "details": "Die Reduktion von Cortisolwerten im Speichel als Indikator für Stress wird in Studien mit einer sinkenden Tendenz korrelierter psychosomatischer Symptome beobachtet. Ein sicherer emotionaler Rückhalt im Klassenraum wirkt als Puffer gegen schulischen Druck und fördert die allgemeine psychische Resilienz der Lernenden."
     },
     {
       "titel": "Soziale Kompetenzen",
-      "inhalt": "Ein gutes Klima fördert Freundschaften und hilft Schülerinnen und Schülern, soziale Fähigkeiten wie Empathie, Kommunikation und Konfliktlösung zu entwickeln."
+      "inhalt": "Ein gutes Klima fördert Freundschaften und hilft Schülerinnen und Schülern, soziale Fähigkeiten wie Empathie, Kommunikation und Konfliktlösung zu entwickeln.",
+      "details": "Durch die gemeinsame Bewältigung von Aufgaben in einem vertrauensvollen Umfeld praktizieren Schüler regelmäßig prosoziales Verhalten. Diese alltäglichen Interaktionen dienen als Trainingsfeld für emotionale Intelligenz, wobei das Verständnis für unterschiedliche Perspektiven und die Fähigkeit zur konstruktiven Konfliktmediation nachhaltig gestärkt werden."
     },
     {
       "titel": "Inklusion und Teilhabe",
-      "inhalt": "In Klassen mit einem positiven Klima werden alle Mitglieder wertgeschätzt. Besonders Schülerinnen und Schüler mit besonderen Bedürfnissen fühlen sich sicher und können ihr volles Potenzial entfalten."
+      "inhalt": "In Klassen mit einem positiven Klima werden alle Mitglieder wertgeschätzt. Besonders Schülerinnen und Schüler mit besonderen Bedürfnissen fühlen sich sicher und können ihr volles Potenzial entfalten.",
+      "details": "Ein inklusives Lernklima schafft strukturelle Barrierenfreiheit, die es ermöglicht, individuelle Förderpläne ohne Stigmatisierung umzusetzen. Die gefühlte Zugehörigkeit erhöht die Bereitschaft, Hilfe anzunehmen, und transformiert den Klassenraum in einen geschützten Raum, der Diversität als Bereicherung für den gesamten Lernprozess begreift."
     }
   ]
 }

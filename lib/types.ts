@@ -90,6 +90,7 @@ export interface Statistik {
 export interface ThemaBereich {
   titel: string;
   inhalt: string;
+  details: string;
 }
 
 export interface StudienDaten {
