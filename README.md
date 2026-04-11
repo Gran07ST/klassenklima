@@ -1,4 +1,4 @@
-# Klassenklima
+# PeerConnect
 
 Eine kleine Web-App für ein grosses Thema: Das Klassenklima an Schulen.
 
@@ -19,17 +19,16 @@ Diese App unterstützt Lehrkräfte und Schüler dabei, ein positives Klassenklim
 
 - **Datenschutz**: Alle Daten bleiben lokal im Browser (LocalStorage)
 - **Responsive Design**: Funktioniert auf Desktop, Tablet und Mobile
-- **Modernes UI**: Warme, minimalistische Gestaltung mit handgezeichneten SVGs
-- **Keine Server-Notwendig**: Statische Seite, kann überall gehostet werden
+- **Kein Server-Notwendig**: Statische Seite, kann überall gehostet werden
 
 ## Tech Stack
 
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js 16+ (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Charts**: Recharts (Radar-Chart)
 - **UI Components**: shadcn/ui
-- **Runtime**: Bun, Node.js, oder andere Next.js-kompatible Runtimes
+- **Runtime**: Bun
 
 ## Getting Started
 
@@ -38,13 +37,9 @@ Diese App unterstützt Lehrkräfte und Schüler dabei, ein positives Klassenklim
 ```bash
 # Dependencies installieren
 bun install
-# oder
-npm install
 
 # Development-Server starten
-bun dev
-# oder
-npm run dev
+bun run dev
 ```
 
 Öffne [http://localhost:3000](http://localhost:3000) im Browser.
@@ -52,23 +47,19 @@ npm run dev
 ### Build für Production
 
 ```bash
-bun build
-# oder
-npm run build
+bun run build
 ```
 
 ### Start Production-Server
 
 ```bash
-bun start
-# oder
-npm start
+bunx serve out
 ```
 
 ## Projektstruktur
 
 ```
-rebecca-projekt/
+PeerConnect/
 ├── app/
 │   ├── page.tsx                 # Landing page (Lehrkraft vs. Schüler)
 │   ├── lehrer/
@@ -106,21 +97,140 @@ rebecca-projekt/
 
 ## Datenstruktur
 
+Die App verwendet drei JSON-Dateien im `data/`-Ordner, um alle Inhalte zu verwalten.
+
 ### Fragebogen (`data/fragebogen.json`)
-- 10 Fragen zu 7 Subthemen:
-  - Empathie, Kommunikation, Teamfähigkeit
-  - Selbstregulation, Konfliktlösung
-  - Soziale Kompetenz, Selbstbewusstsein
-- Jede Frage hat Gewichtung und Skalabezeichnungen
+
+Enthält Fragen zu verschiedenen Subthemen sowie Verbesserungsvorschläge für niedrige Scores.
+
+**Hauptstrukturen:**
+- `subthemen`: Array aller möglichen Subthemen (als Referenz für Filter)
+- `fragen`: Array der eigentlichen Fragen (zwei Typen: `skala` oder `single_choice`)
+- `verbesserungsvorschlaege`: Objekt mit Tipps pro Subthema für Scores unter 90%
+
+**Frage-Typen:**
+
+1. **Skala-Fragen** (5-stufige Zustimmungsskala):
+```json
+{
+  "id": "q-001",
+  "subthema": "Empathie",
+  "type": "skala",
+  "aussage": "Ich kann mich gut in andere Leute hineinversetzen.",
+  "gewichtung": 1,
+  "skalaLabels": {
+    "1": "Stimme gar nicht zu",
+    "5": "Stimme voll zu"
+  }
+}
+```
+
+2. **Single-Choice-Fragen** (Multiple Choice):
+```json
+{
+  "id": "q-002",
+  "subthema": "Empathie",
+  "type": "single_choice",
+  "frage": "Was tust du, wenn ein Klassenkamerad traurig ist?",
+  "gewichtung": 1,
+  "optionen": [
+    { "text": "Ich ignoriere es", "wert": 1 },
+    { "text": "Ich frage, ob alles okay ist", "wert": 3 },
+    { "text": "Ich tröste ihn/sie", "wert": 5 }
+  ]
+}
+```
+
+**Verbesserungsvorschläge:**
+```json
+"verbesserungsvorschlaege": {
+  "Empathie": {
+    "unter90": {
+      "titel": "Lerne, Gefühle zu erkennen",
+      "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst...",
+      "tipps": ["Achte auf Gesichtsausdrücke", "Frag nach", "Stell dir vor"]
+    }
+  }
+}
+```
+
+**Neue Frage hinzufügen:** einfach ein neues Objekt im `fragen`-Array ergänzen, `id` muss eindeutig sein (`q-001`, `q-002`, etc.)
+
+**Neues Subthema hinzufügen:** 
+1. Zu `subthemen`-Array hinzufügen
+2. Fragen für dieses Subthema erstellen
+3. Einträge in `verbesserungsvorschlaege` für dieses Subthema ergänzen
+
+---
 
 ### Studien (`data/studien.json`)
-- 3 Statistiken mit Quellen (Hattie, OECD, Wentzel)
-- 4 Themenbereiche mit Details
+
+Enthält Statistiken aus der Forschung und Themenbereiche zum Klassenklima.
+
+**Hauptstrukturen:**
+- `einleitung`: Einleitungstext für die Studien-Seite
+- `statistiken`: Array mit Statistiken (jede mit Zahl, Aussage, Quelle, Details)
+- `themenBereiche`: Array mit detaillierten Themenbereichen
+
+**Statistik-Struktur:**
+```json
+{
+  "id": "stat-001",
+  "zahl": "86%",
+  "aussage": "Der Klassenklima hat einen grossen Einfluss auf den Lernerfolg",
+  "quelle": "Hattie, 2009",
+  "details": "John Hatties grosse Meta-Studie zeigt: ..."
+}
+```
+
+**Neue Statistik hinzufügen:** neues Objekt mit `id` (`stat-004`, `stat-005`, etc.) zum `statistiken`-Array hinzufügen.
+
+**Themenbereiche:**
+```json
+{
+  "titel": "Motivation und Leistung",
+  "inhalt": "Ein positives Klassenklima steigert die Lernmotivation...",
+  "details": "Detaillierte Untersuchungen zeigen..."
+}
+```
+
+**Neuen Themenbereich hinzufügen:** neues Objekt mit `titel`, `inhalt` (kurz) und `details` (ausführlich) zum `themenBereiche`-Array hinzufügen.
+
+---
 
 ### Übungen (`data/uebungen.json`)
-- 6+ Übungen mit Metadaten:
-  - Zeitdauer, Alter, Subthema
-  - Material, Beschreibung, Tipps
+
+Enthält eine Sammlung von Aktivitäten zur Förderung des Klassenklimas.
+
+**Übungs-Struktur:**
+```json
+{
+  "id": "ueb-001",
+  "titel": "Das Netz der Verbindungen",
+  "kurzbeschreibung": "Eine warm-up Übung, um die Klasse als Netzwerk zu erleben...",
+  "anleitung": "Alle Teilnehmer stehen im Kreis. Eine Person hält ein Garnknäuel...",
+  "zeitBadge": "5–15 Min",
+  "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+  "subthemaBadge": ["Teamfähigkeit", "Soziale Kompetenz"],
+  "material": "Ein grosses Garnknäuel",
+  "tipps": "Für jüngere Klassen kann die Lehrkraft..."
+}
+```
+
+**Wichtige Felder:**
+- `id`: Eindeutige ID (`ueb-001`, `ueb-002`, etc.)
+- `titel`: Name der Übung
+- `kurzbeschreibung`: Kurze Einleitung (erscheint in der Übersicht)
+- `anleitung`: Detaillierte Schritte (evtl. mit `\n` für Zeilenumbrüche)
+- `zeitBadge`: Zeitspanne als Text (z.B. "5–15 Min")
+- `alterBadge`: Array von Altersgruppen (z.B. "6–10 Jahre", "10–13 Jahre", "13–16 Jahre")
+- `subthemaBadge`: Array von Subthemen, die gefördert werden
+- `material`: Benötigtes Material (oder "Keine")
+- `tipps`: Zusätzliche Hinweise für Lehrkräfte
+
+**Neue Übung hinzufügen:** neues Objekt mit allen Feldern zum `uebungen`-Array hinzufügen, `id` muss eindeutig sein (`ueb-007`, `ueb-008`, etc.).
+
+**Filter nach Alter/Zeit/Thema:** Die Filterkomponente liest die Arrays `alterBadge`, `zeitBadge` (aus `ueb-001` Beispiel), und `subthemaBadge` aus. Neue Werte können einfach hinzugefügt werden, ohne Code zu ändern.
 
 ## Scoring
 
