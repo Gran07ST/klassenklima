@@ -26,7 +26,7 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header className="relative py-20 px-6">
+      <header className="relative pt-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h1
             className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6 animate-fade-in-up"
