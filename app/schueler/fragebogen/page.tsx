@@ -20,6 +20,25 @@ export default function FragebogenPage() {
   const currentFrage = fragen[currentStep];
   const progress = (currentStep / fragen.length) * 100;
 
+  const saveToLocalStorage = (neueAntworten: Antwort[]) => {
+    try {
+      const gespeicherteAntworten: GespeicherteAntworten = {
+        zeitstempel: new Date().toISOString(),
+        antworten: neueAntworten,
+      };
+      localStorage.setItem(
+        "klassenklima_fragebogen_antworten",
+        JSON.stringify(gespeicherteAntworten),
+      );
+    } catch (error) {
+      console.error("Failed to save answers to localStorage:", error);
+    }
+  };
+
+  const handleAnswer = (wert: number) => {
+    setSelectedWert(wert);
+  };
+
   useEffect(() => {
     if (selectedWert !== null) {
       const timer = setTimeout(() => {
@@ -31,15 +50,8 @@ export default function FragebogenPage() {
         const neueAntworten = [...antworten, neueAntwort];
         setAntworten(neueAntworten);
 
-        // Speichern im LocalStorage
-        const gespeicherteAntworten: GespeicherteAntworten = {
-          zeitstempel: new Date().toISOString(),
-          antworten: neueAntworten,
-        };
-        localStorage.setItem(
-          "klassenklima_fragebogen_antworten",
-          JSON.stringify(gespeicherteAntworten),
-        );
+        // Save to LocalStorage using helper function
+        saveToLocalStorage(neueAntworten);
 
         setSelectedWert(null);
 
@@ -53,10 +65,6 @@ export default function FragebogenPage() {
       return () => clearTimeout(timer);
     }
   }, [selectedWert, currentStep, antworten, currentFrage.id, fragen.length]);
-
-  const handleAnswer = (wert: number) => {
-    setSelectedWert(wert);
-  };
 
   const handleBack = () => {
     if (currentStep > 0) {
@@ -108,9 +116,9 @@ export default function FragebogenPage() {
               >
                 Vielen Dank!
               </h2>
-              <p className=" text-sm md:text-base leading-relaxed">
-                Deine Antworten wurden gespeichert. Klicke auf "Weiter", um
-                deine Auswertung zu sehen.
+              <p className="text-sm md:text-base leading-relaxed">
+                Deine Antworten wurden gespeichert. Klicke auf
+                &quot;Weiter&quot;, um deine Auswertung zu sehen.
               </p>
             </div>
 

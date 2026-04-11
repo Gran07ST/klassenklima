@@ -10,12 +10,8 @@ import { useState } from "react";
 import uebungenData from "@/data/uebungen.json";
 
 export default function UebungenPage() {
-  const [uebungen, setUebungen] = useState<Uebung[]>(
-    uebungenData.uebungen as Uebung[],
-  );
-  const [filtered, setFiltered] = useState<Uebung[]>(
-    uebungenData.uebungen as Uebung[],
-  );
+  const uebungen = uebungenData.uebungen as Uebung[];
+  const [filtered, setFiltered] = useState<Uebung[]>(uebungen);
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">

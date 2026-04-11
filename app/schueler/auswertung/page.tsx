@@ -3,12 +3,7 @@
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
 import { berechneScores } from "@/lib/scoring";
-import {
-  Antwort,
-  Frage,
-  GespeicherteAntworten,
-  SubthemaScore,
-} from "@/lib/types";
+import { Frage, GespeicherteAntworten, SubthemaScore } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
@@ -25,7 +20,6 @@ export default function AuswertungPage() {
   const router = useRouter();
   const [scores, setScores] = useState<SubthemaScore[]>([]);
   const [loading, setLoading] = useState(true);
-  const [answers, setAnswers] = useState<Antwort[]>([]);
   const fragen = fragebogenData.fragen as Frage[];
 
   useEffect(() => {
@@ -38,14 +32,21 @@ export default function AuswertungPage() {
       return;
     }
 
-    const antwortenData: GespeicherteAntworten = JSON.parse(gespeicherte);
-    setAnswers(antwortenData.antworten);
+    let antwortenData: GespeicherteAntworten;
+    try {
+      antwortenData = JSON.parse(gespeicherte);
+    } catch (error) {
+      console.error("Failed to parse saved answers:", error);
+      router.push("/schueler/fragebogen");
+      return;
+    }
 
     const berechneteScores = berechneScores(antwortenData.antworten, fragen);
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setScores(berechneteScores);
     setLoading(false);
-  }, [router]);
+  }, [router, fragen]);
 
   const chartData = scores.map((score) => ({
     subthema: score.subthema,
@@ -174,7 +175,7 @@ export default function AuswertungPage() {
 
               <button
                 onClick={handleDeleteData}
-                className="w-full bg-none text-destructive border border-destructive  hover:bg-destructive hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg text-center"
+                className="w-full bg-none text-destructive border border-destructive hover:bg-destructive hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg text-center"
               >
                 Meine Daten löschen
               </button>

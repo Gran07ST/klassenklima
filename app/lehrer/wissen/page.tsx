@@ -76,7 +76,9 @@ export default function WissenPage() {
                       : "Mehr erfahren"}
                   </span>
                   <svg
-                    className="w-4 h-4 transition-transform duration-300"
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      expanded === thema.titel ? "rotate-180" : ""
+                    }`}
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

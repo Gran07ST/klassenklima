@@ -2,8 +2,13 @@
 
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
-import { alleScoresGenugend, getVerbesserungsvorschlaege } from "@/lib/scoring";
 import {
+  alleScoresGenugend,
+  berechneScores,
+  getVerbesserungsvorschlaege,
+} from "@/lib/scoring";
+import {
+  Frage,
   GespeicherteAntworten,
   Subthema,
   SubthemaScore,
@@ -18,9 +23,7 @@ import fragebogenData from "@/data/fragebogen.json";
 
 export default function VorschlaegePage() {
   const router = useRouter();
-  const [scores, setScores] = useState<SubthemaScore[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [vorschlaege, setVorschlaege] = useState<
     Array<{
       subthema: Subthema;
@@ -45,45 +48,28 @@ export default function VorschlaegePage() {
       return;
     }
 
-    const antwortenData: GespeicherteAntworten = JSON.parse(gespeicherte);
+    let antwortenData: GespeicherteAntworten;
+    try {
+      antwortenData = JSON.parse(gespeicherte);
+    } catch (error) {
+      console.error("Failed to parse saved answers:", error);
+      router.push("/schueler/fragebogen");
+      return;
+    }
 
-    // Scores berechnen
-    const berechneteScores = fragebogenData.fragen
-      .filter((frage) => frage.type === "skala")
-      .map((frage) => {
-        const antworten = antwortenData.antworten.filter(
-          (a) => a.frageId === frage.id,
-        );
-        const erreichterScore = antworten.reduce(
-          (sum, a) => sum + a.wert * frage.gewichtung,
-          0,
-        );
-        const maxScore = antworten.reduce(
-          (sum, a) => sum + 5 * frage.gewichtung,
-          0,
-        );
-        const prozent =
-          maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
-
-        return {
-          subthema: frage.subthema as Subthema,
-          erreichterScore: Math.round(erreichterScore),
-          maxScore: Math.round(maxScore),
-          prozent,
-          hatVerbesserungspotenzial: prozent < 90,
-        };
-      });
-
-    setScores(berechneteScores);
-    setShowSuccess(alleScoresGenugend(berechneteScores));
+    // Scores berechnen using existing scoring function
+    const berechneteScores = berechneScores(
+      antwortenData.antworten,
+      fragebogenData.fragen as Frage[],
+    );
 
     // Vorschläge holen
     const vorschlaegeListe = getVerbesserungsvorschlaege(
       berechneteScores,
       fragebogenData.verbesserungsvorschlaege as VerbesserungsvorschlaegeDaten["verbesserungsvorschlaege"],
     );
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVorschlaege(vorschlaegeListe);
-
     setLoading(false);
   }, [router]);
 
@@ -96,6 +82,8 @@ export default function VorschlaegePage() {
       </RoutingGuard>
     );
   }
+
+  const showSuccess = alleScoresGenugend(vorschlaege.map((v) => v.score));
 
   if (showSuccess) {
     return (
@@ -135,7 +123,7 @@ export default function VorschlaegePage() {
               </div>
 
               <Link href="/schueler">
-                <button className="bg-none text-accent border border-accent  hover:bg-accent hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg">
+                <button className="bg-none text-accent border border-accent hover:bg-accent hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg">
                   Zurück zur Übersicht
                 </button>
               </Link>
@@ -191,7 +179,7 @@ export default function VorschlaegePage() {
                     {item.vorschlag.titel}
                   </h3>
 
-                  <p className=" leading-relaxed mb-6">{item.vorschlag.text}</p>
+                  <p className="leading-relaxed mb-6">{item.vorschlag.text}</p>
 
                   <div className="space-y-3">
                     <p className="text-accent text-sm font-normal mb-3">
@@ -202,7 +190,7 @@ export default function VorschlaegePage() {
                         key={index}
                         className="flex items-start gap-3 text-sm"
                       >
-                        <span className="text-accent ">▹</span>
+                        <span className="text-accent">▹</span>
                         <span>{tip}</span>
                       </div>
                     ))}
