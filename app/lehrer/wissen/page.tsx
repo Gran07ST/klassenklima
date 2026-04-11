@@ -24,7 +24,7 @@ export default function WissenPage() {
         <div className="max-w-4xl mx-auto px-4">
           {/* Introduction */}
           <div className="mb-8 md:mb-12">
-            <p className="text-[#6b665f] text-base md:text-lg leading-relaxed">
+            <p className=" text-base md:text-lg leading-relaxed">
               {data.einleitung}
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function WissenPage() {
             {data.themenBereiche.map((thema, index) => (
               <div
                 key={index}
-                className="border-b border-[#e8e5df] pb-6 md:pb-8 last:border-b-0"
+                className="border-b border-accent pb-6 md:pb-8 last:border-b-0"
               >
                 <h3
                   className="text-lg md:text-xl font-light tracking-tight mb-3 md:mb-4"
@@ -62,14 +62,14 @@ export default function WissenPage() {
                 >
                   {thema.titel}
                 </h3>
-                <p className="text-[#6b665f] leading-relaxed">{thema.inhalt}</p>
+                <p className=" leading-relaxed">{thema.inhalt}</p>
 
                 {/* Expandable details */}
                 <button
                   onClick={() =>
                     setExpanded(expanded === thema.titel ? null : thema.titel)
                   }
-                  className="mt-3 md:mt-4 group inline-flex items-center gap-2 text-[#6b665f] hover:text-[#4a403a] transition-colors duration-300"
+                  className="mt-3 md:mt-4 group inline-flex items-center gap-2  hover:text-[#4a403a] transition-colors duration-300"
                 >
                   <span className="text-xs md:text-sm font-normal">
                     {expanded === thema.titel
@@ -88,10 +88,8 @@ export default function WissenPage() {
                 </button>
 
                 {expanded === thema.titel && (
-                  <div className="mt-4 ml-4 md:ml-6 border-l-2 border-[#e8e5df] pl-6 md:pl-8 animate-fade-in-up">
-                    <p className="text-[#6b665f] leading-relaxed">
-                      {thema.inhalt}
-                    </p>
+                  <div className="mt-4 ml-4 md:ml-6 border-l-2 border-accent pl-6 md:pl-8 animate-fade-in-up">
+                    <p className=" leading-relaxed">{thema.inhalt}</p>
                   </div>
                 )}
               </div>

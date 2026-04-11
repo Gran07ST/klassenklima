@@ -61,27 +61,6 @@ export default function UebungenPage() {
               ))
             )}
           </div>
-
-          {/* Back link */}
-          <div className="mt-12 md:mt-16">
-            <Link href="/lehrer" className="inline-block">
-              <button className="group inline-flex items-center gap-2 md:gap-3 text-[#6b665f] hover:text-[#4a403a] transition-colors duration-300">
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:-translate-x-1"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M 19 12 L 5 12" stroke="currentColor" />
-                  <path d="M 10 7 L 5 12 L 10 17" stroke="currentColor" />
-                </svg>
-                <span className="text-xs md:text-sm font-normal">
-                  Zurück zur Übersicht
-                </span>
-              </button>
-            </Link>
-          </div>
         </div>
       </main>
 

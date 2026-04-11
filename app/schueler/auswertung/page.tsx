@@ -87,7 +87,7 @@ export default function AuswertungPage() {
               >
                 Hier siehst du deine Ergebnisse
               </h2>
-              <p className="text-[#6b665f] leading-relaxed">
+              <p className="leading-relaxed">
                 Die Prozentwerte zeigen, wie gut du in jedem Bereich bist. Unter
                 90% bedeutet: Hier gibt es Verbesserungspotenzial!
               </p>
@@ -110,9 +110,9 @@ export default function AuswertungPage() {
                     <Radar
                       name="Prozent"
                       dataKey="prozent"
-                      stroke="#4a403a"
+                      stroke="var(--accent)"
                       strokeWidth={2}
-                      fill="#4a403a"
+                      fill="var(--accent)"
                       fillOpacity={0.2}
                     />
                   </RadarChart>
@@ -133,18 +133,16 @@ export default function AuswertungPage() {
                     key={score.subthema}
                     className={`p-6 rounded-2xl border-2 ${
                       score.hatVerbesserungspotenzial
-                        ? "border-[#d4d0c8] bg-white"
+                        ? "border-accent bg-white"
                         : "border-[#4a403a] bg-[#f4f1ea]"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[#6b665f] font-normal">
-                        {score.subthema}
-                      </span>
+                      <span className=" font-normal">{score.subthema}</span>
                       <span
                         className={`text-3xl font-light ${
                           score.hatVerbesserungspotenzial
-                            ? "text-[#4a403a]"
+                            ? "text-accent"
                             : "text-[#2d2a26]"
                         }`}
                         style={{ fontFamily: '"Playfair Display", serif' }}
@@ -156,7 +154,7 @@ export default function AuswertungPage() {
                       <div
                         className={`h-full rounded-full ${
                           score.hatVerbesserungspotenzial
-                            ? "bg-[#4a403a]"
+                            ? "bg-accent"
                             : "bg-[#2d2a26]"
                         }`}
                         style={{ width: `${score.prozent}%` }}
@@ -170,14 +168,14 @@ export default function AuswertungPage() {
             <div className="space-y-4">
               <button
                 onClick={handleContinue}
-                className="w-full bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg text-center"
+                className="w-full bg-none text-accent border border-accent  hover:bg-accent hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg text-center"
               >
                 Zu meinen Verbesserungsvorschlägen
               </button>
 
               <button
                 onClick={handleDeleteData}
-                className="w-full bg-white border border-[#e8e5df] text-[#6b665f] px-8 py-4 rounded-2xl hover:border-[#d4d0c8] transition-colors duration-300 font-normal text-lg text-center"
+                className="w-full bg-none text-destructive border border-destructive  hover:bg-destructive hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg text-center"
               >
                 Meine Daten löschen
               </button>

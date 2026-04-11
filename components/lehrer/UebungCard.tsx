@@ -13,7 +13,7 @@ export default function UebungCard({ uebung }: UebungCardProps) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <Card className="border-[#e8e5df] hover:border-[#d4d0c8] transition-colors duration-300 overflow-hidden">
+    <Card className="overflow-hidden">
       <CardContent className="p-8">
         <div className="flex flex-col">
           {/* Header: Title + Badges */}
@@ -27,7 +27,7 @@ export default function UebungCard({ uebung }: UebungCardProps) {
             <div className="flex flex-wrap gap-2">
               <Badge
                 variant="outline"
-                className="border-[#b8afa7] text-[#6b665f] bg-transparent hover:bg-[#f4f1ea]"
+                className="text-accent border-accent bg-transparent"
               >
                 {uebung.zeitBadge}
               </Badge>
@@ -35,7 +35,7 @@ export default function UebungCard({ uebung }: UebungCardProps) {
                 <Badge
                   key={alter}
                   variant="outline"
-                  className="border-[#b8afa7] text-[#6b665f] bg-transparent hover:bg-[#f4f1ea]"
+                  className=" border-accent text-accent bg-transparent"
                 >
                   {alter}
                 </Badge>
@@ -44,14 +44,14 @@ export default function UebungCard({ uebung }: UebungCardProps) {
           </div>
 
           {/* Short description */}
-          <p className="text-[#6b665f] text-base leading-relaxed mb-6">
+          <p className="text-accent text-base leading-relaxed mb-6">
             {uebung.kurzbeschreibung}
           </p>
 
           {/* Toggle button */}
           <button
             onClick={() => setExpanded(!expanded)}
-            className="group inline-flex items-center gap-2 text-[#6b665f] hover:text-[#4a403a] transition-colors duration-300"
+            className="group inline-flex items-center gap-2 text-primary  hover:text-accent transition-colors duration-300"
           >
             <span className="text-sm font-normal">
               {expanded ? "Weniger zeigen" : "Anleitung anzeigen"}
@@ -69,29 +69,27 @@ export default function UebungCard({ uebung }: UebungCardProps) {
 
           {/* Expanded content */}
           {expanded && (
-            <div className="mt-6 pt-6 border-t border-[#e8e5df] animate-fade-in-up">
+            <div className="mt-6 pt-6 border-t border-accent animate-fade-in-up">
               <div className="prose prose-sm max-w-none">
-                <p className="text-[#6b665f] leading-relaxed whitespace-pre-wrap">
+                <p className="leading-relaxed whitespace-pre-wrap">
                   {uebung.anleitung}
                 </p>
                 {uebung.material && (
                   <div className="mt-4">
-                    <p className="text-sm text-[#8a847a] font-normal mb-2">
+                    <p className="text-sm text-accent font-normal mb-2">
                       Material:
                     </p>
-                    <p className="text-[#6b665f] text-sm leading-relaxed">
+                    <p className=" text-sm leading-relaxed">
                       {uebung.material}
                     </p>
                   </div>
                 )}
                 {uebung.tipps && (
                   <div className="mt-4">
-                    <p className="text-sm text-[#8a847a] font-normal mb-2">
+                    <p className="text-sm text-accent font-normal mb-2">
                       Tipp:
                     </p>
-                    <p className="text-[#6b665f] text-sm leading-relaxed">
-                      {uebung.tipps}
-                    </p>
+                    <p className="text-sm leading-relaxed">{uebung.tipps}</p>
                   </div>
                 )}
               </div>

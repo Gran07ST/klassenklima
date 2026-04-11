@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Uebung, ZeitBadge, AlterBadge, Subthema } from "@/lib/types";
 
 interface UebungFilterProps {
@@ -14,32 +13,6 @@ type FilterState = {
   subthema: Subthema | "Alle";
 };
 
-const alleZeiten: (ZeitBadge | "Alle")[] = [
-  "Alle",
-  "< 5 Min",
-  "5–15 Min",
-  "15–30 Min",
-  "> 30 Min",
-];
-
-const alleAlters: (AlterBadge | "Alle")[] = [
-  "Alle",
-  "6–10 Jahre",
-  "10–13 Jahre",
-  "13–16 Jahre",
-];
-
-const alleSubthemen: (Subthema | "Alle")[] = [
-  "Alle",
-  "Empathie",
-  "Kommunikation",
-  "Teamfähigkeit",
-  "Selbstregulation",
-  "Konfliktlösung",
-  "Soziale Kompetenz",
-  "Selbstbewusstsein",
-];
-
 export default function UebungFilter({
   uebungen,
   onFilterChange,
@@ -49,96 +22,152 @@ export default function UebungFilter({
     alter: "Alle",
     subthema: "Alle",
   });
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const handleFilterChange = (key: keyof FilterState, newValue: string) => {
-    const newFilter = {
-      ...filter,
-      [key]: newValue as FilterState[keyof FilterState],
+  const alleZeiten = [...new Set(uebungen.map((u) => u.zeitBadge))];
+  const alleAlters = [...new Set(uebungen.flatMap((u) => u.alterBadge))];
+  const alleSubthemen = [...new Set(uebungen.flatMap((u) => u.subthemaBadge))];
+
+  const activeCount = [filter.zeit, filter.alter, filter.subthema].filter(
+    (v) => v !== "Alle",
+  ).length;
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node))
+        setOpen(false);
     };
-    setFilter(newFilter);
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
 
-    const filtered = uebungen.filter((uebung) => {
-      const zeitMatch =
-        newFilter.zeit === "Alle" || uebung.zeitBadge === newFilter.zeit;
+  const apply = (next: FilterState) => {
+    setFilter(next);
+    const filtered = uebungen.filter((u) => {
+      const zeitMatch = next.zeit === "Alle" || u.zeitBadge === next.zeit;
       const alterMatch =
-        newFilter.alter === "Alle" ||
-        uebung.alterBadge.some((a) => a === newFilter.alter);
+        next.alter === "Alle" ||
+        u.alterBadge.includes(next.alter as AlterBadge);
       const subthemaMatch =
-        newFilter.subthema === "Alle" ||
-        uebung.subthemaBadge.some((s) => s === newFilter.subthema);
+        next.subthema === "Alle" ||
+        u.subthemaBadge.includes(next.subthema as Subthema);
       return zeitMatch && alterMatch && subthemaMatch;
     });
-
     onFilterChange(filtered);
   };
 
-  const activeCount = [
-    filter.zeit !== "Alle",
-    filter.alter !== "Alle",
-    filter.subthema !== "Alle",
-  ].filter(Boolean).length;
+  const set = (key: keyof FilterState, value: string) =>
+    apply({ ...filter, [key]: value });
+  const reset = () => apply({ zeit: "Alle", alter: "Alle", subthema: "Alle" });
+
+  const chipBase =
+    "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm transition-colors";
+  const optBase =
+    "px-2.5 py-1 rounded-full border text-sm cursor-pointer transition-colors";
 
   return (
-    <div className="mb-8">
-      <div className="flex flex-wrap items-center gap-4">
-        {/* Zeit Filter */}
-        <div className="flex flex-wrap gap-2">
-          {alleZeiten.map((zeit) => (
-            <button
-              key={zeit}
-              onClick={() => handleFilterChange("zeit", zeit)}
-              className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                filter.zeit === zeit
-                  ? "bg-[#4a403a] text-white border-[#4a403a]"
-                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-              }`}
-            >
-              {zeit}
-            </button>
-          ))}
-        </div>
+    <div className="mb-8 flex items-center gap-2 flex-wrap">
+      {/* Filter trigger */}
+      <div className="relative" ref={ref}>
+        <button
+          onClick={() => setOpen((o) => !o)}
+          className={`${chipBase} gap-2 cursor-pointer ${
+            activeCount > 0
+              ? "border-accent text-accent"
+              : "border-gray-200 text-gray-600 hover:bg-gray-50"
+          }`}
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          >
+            <line x1="2" y1="4" x2="12" y2="4" />
+            <line x1="4" y1="7" x2="10" y2="7" />
+            <line x1="6" y1="10" x2="8" y2="10" />
+          </svg>
+          Filter
+          {activeCount > 0 && (
+            <span className="bg-accent text-white text-xs rounded-full w-4 h-4 flex items-center justify-center font-medium">
+              {activeCount}
+            </span>
+          )}
+        </button>
 
-        {/* Alter Filter */}
-        <div className="flex flex-wrap gap-2">
-          {alleAlters.map((alter) => (
-            <button
-              key={alter}
-              onClick={() => handleFilterChange("alter", alter)}
-              className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                filter.alter === alter
-                  ? "bg-[#4a403a] text-white border-[#4a403a]"
-                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-              }`}
-            >
-              {alter}
-            </button>
-          ))}
-        </div>
+        {open && (
+          <div className="absolute top-full mt-1.5 left-0 z-20 bg-white border border-gray-200 rounded-xl shadow-sm p-4 w-72">
+            {[
+              { key: "zeit" as const, label: "Zeit", options: alleZeiten },
+              { key: "alter" as const, label: "Alter", options: alleAlters },
+              {
+                key: "subthema" as const,
+                label: "Subthema",
+                options: alleSubthemen,
+              },
+            ].map(({ key, label, options }) => (
+              <div key={key} className="mb-4 last:mb-0">
+                <p className="text-[11px] uppercase tracking-wider text-gray-400 mb-2">
+                  {label}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {(["Alle", ...options] as string[]).map((v) => (
+                    <button
+                      key={v}
+                      onClick={() => set(key, v)}
+                      className={`${optBase} ${
+                        filter[key] === v
+                          ? "bg-accent/10 border-accent/40 text-accent"
+                          : "border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                      }`}
+                    >
+                      {v}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
 
-        {/* Subthema Filter */}
-        <div className="flex flex-wrap gap-2">
-          {alleSubthemen.map((subthema) => (
-            <button
-              key={subthema}
-              onClick={() => handleFilterChange("subthema", subthema)}
-              className={`px-4 py-2 text-sm border transition-all duration-300 ${
-                filter.subthema === subthema
-                  ? "bg-[#4a403a] text-white border-[#4a403a]"
-                  : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
-              }`}
-            >
-              {subthema}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Filter Count */}
-        {activeCount > 0 && (
-          <div className="ml-auto text-[#8a847a] text-sm">
-            {activeCount} Filter aktiv
+            <div className="border-t border-gray-100 mt-3 pt-3 flex justify-between items-center">
+              <button
+                onClick={reset}
+                className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                Zurücksetzen
+              </button>
+              <button
+                onClick={() => setOpen(false)}
+                className="px-4 py-1.5 bg-accent text-white text-sm rounded-full hover:opacity-90 transition-opacity"
+              >
+                Anwenden
+              </button>
+            </div>
           </div>
         )}
       </div>
+
+      {/* Active filter chips */}
+      {(["zeit", "alter", "subthema"] as (keyof FilterState)[]).map((key) =>
+        filter[key] !== "Alle" ? (
+          <span
+            key={key}
+            className={`${chipBase} border-gray-300 text-gray-700 bg-gray-50`}
+          >
+            {filter[key]}
+            <button
+              onClick={() => set(key, "Alle")}
+              className="text-gray-400 hover:text-gray-600 leading-none text-base"
+              aria-label="Entfernen"
+            >
+              ×
+            </button>
+          </span>
+        ) : null,
+      )}
     </div>
   );
 }

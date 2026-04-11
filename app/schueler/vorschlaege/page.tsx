@@ -118,7 +118,7 @@ export default function VorschlaegePage() {
                   {/* Star icon */}
                   <path
                     d="M 60 20 L 72 48 L 102 48 L 78 66 L 86 94 L 60 78 L 34 94 L 42 66 L 18 48 L 48 48 Z"
-                    stroke="#4a403a"
+                    stroke="var(--accent)"
                     strokeWidth="2"
                     fill="none"
                   />
@@ -129,14 +129,14 @@ export default function VorschlaegePage() {
                 >
                   Super gemacht!
                 </h2>
-                <p className="text-[#6b665f] text-lg leading-relaxed">
+                <p className="text-accent text-lg leading-relaxed">
                   Alle deine Werte liegen bei 90% oder höher. Du hast ein sehr
                   positives Klassenklima!
                 </p>
               </div>
 
               <Link href="/schueler">
-                <button className="bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg">
+                <button className="bg-none text-accent border border-accent  hover:bg-accent hover:text-white transition-colors duration-300 px-8 py-4 rounded-2xl font-normal text-lg">
                   Zurück zur Übersicht
                 </button>
               </Link>
@@ -163,7 +163,7 @@ export default function VorschlaegePage() {
               >
                 Hier sind deine persönlichen Tipps
               </h2>
-              <p className="text-[#6b665f] leading-relaxed">
+              <p className="leading-relaxed">
                 Die Vorschläge sind nach Wichtigkeit sortiert. Beginne mit dem
                 ersten Tipp und arbeite dich nach unten vor.
               </p>
@@ -173,14 +173,14 @@ export default function VorschlaegePage() {
               {vorschlaege.map((item) => (
                 <div
                   key={item.subthema}
-                  className="bg-white border border-[#e8e5df] rounded-2xl p-8"
+                  className="bg-white border border-accent rounded-2xl p-8"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[#6b665f] font-normal">
+                    <span className="text-accent font-normal">
                       {item.score.subthema}
                     </span>
                     <span
-                      className="text-3xl font-light"
+                      className="text-3xl font-light text-accent"
                       style={{ fontFamily: '"Playfair Display", serif' }}
                     >
                       {item.score.prozent}%
@@ -194,20 +194,18 @@ export default function VorschlaegePage() {
                     {item.vorschlag.titel}
                   </h3>
 
-                  <p className="text-[#6b665f] leading-relaxed mb-6">
-                    {item.vorschlag.text}
-                  </p>
+                  <p className=" leading-relaxed mb-6">{item.vorschlag.text}</p>
 
                   <div className="space-y-3">
-                    <p className="text-[#6b665f] text-sm font-normal mb-3">
+                    <p className="text-accent text-sm font-normal mb-3">
                       Tipps:
                     </p>
                     {item.vorschlag.tipps.map((tip, index) => (
                       <div
                         key={index}
-                        className="flex items-start gap-3 text-[#6b665f] text-sm"
+                        className="flex items-start gap-3 text-sm"
                       >
-                        <span className="text-[#4a403a] mt-0.5">▹</span>
+                        <span className="text-accent ">▹</span>
                         <span>{tip}</span>
                       </div>
                     ))}
@@ -218,7 +216,7 @@ export default function VorschlaegePage() {
 
             <div className="mt-16">
               <Link href="/schueler">
-                <button className="w-full bg-[#4a403a] text-white px-8 py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-lg text-center">
+                <button className="w-full bg-none text-accent border border-accent px-8 py-4 rounded-2xl hover:bg-accent hover:text-white transition-colors duration-300 font-normal text-lg text-center">
                   Zurück zur Übersicht
                 </button>
               </Link>

@@ -27,7 +27,7 @@ klassenklima/
 ├── app/
 │   ├── page.tsx                        # Landing / Rollenauswahl
 │   ├── lehrer/
-│   │   ├── page.tsx                    # Lehrerbereich Übersicht
+│   │   ├── page.tsx                    # Übersicht
 │   │   ├── wissen/
 │   │   │   └── page.tsx               # Abschnitt 1: Studien & Fakten
 │   │   └── uebungen/

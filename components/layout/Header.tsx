@@ -45,7 +45,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
       {showBackButton && (
         <div className="max-w-4xl mx-auto">
           <Link href={getBackUrl()} className="inline-block mb-6">
-            <button className="group inline-flex items-center gap-3 text-[#6b665f] hover:text-[#4a403a] transition-colors duration-300">
+            <button className="group inline-flex items-center gap-3 text-accent hover:text-[#4a403a] transition-colors duration-300">
               <svg
                 className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"
                 viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
                 <path d="M 19 12 L 5 12" stroke="currentColor" />
                 <path d="M 10 7 L 5 12 L 10 17" stroke="currentColor" />
               </svg>
-              <span className="text-[#6b665f] text-sm font-normal">Zurück</span>
+              <span className="text-accent text-sm font-normal">Zurück</span>
             </button>
           </Link>
         </div>
@@ -69,9 +69,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
         >
           {title}
         </h1>
-        {subtitle && (
-          <p className="text-[#6b665f] mt-3 text-lg font-normal">{subtitle}</p>
-        )}
+        {subtitle && <p className=" mt-3 text-lg font-normal">{subtitle}</p>}
       </div>
     </header>
   );

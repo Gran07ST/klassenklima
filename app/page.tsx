@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
         <svg viewBox="0 0 400 400" className="w-full h-full">
           <defs>
             <pattern
@@ -16,7 +16,7 @@ export default function Home() {
               <path
                 d="M 40 0 L 0 0 0 40"
                 fill="none"
-                stroke="#2d2a26"
+                stroke="#000"
                 strokeWidth="0.5"
               />
             </pattern>
@@ -35,7 +35,7 @@ export default function Home() {
             Klassenklima
           </h1>
           <p
-            className="text-lg md:text-xl text-[#6b665f] font-normal leading-relaxed animate-fade-in"
+            className="text-lg md:text-xl  font-normal leading-relaxed animate-fade-in"
             style={{ animationDelay: "200ms" }}
           >
             Eine kleine App für ein grosses Thema
@@ -54,7 +54,7 @@ export default function Home() {
             >
               Wer bist du?
             </h2>
-            <p className="text-[#6b665f] text-base md:text-lg font-normal animate-fade-in">
+            <p className=" text-base md:text-lg font-normal animate-fade-in">
               Wähle deine Rolle
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Home() {
             {/* Teacher Card */}
             <Link
               href="/lehrer"
-              className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+              className="group block bg-white border border-[#e8e5df] hover:border-accent transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
               style={{ animationDelay: "300ms" }}
             >
               <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-6 py-8 md:px-8 md:py-12">
@@ -153,15 +153,15 @@ export default function Home() {
                 </h3>
               </div>
               <div className="p-6 md:p-8">
-                <p className="text-[#6b665f] mb-4 md:mb-6 leading-relaxed">
+                <p className="mb-4 md:mb-6 leading-relaxed">
                   Übungen und Studien zum Klassenklima entdecken
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                  <div className="flex items-center gap-3 text-sm">
                     <span className="text-[#b8afa7]">▸</span>
                     Übungskatalog
                   </div>
-                  <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                  <div className="flex items-center gap-3  text-sm">
                     <span className="text-[#b8afa7]">▸</span>
                     Wissenswertes
                   </div>
@@ -172,7 +172,7 @@ export default function Home() {
             {/* Student Card */}
             <Link
               href="/schueler"
-              className="group block bg-white border border-[#e8e5df] hover:border-[#d4d0c8] transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
+              className="group block bg-white border border-[#e8e5df] hover:border-accent transition-all duration-500 animate-fade-in-up rounded-3xl overflow-hidden"
               style={{ animationDelay: "400ms" }}
             >
               <div className="bg-[#f4f1ea] border-b border-[#e8e5df] px-6 py-8 md:px-8 md:py-12">
@@ -259,15 +259,15 @@ export default function Home() {
                 </h3>
               </div>
               <div className="p-6 md:p-8">
-                <p className="text-[#6b665f] mb-4 md:mb-6 leading-relaxed">
+                <p className=" mb-4 md:mb-6 leading-relaxed">
                   Fragebogen ausfüllen und Tipps erhalten
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                  <div className="flex items-center gap-3  text-sm">
                     <span className="text-[#b8afa7]">▸</span>
                     Fragebogen
                   </div>
-                  <div className="flex items-center gap-3 text-[#6b665f] text-sm">
+                  <div className="flex items-center gap-3 text-sm">
                     <span className="text-[#b8afa7]">▸</span>
                     Verbessertungstipps
                   </div>
@@ -279,7 +279,7 @@ export default function Home() {
           {/* Privacy Notice */}
           <div className="mt-16 md:mt-20 max-w-xl mx-auto">
             <div className="bg-white border border-[#e8e5df] px-6 py-4 md:px-8 md:py-6 text-center rounded-2xl">
-              <p className="text-[#8a847a] text-xs md:text-sm leading-relaxed">
+              <p className="text-\[#d4a344\] text-xs md:text-sm leading-relaxed">
                 🔒 Deine Daten bleiben auf deinem Gerät
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="relative py-8 md:py-12 px-4 md:px-6 bg-[#f4f1ea]">
-        <div className="max-w-4xl mx-auto text-center text-[#8a847a] text-xs md:text-sm font-normal">
+        <div className="max-w-4xl mx-auto text-center text-\[#d4a344\] text-xs md:text-sm font-normal">
           <p style={{ fontFamily: '"Source Sans 3", sans-serif' }}>
             Klassenklima-WebApp &copy; 2026
           </p>

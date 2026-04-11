@@ -109,7 +109,7 @@ export default function FragebogenPage() {
               >
                 Vielen Dank!
               </h2>
-              <p className="text-[#6b665f] text-sm md:text-base leading-relaxed">
+              <p className=" text-sm md:text-base leading-relaxed">
                 Deine Antworten wurden gespeichert. Klicke auf "Weiter", um
                 deine Auswertung zu sehen.
               </p>
@@ -117,7 +117,7 @@ export default function FragebogenPage() {
 
             <button
               onClick={handleContinue}
-              className="bg-[#4a403a] text-white px-6 py-3 md:px-8 md:py-4 rounded-2xl hover:bg-[#3d352f] transition-colors duration-300 font-normal text-sm md:text-base"
+              className="bg-none text-accent border border-accent px-6 py-3 md:px-8 md:py-4 rounded-2xl hover:bg-accent hover:text-white transition-colors duration-300 font-normal text-sm md:text-base"
             >
               Weiter zur Auswertung
             </button>
@@ -145,7 +145,7 @@ export default function FragebogenPage() {
                 {Math.round(progress)}%
               </span>
             </div>
-            <Progress value={progress} className="h-2 md:h-3 bg-[#e8e5df]" />
+            <Progress value={progress} className="h-2 md:h-3" />
           </div>
 
           {/* Question */}
@@ -154,7 +154,7 @@ export default function FragebogenPage() {
               <span className="text-[#8a847a] text-xs md:text-sm font-normal">
                 Subthema:
               </span>
-              <span className="text-[#6b665f] text-xs md:text-sm font-normal">
+              <span className="text-accent text-xs md:text-sm font-normal">
                 {currentFrage.subthema}
               </span>
             </div>
@@ -175,8 +175,8 @@ export default function FragebogenPage() {
                     onClick={() => handleAnswer(wert)}
                     className={`py-3 md:py-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 font-normal text-xs md:text-sm ${
                       selectedWert === wert
-                        ? "bg-[#4a403a] text-white border-[#4a403a] scale-105 shadow-lg"
-                        : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
+                        ? "bg-accent text-white scale-105 shadow-lg"
+                        : "bg-white border-[#e8e5df] hover:border-accent"
                     }`}
                   >
                     {wert}
@@ -195,8 +195,8 @@ export default function FragebogenPage() {
                     onClick={() => handleAnswer(option.wert)}
                     className={`p-4 md:p-6 rounded-lg md:rounded-xl border-2 transition-all duration-300 font-normal text-xs md:text-sm text-left ${
                       selectedWert === option.wert
-                        ? "bg-[#4a403a] text-white border-[#4a403a] scale-105 shadow-lg"
-                        : "bg-white text-[#6b665f] border-[#e8e5df] hover:border-[#d4d0c8]"
+                        ? "bg-accent text-white scale-105 shadow-lg"
+                        : "bg-white border-[#e8e5df] hover:border-accent"
                     }`}
                   >
                     {option.text}
@@ -214,7 +214,7 @@ export default function FragebogenPage() {
               className={`group inline-flex items-center gap-2 transition-colors duration-300 ${
                 currentStep === 0
                   ? "text-[#c8c2b7] cursor-not-allowed"
-                  : "text-[#6b665f] hover:text-[#4a403a]"
+                  : "text-accent hover:text-[#4a403a]"
               }`}
             >
               <svg
@@ -227,7 +227,7 @@ export default function FragebogenPage() {
                 <path d="M 19 12 L 5 12" stroke="currentColor" />
                 <path d="M 10 17 L 5 12 L 10 7" stroke="currentColor" />
               </svg>
-              <span className="text-[#6b665f] text-xs font-normal">Zurück</span>
+              <span className="text-accent text-xs font-normal">Zurück</span>
             </button>
 
             {currentStep < fragen.length - 1 && (
