@@ -149,7 +149,7 @@ export default function Home() {
                   className="text-xl md:text-2xl font-light tracking-tight text-[#2d2a26] mt-4 md:mt-6 text-center"
                   style={{ fontFamily: '"Playfair Display", serif' }}
                 >
-                  Lehrkraft
+                  Lehrperson
                 </h3>
               </div>
               <div className="p-6 md:p-8">
