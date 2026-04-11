@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
 import { berechneScores } from "@/lib/scoring";
@@ -182,8 +181,6 @@ export default function AuswertungPage() {
             </div>
           </div>
         </main>
-
-        <Footer />
       </div>
     </RoutingGuard>
   );

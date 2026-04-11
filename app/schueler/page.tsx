@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Link from "next/link";
 
 export default function SchuelerPage() {
   return (
@@ -160,8 +159,6 @@ export default function SchuelerPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

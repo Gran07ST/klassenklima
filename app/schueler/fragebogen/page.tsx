@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { Progress } from "@/components/ui/progress";
 import { Antwort, Frage, GespeicherteAntworten } from "@/lib/types";
@@ -123,8 +122,6 @@ export default function FragebogenPage() {
             </button>
           </div>
         </main>
-
-        <Footer />
       </div>
     );
   }
@@ -238,8 +235,6 @@ export default function FragebogenPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

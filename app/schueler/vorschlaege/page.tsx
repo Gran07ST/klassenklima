@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
 import { alleScoresGenugend, getVerbesserungsvorschlaege } from "@/lib/scoring";
@@ -130,8 +129,8 @@ export default function VorschlaegePage() {
                   Super gemacht!
                 </h2>
                 <p className="text-accent text-lg leading-relaxed">
-                  Alle deine Werte liegen bei 90% oder höher. Du hast ein sehr
-                  positives Klassenklima!
+                  Alle deine Werte liegen bei 90% oder höher. Du trägst zu einem
+                  sehr positiven Klassenklima bei!
                 </p>
               </div>
 
@@ -142,8 +141,6 @@ export default function VorschlaegePage() {
               </Link>
             </div>
           </main>
-
-          <Footer />
         </div>
       </RoutingGuard>
     );
@@ -223,8 +220,6 @@ export default function VorschlaegePage() {
             </div>
           </div>
         </main>
-
-        <Footer />
       </div>
     </RoutingGuard>
   );

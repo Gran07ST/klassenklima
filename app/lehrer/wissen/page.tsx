@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import StatCard from "@/components/lehrer/StatCard";
 import { StudienDaten } from "@/lib/types";
@@ -97,8 +96,6 @@ export default function WissenPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

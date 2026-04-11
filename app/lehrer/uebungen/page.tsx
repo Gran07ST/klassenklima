@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import UebungCard from "@/components/lehrer/UebungCard";
 import UebungFilter from "@/components/lehrer/UebungFilter";
 import { Uebung } from "@/lib/types";
+import { useState } from "react";
 
 // Import data
 import uebungenData from "@/data/uebungen.json";
@@ -63,8 +61,6 @@ export default function UebungenPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

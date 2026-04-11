@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Link from "next/link";
 
@@ -110,8 +109,6 @@ export default function LehrerPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -275,26 +275,8 @@ export default function Home() {
               </div>
             </Link>
           </div>
-
-          {/* Privacy Notice */}
-          <div className="mt-16 md:mt-20 max-w-xl mx-auto">
-            <div className="bg-white border border-[#e8e5df] px-6 py-4 md:px-8 md:py-6 text-center rounded-2xl">
-              <p className="text-\[#d4a344\] text-xs md:text-sm leading-relaxed">
-                🔒 Deine Daten bleiben auf deinem Gerät
-              </p>
-            </div>
-          </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="relative py-8 md:py-12 px-4 md:px-6 bg-[#f4f1ea]">
-        <div className="max-w-4xl mx-auto text-center text-\[#d4a344\] text-xs md:text-sm font-normal">
-          <p style={{ fontFamily: '"Source Sans 3", sans-serif' }}>
-            Klassenklima-WebApp &copy; 2026
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
