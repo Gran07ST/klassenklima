@@ -26,13 +26,19 @@
   "themenBereiche": [
     {
       "titel": "Sicherheit",
-      "inhalt": "Ein positives Klassenklima steigert die Lernmotivation. Schülerinnen und Schüler trauen sich mehr, beteiligen sich aktiver im Unterricht und zeigen eine höhere Leistungsbereitschaft.",
-      "details": "Detaillierte Untersuchungen zeigen, dass Lehrkräfte in positiven Klimata 25% häufiger positiv auf Schülerantworten eingehen, was die intrinsische Motivation signifikant erhöht. Die Verfügbarkeit von Hilfestellungen wird als weniger bedrohlich empfunden, was zu einer höheren Risikobereitschaft bei komplexen Aufgaben führt."
+      "inhalt": "Die Domäne Sicherheit umfasst die physische und emotionale Unversehrtheit sowie das Vorhandensein klarer Strukturen",
+      "details": "Emotionale Sicherheit: Abwesenheit von Mobbing und Belästigung sowie die Verfügbarkeit von unterstützenden Diensten (z. B. Beratung) für das psychische Wohlbefinden
+Ordnung und Disziplin: Die Klarheit, Fairness und Konsistenz von Schulregeln sowie der Umgang mit Disziplinarverstössen
+Physische Sicherheit: Das Ausmass an Schutz vor Gewalt und Aggression sowie die Umsetzung von Sicherheitsmassnahmen auf dem Schulgelände
+"
     },
     {
       "titel": "Gemeinschaft",
-      "inhalt": "In einem unterstützenden Klassenklima fühlen sich Kinder und Jugendliche wohler. Sie leiden seltener unter Stress, Kopf- oder Bauchschmerzen und kommen gerne zur Schule.",
-      "details": "Die Reduktion von Cortisolwerten im Speichel als Indikator für Stress wird in Studien mit einer sinkenden Tendenz korrelierter psychosomatischer Symptome beobachtet. Ein sicherer emotionaler Rückhalt im Klassenraum wirkt als Puffer gegen schulischen Druck und fördert die allgemeine psychische Resilienz der Lernenden."
+      "inhalt": "Dieser Bereich betont die Qualität der zwischenmenschlichen Beziehungen innerhalb der Schule",
+      "details": "Qualität der Beziehungen: Fokus auf Vertrauen, Respekt und gegenseitige Unterstützung zwischen Lehrpersonen, Schülern und dem gesamten Personal
+Verbundenheit (Connectedness): Das Gefühl der Akzeptanz, Inklusion und Zugehörigkeit, das Lernende gegenüber ihrer Schule empfinden
+Respekt für Diversität: Die Förderung von kulturellem Bewusstsein und die faire Behandlung aller Mitglieder der Schulgemeinschaft, unabhängig von Hintergrund oder Identität
+Partnerschaften: Die aktive Einbindung von Eltern und Gemeindemitgliedern in den Schulalltag und Entscheidungsprozesse"
     },
     {
       "titel": "Lehren und Lernen",
@@ -43,8 +49,11 @@ Professionelle Weiterentwicklung (Professional Development): Beinhaltet Programm
     },
     {
       "titel": "Schule als Organisation",
-      "inhalt": "In Klassen mit einem positiven Klima werden alle Mitglieder wertgeschätzt. Besonders Schülerinnen und Schüler mit besonderen Bedürfnissen fühlen sich sicher und können ihr volles Potenzial entfalten.",
-      "details": "Ein inklusives Lernklima schafft strukturelle Barrierenfreiheit, die es ermöglicht, individuelle Förderpläne ohne Stigmatisierung umzusetzen. Die gefühlte Zugehörigkeit erhöht die Bereitschaft, Hilfe anzunehmen, und transformiert den Klassenraum in einen geschützten Raum, der Diversität als Bereicherung für den gesamten Lernprozess begreift."
+      "inhalt": "Dieser Bereich reflektiert die organisatorischen und strukturellen Merkmale der Schulumgebung",
+      "details": "Angemessenheit der Umgebung (Environmental): Bezieht sich auf die physische Qualität des Gebäudes, einschliesslich Beleuchtung, Heizung, Sauberkeit und Instandhaltung
+Strukturelle Organisation: Umfasst Rahmenbedingungen wie Klassengrössen, Schulgrösse und die Organisation von Stundenplänen
+Verfügbarkeit von Ressourcen: Die Zugänglichkeit von Lehrmaterialien, Technologie und notwendiger Ausrüstung für einen effektiven Unterricht
+"
     }
   ]
 }
