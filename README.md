@@ -145,7 +145,7 @@ Enthält Fragen zu verschiedenen Subthemen sowie Verbesserungsvorschläge für n
 ```json
 "verbesserungsvorschlaege": {
   "Empathie": {
-    "unter90": {
+    "vorschlag": {
       "titel": "Lerne, Gefühle zu erkennen",
       "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst...",
       "tipps": ["Achte auf Gesichtsausdrücke", "Frag nach", "Stell dir vor"]
@@ -235,8 +235,16 @@ Enthält eine Sammlung von Aktivitäten zur Förderung des Klassenklimas.
 ## Scoring
 
 Die App berechnet prozentuale Werte für jedes Subthema:
-- **≥ 90%**: Gut, kein Verbesserungsbedarf
+Standardwert liegt bei 90%, kann aber verändert werden. 
+
+- **>= 90%**: Gut, kein Verbesserungsbedarf
 - **< 90%**: Verbesserungspotenzial vorhanden
+
+Der Wert kann in `lib/scoring.ts` angepasst werden. 
+
+```tsx
+export const VERBESSERUNGS_SCORE = 90;
+```
 
 Die Scores werden lokal im Browser gespeichert und für personalisierte Vorschläge verwendet.
 

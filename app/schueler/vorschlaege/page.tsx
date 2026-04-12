@@ -6,6 +6,7 @@ import {
   alleScoresGenugend,
   berechneScores,
   getVerbesserungsvorschlaege,
+  VERBESSERUNGS_SCORE,
 } from "@/lib/scoring";
 import {
   Frage,
@@ -117,8 +118,8 @@ export default function VorschlaegePage() {
                   Super gemacht!
                 </h2>
                 <p className="text-accent text-lg leading-relaxed">
-                  Alle deine Werte liegen bei 90% oder höher. Du trägst zu einem
-                  sehr positiven Klassenklima bei!
+                  Alle deine Werte liegen bei {VERBESSERUNGS_SCORE}% oder höher.
+                  Du trägst zu einem sehr positiven Klassenklima bei!
                 </p>
               </div>
 

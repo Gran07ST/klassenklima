@@ -173,7 +173,7 @@
   ],
   "verbesserungsvorschlaege": {
     "Empathie": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Lerne, Gefühle zu erkennen",
         "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst. Hier sind ein paar Tipps, wie du das üben kannst:",
         "tipps": [
@@ -184,7 +184,7 @@
       }
     },
     "Kommunikation": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Sprich klar und hör zu",
         "text": "Gute Kommunikation ist wie ein Gespräch im Pingpong – beide müssen mitmachen. Hier sind Tipps:",
         "tipps": [
@@ -195,7 +195,7 @@
       }
     },
     "Teamfähigkeit": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Mach mit – gemeinsam geht's besser!",
         "text": "Teamarbeit macht Spass, wenn alle mitmachen. Hier sind Tipps für gute Zusammenarbeit:",
         "tipps": [
@@ -206,7 +206,7 @@
       }
     },
     "Selbstregulation": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Bleib ruhig, auch wenn's knallt",
         "text": "Selbstregulation bedeutet, dass du deine Gefühle kontrollieren kannst – auch wenn du wütend oder genervt bist. Hier sind Tipps:",
         "tipps": [
@@ -217,7 +217,7 @@
       }
     },
     "Konfliktlösung": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Streit fair lösen",
         "text": "Konflikte gehören zum Leben dazu. Wichtig ist, wie ihr sie löst. Hier sind Tipps:",
         "tipps": [
@@ -228,7 +228,7 @@
       }
     },
     "Soziale Kompetenz": {
-      "unter90": {
+      "vorschlag": {
         "titel": "Freunde finden und halten",
         "text": "Soziale Kompetenz hilft dir, Freunde zu finden und gute Beziehungen zu pflegen. Hier sind Tipps:",
         "tipps": [
@@ -239,7 +239,7 @@
       }
     },
     "Selbstbewusstsein": {
-      "unter90": {
+      "vorschlag": {
         "titel": "An dich glauben – du schaffst das!",
         "text": "Selbstbewusstsein bedeutet, dass du an dich glaubst und dir zutraust, Dinge zu schaffen. Hier sind Tipps:",
         "tipps": [

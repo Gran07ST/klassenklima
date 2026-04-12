@@ -6,6 +6,9 @@ import { Frage, Antwort, SubthemaScore, Subthema } from "./types";
  * @param fragen - Die Fragen aus dem Fragebogen
  * @returns Array von SubthemaScores
  */
+
+export const VERBESSERUNGS_SCORE = 90;
+
 export function berechneScores(
   antworten: Antwort[],
   fragen: Frage[],
@@ -43,7 +46,7 @@ export function berechneScores(
       erreichterScore: Math.round(erreichterScore),
       maxScore: Math.round(maxScore),
       prozent,
-      hatVerbesserungspotenzial: prozent < 90,
+      hatVerbesserungspotenzial: prozent < VERBESSERUNGS_SCORE,
     };
   });
 }
@@ -58,7 +61,7 @@ export function getVerbesserungsvorschlaege(
   scores: SubthemaScore[],
   vorschlaege: {
     [subthema: string]: {
-      unter90: {
+      vorschlag: {
         titel: string;
         text: string;
         tipps: string[];
@@ -74,7 +77,7 @@ export function getVerbesserungsvorschlaege(
     tipps: string[];
   };
 }> {
-  // Nur Subthemen mit Potenzial (< 90%)
+  // Nur Subthemen mit Potenzial (< VERBESSERUNGS_SCORE%)
   const scoresMitPotenzial = scores.filter(
     (score) => score.hatVerbesserungspotenzial,
   );
@@ -87,7 +90,7 @@ export function getVerbesserungsvorschlaege(
   // Vorschläge hinzufügen
   return sortierteScores
     .map((score) => {
-      const vorschlag = vorschlaege[score.subthema]?.unter90;
+      const vorschlag = vorschlaege[score.subthema]?.vorschlag;
       if (!vorschlag) return null;
 
       return {
@@ -112,10 +115,10 @@ export function getVerbesserungsvorschlaege(
 }
 
 /**
- * Prüft ob alle Scores >= 90% sind
+ * Prüft ob alle Scores >= VERBESSERUNGS_SCORE% sind
  * @param scores - Die berechneten Scores
- * @returns true wenn alle >= 90%, sonst false
+ * @returns true wenn alle >= VERBESSERUNGS_SCORE%, sonst false
  */
 export function alleScoresGenugend(scores: SubthemaScore[]): boolean {
-  return scores.every((score) => score.prozent >= 90);
+  return scores.every((score) => score.prozent >= VERBESSERUNGS_SCORE);
 }

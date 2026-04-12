@@ -2,7 +2,7 @@
 
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
-import { berechneScores } from "@/lib/scoring";
+import { berechneScores, VERBESSERUNGS_SCORE } from "@/lib/scoring";
 import { Frage, GespeicherteAntworten, SubthemaScore } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -88,8 +88,9 @@ export default function AuswertungPage() {
                 Hier siehst du deine Ergebnisse
               </h2>
               <p className="leading-relaxed">
-                Die Prozentwerte zeigen, wie gut du in jedem Bereich bist. Unter
-                90% bedeutet: Hier gibt es Verbesserungspotenzial!
+                Die Prozentwerte zeigen, wie gut du in jedem Bereich bist. Unter{" "}
+                {VERBESSERUNGS_SCORE}% bedeutet: Hier gibt es
+                Verbesserungspotenzial!
               </p>
             </div>
 

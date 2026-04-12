@@ -46,7 +46,7 @@ export interface SubthemaScore {
   erreichterScore: number;
   maxScore: number;
   prozent: number;
-  hatVerbesserungspotenzial: boolean; // prozent < 90
+  hatVerbesserungspotenzial: boolean; // prozent < VERBESSERUNGS_SCORE
 }
 
 export interface GespeicherteAntworten {
@@ -66,7 +66,7 @@ export interface GespeicherteScores {
 export interface VerbesserungsvorschlaegeDaten {
   verbesserungsvorschlaege: {
     [subthema: string]: {
-      unter90: {
+      vorschlag: {
         titel: string;
         text: string;
         tipps: string[];
