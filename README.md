@@ -4,26 +4,26 @@ Eine kleine Web-App für ein grosses Thema: Das Klassenklima an Schulen.
 
 ## Über das Projekt
 
-Diese App unterstützt Lehrkräfte und Schüler dabei, ein positives Klassenklima zu fördern. Sie besteht aus zwei Bereichen:
+Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Klassenklima zu fördern. Sie besteht aus zwei Bereichen:
 
 ### Lehrbereich
-- **Wissen & Studien**: Forschungsergebnisse zum Thema Klassenklima
-- **Übungen**: Übungskatalog zur Förderung sozialer Kompetenzen (filterbar nach Zeit, Alter, Thema)
+- **Wissen & Studien**: Wissenschaftliche Grundlagen, Themenbereiche und Studien zum Schul- und Klassenklima
+- **Übungen**: Übungskatalog zur Förderung des Klassenklimas (filterbar nach Zeit, Alter und Subthema)
 
 ### Schülerbereich
-- **Fragebogen**: Beantwortet Fragen zum eigenen Klassenklima
-- **Auswertung**: Radar-Diagramm zeigt Ergebnisse in verschiedenen Bereichen
-- **Vorschläge**: Personalisierte Verbesserungsvorschläge basierend auf den Ergebnissen
+- **Fragebogen**: Selbsteinschätzung zum erlebten Klassenklima
+- **Auswertung**: Radar-Diagramm zeigt Ergebnisse pro Subthema
+- **Vorschläge**: Personalisierte Verbesserungsvorschläge für Subthemen mit Verbesserungspotenzial
 
 ## Features
 
 - **Datenschutz**: Alle Daten bleiben lokal im Browser (LocalStorage)
 - **Responsive Design**: Funktioniert auf Desktop, Tablet und Mobile
-- **Kein Server-Notwendig**: Statische Seite, kann überall gehostet werden
+- **Statisch**: Keine Server-Logik nötig, deploybar als statische Seite (z. B. via GitHub Pages)
 
 ## Tech Stack
 
-- **Framework**: Next.js 16+ (App Router)
+- **Framework**: Next.js 16+ (App Router, statischer Export)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Charts**: Recharts (Radar-Chart)
@@ -61,192 +61,205 @@ bunx serve out
 ```
 PeerConnect/
 ├── app/
-│   ├── page.tsx                 # Landing page (Lehrkraft vs. Schüler)
+│   ├── page.tsx                 # Landing page (Lehrperson vs. Schüler:in)
 │   ├── lehrer/
 │   │   ├── page.tsx             # Lehrbereich-Übersicht
-│   │   ├── wissen/
-│   │   │   └── page.tsx         # Studien & Fakten
-│   │   └── uebungen/
-│   │       └── page.tsx         # Übungskatalog
+│   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen, Themenbereiche, Studien
+│   │   └── uebungen/page.tsx    # Übungskatalog
 │   └── schueler/
 │       ├── page.tsx             # Schülerbereich-Übersicht
-│       ├── fragebogen/
-│       │   └── page.tsx         # Fragebogen
-│       ├── auswertung/
-│       │   └── page.tsx         # Ergebnisse (Radar-Chart)
-│       └── vorschlaege/
-│           └── page.tsx         # Verbesserungsvorschläge
+│       ├── fragebogen/page.tsx  # Fragebogen
+│       ├── auswertung/page.tsx  # Ergebnisse (Radar-Chart)
+│       └── vorschlaege/page.tsx # Verbesserungsvorschläge
 ├── components/
 │   ├── layout/
 │   │   ├── Header.tsx           # Header mit Logo & Navigation
 │   │   ├── Footer.tsx           # Footer
+│   │   ├── Logo.tsx             # SVG-Logo
+│   │   ├── BackButton.tsx       # Zurück-Navigation
 │   │   └── RoutingGuard.tsx     # Schutz für geschützte Pages
-│   └── lehrer/
-│       ├── StatCard.tsx         # Statistik-Karte
-│       ├── UebungCard.tsx       # Übungskarte
-│       └── UebungFilter.tsx     # Filter-Komponente
+│   ├── lehrer/
+│   │   ├── StatCard.tsx         # Statistik-Karte
+│   │   ├── UebungCard.tsx       # Übungskarte
+│   │   └── UebungFilter.tsx     # Filter-Komponente
+│   ├── schueler/
+│   │   ├── QuellenListe.tsx     # Kompakte Quellenliste
+│   │   └── Quellenverzeichnis.tsx # Vollständiges Quellenverzeichnis
+│   └── ui/                      # shadcn/ui Primitives
 ├── data/
-│   ├── fragebogen.json          # 10 Fragen + Verbesserungsvorschläge
-│   ├── studien.json             # 3 Statistiken + Themenbereiche
-│   └── uebungen.json            # 6+ Übungen
+│   ├── fragebogen.json          # Fragen für die Selbsteinschätzung
+│   ├── verbesserungsvorschlaege.json # Tipps pro Subthema
+│   ├── studien.json             # Wissenschaftliche Grundlagen, Themenbereiche, Studien
+│   └── uebungen.json            # Übungskatalog
 ├── lib/
 │   ├── types.ts                 # TypeScript-Typdefinitionen
-│   └── scoring.ts               # Scoring-Logik für Fragebogen
+│   ├── scoring.ts               # Scoring-Logik für Fragebogen
+│   └── utils.ts                 # Hilfsfunktionen (z. B. cn())
 └── public/                      # Statische Assets
 ```
 
 ## Datenstruktur
 
-Die App verwendet drei JSON-Dateien im `data/`-Ordner, um alle Inhalte zu verwalten.
+Alle Inhalte werden über JSON-Dateien im `data/`-Ordner gepflegt. Änderungen an den JSON-Dateien wirken sich ohne Code-Anpassung aus, sofern die Struktur eingehalten wird.
 
 ### Fragebogen (`data/fragebogen.json`)
 
-Enthält Fragen zu verschiedenen Subthemen sowie Verbesserungsvorschläge für niedrige Scores.
+Enthält die Fragen für die Selbsteinschätzung. Jede Frage gehört zu einem Subthema und ist entweder eine Skala-Frage (5-stufig) oder eine Single-Choice-Frage.
 
-**Hauptstrukturen:**
-- `subthemen`: Array aller möglichen Subthemen (als Referenz für Filter)
-- `fragen`: Array der eigentlichen Fragen (zwei Typen: `skala` oder `single_choice`)
-- `verbesserungsvorschlaege`: Objekt mit Tipps pro Subthema für Scores unter 90%
-
-**Frage-Typen:**
-
-1. **Skala-Fragen** (5-stufige Zustimmungsskala):
+**Skala-Frage:**
 ```json
 {
   "id": "q-001",
-  "subthema": "Empathie",
+  "subthema": "Sozial- und Leistungsdruck",
   "type": "skala",
-  "aussage": "Ich kann mich gut in andere Leute hineinversetzen.",
+  "aussage": "Die Lehrpersonen behandeln alle Schüler:innen fair.",
   "gewichtung": 1,
   "skalaLabels": {
-    "1": "Stimme gar nicht zu",
-    "5": "Stimme voll zu"
+    "1": "Stimmt gar nicht",
+    "5": "Stimmt voll"
   }
 }
 ```
 
-2. **Single-Choice-Fragen** (Multiple Choice):
+**Single-Choice-Frage:**
 ```json
 {
-  "id": "q-002",
-  "subthema": "Empathie",
+  "id": "q-005",
+  "subthema": "Sozial- und Leistungsdruck",
   "type": "single_choice",
-  "frage": "Was tust du, wenn ein Klassenkamerad traurig ist?",
+  "frage": "Wie stark erlebst du den Leistungsdruck?",
   "gewichtung": 1,
   "optionen": [
-    { "text": "Ich ignoriere es", "wert": 1 },
-    { "text": "Ich frage, ob alles okay ist", "wert": 3 },
-    { "text": "Ich tröste ihn/sie", "wert": 5 }
+    { "text": "Sehr stark", "wert": 5 },
+    { "text": "Eher stark", "wert": 4 },
+    { "text": "Mittel",     "wert": 3 },
+    { "text": "Eher wenig", "wert": 2 },
+    { "text": "Gar nicht",  "wert": 1 }
   ]
 }
 ```
 
-**Verbesserungsvorschläge:**
+**Neue Frage hinzufügen:** neues Objekt im `fragen`-Array ergänzen, `id` muss eindeutig sein (`q-001`, `q-002`, …).
+
+**Neues Subthema verwenden:** das Subthema muss im Type `Subthema` in `lib/types.ts` deklariert sein. Anschliessend Fragen dazu im Fragebogen sowie einen Eintrag in `verbesserungsvorschlaege.json` für dieses Subthema ergänzen.
+
+---
+
+### Verbesserungsvorschläge (`data/verbesserungsvorschlaege.json`)
+
+Pro Subthema gibt es einen Vorschlag mit Titel, Einleitungstext und einer Liste von Tipps. Jeder Tipp enthält den Tipptext und eine Quellenangabe.
+
 ```json
 "verbesserungsvorschlaege": {
-  "Empathie": {
+  "Sozial- und Leistungsdruck": {
     "vorschlag": {
-      "titel": "Lerne, Gefühle zu erkennen",
-      "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst...",
-      "tipps": ["Achte auf Gesichtsausdrücke", "Frag nach", "Stell dir vor"]
+      "titel": "Stress Schritt für Schritt reduzieren",
+      "text": "Wenn dir alles zu viel wird, helfen dir diese Methoden:",
+      "tipps": [
+        { "text": "Schreib alle deine Aufgaben auf …", "quelle": "(Zimmerman, 2002)" },
+        { "text": "Stell dir einen Timer auf 25 Minuten …", "quelle": "(Cirillo, 2006)" }
+      ]
     }
   }
 }
 ```
 
-**Neue Frage hinzufügen:** einfach ein neues Objekt im `fragen`-Array ergänzen, `id` muss eindeutig sein (`q-001`, `q-002`, etc.)
-
-**Neues Subthema hinzufügen:** 
-1. Zu `subthemen`-Array hinzufügen
-2. Fragen für dieses Subthema erstellen
-3. Einträge in `verbesserungsvorschlaege` für dieses Subthema ergänzen
+Die Vorschläge werden auf der Vorschläge-Seite nur dann angezeigt, wenn das jeweilige Subthema unter dem Schwellenwert (siehe Scoring) liegt.
 
 ---
 
 ### Studien (`data/studien.json`)
 
-Enthält Statistiken aus der Forschung und Themenbereiche zum Klassenklima.
+Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftliche Grundlagen, Themenbereiche, einzelne Studien und das Quellenverzeichnis.
 
 **Hauptstrukturen:**
-- `einleitung`: Einleitungstext für die Studien-Seite
-- `statistiken`: Array mit Statistiken (jede mit Zahl, Aussage, Quelle, Details)
-- `themenBereiche`: Array mit detaillierten Themenbereichen
+- `wissenschaftlicheGrundlagen`: Einleitende Texte zu Relevanz, Begriffsdifferenzierung und Klimadimensionen
+- `themenBereiche`: Array thematischer Bereiche (z. B. Sicherheit, Gemeinschaft) mit Untertiteln
+- `studien`: Array einzelner Studien mit Kernaussagen und Praxisbeispielen
+- `quellen`: Literaturverzeichnis (Autor:innen-Jahr und Titel)
 
-**Statistik-Struktur:**
+**Themenbereich-Struktur:**
 ```json
 {
-  "id": "stat-001",
-  "zahl": "86%",
-  "aussage": "Der Klassenklima hat einen grossen Einfluss auf den Lernerfolg",
-  "quelle": "Hattie, 2009",
-  "details": "John Hatties grosse Meta-Studie zeigt: ..."
+  "titel": "Sicherheit",
+  "inhalt": "Die Domäne Sicherheit umfasst die physische und emotionale Unversehrtheit …",
+  "details": [
+    { "untertitel": "Emotionale Sicherheit", "text": "Abwesenheit von Mobbing …" },
+    { "untertitel": "Ordnung und Disziplin", "text": "Klarheit, Fairness und Konsistenz …" }
+  ]
 }
 ```
 
-**Neue Statistik hinzufügen:** neues Objekt mit `id` (`stat-004`, `stat-005`, etc.) zum `statistiken`-Array hinzufügen.
-
-**Themenbereiche:**
+**Studien-Struktur:**
 ```json
 {
-  "titel": "Motivation und Leistung",
-  "inhalt": "Ein positives Klassenklima steigert die Lernmotivation...",
-  "details": "Detaillierte Untersuchungen zeigen..."
+  "id": "stud-001",
+  "themenbereich": "Sicherheit",
+  "titel": "…",
+  "beschreibung": "…",
+  "kernaussagen": ["…", "…"],
+  "praxisbeispiele": ["…", "…"]
 }
 ```
 
-**Neuen Themenbereich hinzufügen:** neues Objekt mit `titel`, `inhalt` (kurz) und `details` (ausführlich) zum `themenBereiche`-Array hinzufügen.
+**Quelle:**
+```json
+{ "autorJahr": "Wang, M. T., & Degol, J. L. (2016).", "titel": "School climate: …" }
+```
+
+Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein.
 
 ---
 
 ### Übungen (`data/uebungen.json`)
 
-Enthält eine Sammlung von Aktivitäten zur Förderung des Klassenklimas.
+Enthält den Übungskatalog für den Lehrbereich. Jede Übung verwendet eine flexible `sections`-Struktur, sodass beliebig viele Zusatzabschnitte (z. B. Material, Tipp, Hinweis, Wissenschaftlicher Bezug) ergänzt werden können.
 
-**Übungs-Struktur:**
 ```json
 {
   "id": "ueb-001",
-  "titel": "Das Netz der Verbindungen",
-  "kurzbeschreibung": "Eine warm-up Übung, um die Klasse als Netzwerk zu erleben...",
-  "anleitung": "Alle Teilnehmer stehen im Kreis. Eine Person hält ein Garnknäuel...",
+  "titel": "Die Dankbarkeits-Ecke",
+  "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
+  "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' …",
   "zeitBadge": "5–15 Min",
-  "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
-  "subthemaBadge": ["Teamfähigkeit", "Soziale Kompetenz"],
-  "material": "Ein grosses Garnknäuel",
-  "tipps": "Für jüngere Klassen kann die Lehrkraft..."
+  "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+  "subthemaBadge": ["Gemeinschaft"],
+  "sections": [
+    { "sectionTitle": "Material", "content": "Notizbuch, Stifte, Box oder Korb" },
+    { "sectionTitle": "Tipp",     "content": "Die Lehrkraft wirft selbst Zettel ein …" }
+  ]
 }
 ```
 
 **Wichtige Felder:**
-- `id`: Eindeutige ID (`ueb-001`, `ueb-002`, etc.)
+- `id`: Eindeutige ID (`ueb-001`, `ueb-002`, …)
 - `titel`: Name der Übung
 - `kurzbeschreibung`: Kurze Einleitung (erscheint in der Übersicht)
-- `anleitung`: Detaillierte Schritte (evtl. mit `\n` für Zeilenumbrüche)
-- `zeitBadge`: Zeitspanne als Text (z.B. "5–15 Min")
-- `alterBadge`: Array von Altersgruppen (z.B. "6–10 Jahre", "10–13 Jahre", "13–16 Jahre")
+- `anleitung`: Detaillierte Schritte (`\n` für Zeilenumbrüche, wird mit `whitespace-pre-wrap` gerendert)
+- `zeitBadge`: Zeitspanne als Text (z. B. `5–15 Min`)
+- `alterBadge`: Array von Altersgruppen (`6–10 Jahre`, `10–13 Jahre`, `13–16 Jahre`)
 - `subthemaBadge`: Array von Subthemen, die gefördert werden
-- `material`: Benötigtes Material (oder "Keine")
-- `tipps`: Zusätzliche Hinweise für Lehrkräfte
+- `sections`: Array von Abschnitten mit `sectionTitle` und `content`. Übliche Titel: `Material`, `Tipp`, `Hinweis`, `Didaktischer Hinweis`, `Wissenschaftlicher Bezug`. Beliebig erweiterbar.
 
-**Neue Übung hinzufügen:** neues Objekt mit allen Feldern zum `uebungen`-Array hinzufügen, `id` muss eindeutig sein (`ueb-007`, `ueb-008`, etc.).
+**Neue Übung hinzufügen:** neues Objekt im `uebungen`-Array ergänzen, `id` muss eindeutig sein.
 
-**Filter nach Alter/Zeit/Thema:** Die Filterkomponente liest die Arrays `alterBadge`, `zeitBadge` (aus `ueb-001` Beispiel), und `subthemaBadge` aus. Neue Werte können einfach hinzugefügt werden, ohne Code zu ändern.
+**Neuen Abschnitt hinzufügen:** einfach einen weiteren Eintrag in `sections` ergänzen – die Übungs-Karte rendert alle Abschnitte automatisch.
+
+**Filter nach Alter/Zeit/Thema:** Die Filterkomponente liest die Werte aus `alterBadge`, `zeitBadge` und `subthemaBadge`. Neue Werte in den Daten erscheinen automatisch im Filter.
 
 ## Scoring
 
-Die App berechnet prozentuale Werte für jedes Subthema:
-Standardwert liegt bei 90%, kann aber verändert werden. 
+Die App berechnet pro Subthema einen prozentualen Wert. Ab einem konfigurierbaren Schwellenwert gilt ein Subthema als „gut“, darunter wird Verbesserungspotenzial angezeigt.
 
-- **>= 90%**: Gut, kein Verbesserungsbedarf
-- **< 90%**: Verbesserungspotenzial vorhanden
-
-Der Wert kann in `lib/scoring.ts` angepasst werden. 
-
-```tsx
+```ts
+// lib/scoring.ts
 export const VERBESSERUNGS_SCORE = 90;
 ```
 
-Die Scores werden lokal im Browser gespeichert und für personalisierte Vorschläge verwendet.
+- **>= Schwellenwert**: kein Verbesserungsbedarf
+- **<  Schwellenwert**: Verbesserungspotenzial → Vorschläge aus `verbesserungsvorschlaege.json` werden angezeigt
+
+Die Scores werden lokal im Browser gespeichert und für die personalisierten Vorschläge verwendet.
 
 ## Lizenz
 
