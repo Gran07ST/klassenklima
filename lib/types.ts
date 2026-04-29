@@ -9,7 +9,11 @@ export type Subthema =
   | "Selbstregulation"
   | "Konfliktlösung"
   | "Soziale Kompetenz"
-  | "Selbstbewusstsein";
+  | "Selbstbewusstsein"
+  | "Sozial- und Leistungsdruck"
+  | "Schülerzentriertheit"
+  | "Lerngemeinschaft"
+  | "Rivalität und Störneigung";
 
 export type Rolle = "lehrer" | "schueler";
 
@@ -63,16 +67,42 @@ export interface GespeicherteScores {
 // Verbesserungsvorschläge-Typen
 // ============================================================================
 
+export interface Tipp {
+  text: string;
+  quelle: string;
+}
+
+export interface Vorschlag {
+  titel: string;
+  text: string;
+  tipps: Tipp[];
+}
+
 export interface VerbesserungsvorschlaegeDaten {
   verbesserungsvorschlaege: {
     [subthema: string]: {
-      vorschlag: {
-        titel: string;
-        text: string;
-        tipps: string[];
-      };
+      vorschlag: Vorschlag;
     };
   };
+}
+
+// ============================================================================
+// Quellen-Typen (für Fragebogen)
+// ============================================================================
+
+export interface QuelleEintrag {
+  autorJahr: string;
+  titel: string;
+}
+
+export interface QuellenLiteratur extends QuelleEintrag {
+  typ: string;
+}
+
+export interface Quellen {
+  beschreibung: string;
+  literatur: QuellenLiteratur[];
+  hinweis: string;
 }
 
 // ============================================================================

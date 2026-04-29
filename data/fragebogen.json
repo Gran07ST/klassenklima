@@ -1,253 +1,206 @@
 {
-  "subthemen": [
-    "Empathie",
-    "Kommunikation",
-    "Teamfähigkeit",
-    "Selbstregulation",
-    "Konfliktlösung",
-    "Soziale Kompetenz",
-    "Selbstbewusstsein"
-  ],
   "fragen": [
     {
       "id": "q-001",
-      "subthema": "Empathie",
+      "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
-      "aussage": "Ich kann mich gut in andere Leute hineinversetzen und verstehe, wie sie sich fühlen.",
+      "aussage": "Die Lehrpersonen behandeln alle Schüler:innen fair.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-002",
-      "subthema": "Empathie",
-      "type": "single_choice",
-      "frage": "Was tust du, wenn ein Klassenkamerad traurig ist?",
+      "subthema": "Sozial- und Leistungsdruck",
+      "type": "skala",
+      "aussage": "Wenn jemand nicht gut mitarbeitet, wird schnell mit schlechten Noten gedroht.",
       "gewichtung": 1,
-      "optionen": [
-        { "text": "Ich ignoriere es", "wert": 1 },
-        { "text": "Ich frage, ob alles okay ist", "wert": 3 },
-        { "text": "Ich tröste ihn/sie", "wert": 5 }
-      ]
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
     },
     {
       "id": "q-003",
-      "subthema": "Kommunikation",
+      "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
-      "aussage": "Ich kann meine Gedanken und Gefühle klar ausdrücken.",
+      "aussage": "Leistungen werden in der Klasse oft miteinander verglichen.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-004",
-      "subthema": "Kommunikation",
-      "type": "single_choice",
-      "frage": "Wie hörst du anderen zu, wenn sie sprechen?",
-      "gewichtung": 1,
-      "optionen": [
-        { "text": "Ich unterbreche sie oft", "wert": 1 },
-        { "text": "Ich höre zu, denke aber an etwas anderes", "wert": 3 },
-        { "text": "Ich höre aufmerksam zu und nicke", "wert": 5 }
-      ]
-    },
-    {
-      "id": "q-005",
-      "subthema": "Teamfähigkeit",
+      "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
-      "aussage": "Ich arbeite gerne in einer Gruppe zusammen.",
+      "aussage": "Ich fühle mich durch die Schule unter Druck gesetzt.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
-      "id": "q-006",
-      "subthema": "Teamfähigkeit",
+      "id": "q-005",
+      "subthema": "Sozial- und Leistungsdruck",
       "type": "single_choice",
-      "frage": "Was machst du, wenn jemand in der Gruppe nicht mitmacht?",
+      "frage": "Wie stark erlebst du den Leistungsdruck?",
       "gewichtung": 1,
       "optionen": [
-        { "text": "Ich lasse es einfach", "wert": 1 },
-        { "text": "Ich frage, ob alles okay ist", "wert": 3 },
-        { "text": "Ich lade ihn/sie aktiv ein", "wert": 5 }
+        { "text": "Sehr stark", "wert": 5 },
+        { "text": "Eher stark", "wert": 4 },
+        { "text": "Mittel", "wert": 3 },
+        { "text": "Eher wenig", "wert": 2 },
+        { "text": "Gar nicht", "wert": 1 }
       ]
     },
     {
-      "id": "q-007",
-      "subthema": "Selbstregulation",
+      "id": "q-006",
+      "subthema": "Schülerzentriertheit",
       "type": "skala",
-      "aussage": "Ich kann meine Gefühle kontrollieren, auch wenn ich genervt bin.",
+      "aussage": "Wir können im Unterricht mitentscheiden.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
+    },
+    {
+      "id": "q-007",
+      "subthema": "Schülerzentriertheit",
+      "type": "skala",
+      "aussage": "Den Lehrpersonen ist wichtig, dass wir den Stoff verstehen.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-008",
-      "subthema": "Selbstregulation",
-      "type": "single_choice",
-      "frage": "Wie gehst du mit Frustration um, wenn etwas nicht klappt?",
+      "subthema": "Schülerzentriertheit",
+      "type": "skala",
+      "aussage": "Wir dürfen eigene Ideen im Unterricht einbringen.",
       "gewichtung": 1,
-      "optionen": [
-        { "text": "Ich gebe sofort auf", "wert": 1 },
-        { "text": "Ich mache eine Pause und versuche es nochmal", "wert": 3 },
-        { "text": "Ich bleibe ruhig und suche eine Lösung", "wert": 5 }
-      ]
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
     },
     {
       "id": "q-009",
-      "subthema": "Konfliktlösung",
+      "subthema": "Schülerzentriertheit",
       "type": "skala",
-      "aussage": "Ich kann Konflikte fair lösen, ohne zu schikanieren.",
+      "aussage": "Die Lehrpersonen unterstützen uns beim Lernen.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-010",
-      "subthema": "Konfliktlösung",
-      "type": "single_choice",
-      "frage": "Was tust du, wenn dich jemand ärgert?",
+      "subthema": "Lerngemeinschaft",
+      "type": "skala",
+      "aussage": "In unserer Klasse wird niemand ausgeschlossen.",
       "gewichtung": 1,
-      "optionen": [
-        { "text": "Ich werde schnell wütend und schreie", "wert": 1 },
-        { "text": "Ich versuche ruhig zu bleiben und rede darüber", "wert": 3 },
-        { "text": "Ich höre zu und suche eine Lösung zusammen", "wert": 5 }
-      ]
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
     },
     {
       "id": "q-011",
-      "subthema": "Soziale Kompetenz",
+      "subthema": "Lerngemeinschaft",
       "type": "skala",
-      "aussage": "Ich finde schnell Freunde in einer neuen Gruppe.",
+      "aussage": "Wir helfen uns gegenseitig in der Klasse.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-012",
-      "subthema": "Soziale Kompetenz",
-      "type": "single_choice",
-      "frage": "Wie gehst du mit neuen Leuten um?",
+      "subthema": "Lerngemeinschaft",
+      "type": "skala",
+      "aussage": "Viele in der Klasse lernen gerne.",
       "gewichtung": 1,
-      "optionen": [
-        { "text": "Ich traue mich nicht anzusprechen", "wert": 1 },
-        { "text": "Ich warte ab, bis jemand auf mich zukommt", "wert": 3 },
-        { "text": "Ich gehe auf sie zu und stelle mich vor", "wert": 5 }
-      ]
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
     },
     {
       "id": "q-013",
-      "subthema": "Selbstbewusstsein",
-      "type": "skala",
-      "aussage": "Ich traue mir zu, Dinge zu schaffen.",
+      "subthema": "Lerngemeinschaft",
+      "type": "single_choice",
+      "frage": "Fühlst du dich als Teil deiner Klasse?",
       "gewichtung": 1,
-      "skalaLabels": {
-        "1": "Stimme gar nicht zu",
-        "5": "Stimme voll zu"
-      }
+      "optionen": [
+        { "text": "Ja, voll", "wert": 5 },
+        { "text": "Eher ja", "wert": 4 },
+        { "text": "Teils/teils", "wert": 3 },
+        { "text": "Eher nein", "wert": 2 },
+        { "text": "Nein", "wert": 1 }
+      ]
     },
     {
       "id": "q-014",
-      "subthema": "Selbstbewusstsein",
+      "subthema": "Rivalität und Störneigung",
+      "type": "skala",
+      "aussage": "Manche freuen sich, wenn andere Fehler machen.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
+    },
+    {
+      "id": "q-015",
+      "subthema": "Rivalität und Störneigung",
+      "type": "skala",
+      "aussage": "Der Unterricht wird oft gestört.",
+      "gewichtung": 1,
+      "skalaLabels": {
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
+      }
+    },
+    {
+      "id": "q-016",
+      "subthema": "Rivalität und Störneigung",
       "type": "single_choice",
-      "frage": "Wie gehst du mit Kritik um?",
+      "frage": "Wie oft wird der Unterricht gestört?",
       "gewichtung": 1,
       "optionen": [
-        { "text": "Ich fühle mich sofort schlecht", "wert": 1 },
-        { "text": "Ich nehme sie zur Kenntnis, bin aber traurig", "wert": 3 },
-        { "text": "Ich sehe sie als Chance zu lernen", "wert": 5 }
+        { "text": "Sehr oft", "wert": 5 },
+        { "text": "Oft", "wert": 4 },
+        { "text": "Manchmal", "wert": 3 },
+        { "text": "Selten", "wert": 2 },
+        { "text": "Nie", "wert": 1 }
       ]
     }
   ],
-  "verbesserungsvorschlaege": {
-    "Empathie": {
-      "vorschlag": {
-        "titel": "Lerne, Gefühle zu erkennen",
-        "text": "Empathie bedeutet, dass du dich in andere hineinversetzen kannst. Hier sind ein paar Tipps, wie du das üben kannst:",
-        "tipps": [
-          "Achte auf Gesichtsausdrücke: Lächeln, Traurigkeit, Wut – erkenne, was andere fühlen",
-          "Frag nach: 'Wie fühlst du dich?' zeigt, dass du dich interessierst",
-          "Stell dir vor: 'Wie wäre ich, wenn das mit mir passiert wäre?'"
-        ]
+
+  "quellen": {
+    "beschreibung": "Basierend auf dem Linzer Fragebogen zum Schul- und Klassenklima",
+    "literatur": [
+      {
+        "typ": "Originalinstrument",
+        "autorJahr": "Eder, F., & Mayr, J. (2000).",
+        "titel": "Linzer Fragebogen zum Schul- und Klassenklima für die 4.–8. Klassenstufe (LFSK 4–8). Hogrefe."
+      },
+      {
+        "typ": "Validierungsstudie",
+        "autorJahr": "Hank, P., Baltes-Götz, B., & Preckel, F. (2021).",
+        "titel": "Welche Klimadimensionen misst der Linzer Fragebogen zum Schul- und Klassenklima für die 4.–8. Klasse (LFSK 4–8)? Diagnostica. https://doi.org/10.1026/0012-1924/a000280"
       }
-    },
-    "Kommunikation": {
-      "vorschlag": {
-        "titel": "Sprich klar und hör zu",
-        "text": "Gute Kommunikation ist wie ein Gespräch im Pingpong – beide müssen mitmachen. Hier sind Tipps:",
-        "tipps": [
-          "Sprich deutlich: Sag, was du meinst, statt zu mutmassen",
-          "Zuhören ist wichtig: Schau den anderen an und nicke",
-          "Unterbrich nicht: Lass andere ausreden, dann bist du auch gehört"
-        ]
-      }
-    },
-    "Teamfähigkeit": {
-      "vorschlag": {
-        "titel": "Mach mit – gemeinsam geht's besser!",
-        "text": "Teamarbeit macht Spass, wenn alle mitmachen. Hier sind Tipps für gute Zusammenarbeit:",
-        "tipps": [
-          "Biete Hilfe an: 'Brauche du Unterstützung?' zeigt Teamgeist",
-          "Teile Aufgaben: Jeder kann etwas beitragen",
-          "Feiere Erfolge zusammen: 'Wir haben es geschafft!'"
-        ]
-      }
-    },
-    "Selbstregulation": {
-      "vorschlag": {
-        "titel": "Bleib ruhig, auch wenn's knallt",
-        "text": "Selbstregulation bedeutet, dass du deine Gefühle kontrollieren kannst – auch wenn du wütend oder genervt bist. Hier sind Tipps:",
-        "tipps": [
-          "Atme tief durch: 3x ein- und ausatmen beruhigt",
-          "Mach eine Pause: Weggehen und kurz durchatmen hilft",
-          "Zähle bis 10: Das gibt deinem Gehirn Zeit zu reagieren"
-        ]
-      }
-    },
-    "Konfliktlösung": {
-      "vorschlag": {
-        "titel": "Streit fair lösen",
-        "text": "Konflikte gehören zum Leben dazu. Wichtig ist, wie ihr sie löst. Hier sind Tipps:",
-        "tipps": [
-          "Ruhig bleiben: Nicht schreien oder schlagen",
-          "Zuhören: Lass den anderen ausreden",
-          "Lösung suchen: 'Wie können wir das zusammen lösen?'"
-        ]
-      }
-    },
-    "Soziale Kompetenz": {
-      "vorschlag": {
-        "titel": "Freunde finden und halten",
-        "text": "Soziale Kompetenz hilft dir, Freunde zu finden und gute Beziehungen zu pflegen. Hier sind Tipps:",
-        "tipps": [
-          "Lächeln hilft: Ein Lächeln öffnet Türen",
-          "Frag nach Namen: 'Ich bin [dein Name] – und du?'",
-          "Zeig Interesse: Frag nach Hobbys und Hören zu"
-        ]
-      }
-    },
-    "Selbstbewusstsein": {
-      "vorschlag": {
-        "titel": "An dich glauben – du schaffst das!",
-        "text": "Selbstbewusstsein bedeutet, dass du an dich glaubst und dir zutraust, Dinge zu schaffen. Hier sind Tipps:",
-        "tipps": [
-          "Sag 'Ich kann das': Positive Selbstgespräche helfen",
-          "Kleine Ziele setzen: Jeden Tag etwas Neues ausprobieren",
-          "Fehler sind okay: Aus Fehlern lernt man"
-        ]
-      }
-    }
+    ],
+    "hinweis": "Die Items wurden für diese Anwendung sprachlich angepasst."
   }
 }

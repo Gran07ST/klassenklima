@@ -1,4 +1,4 @@
-import { Frage, Antwort, SubthemaScore, Subthema } from "./types";
+import { Frage, Antwort, SubthemaScore, Subthema, Vorschlag } from "./types";
 
 /**
  * Berechnet die Scores für alle Subthemen basierend auf den Antworten
@@ -16,39 +16,41 @@ export function berechneScores(
   // Nur Skala-Fragen verwenden (keine single_choice)
   const skalaFragen = fragen.filter((frage) => frage.type === "skala");
 
-  return skalaFragen.map((frage) => {
-    // Alle Antworten für diese Frage finden
+  // Aggregiere pro Subthema (Summe erreichter Score und Max-Score über alle Fragen)
+  const aggregat = new Map<
+    Subthema,
+    { erreichterScore: number; maxScore: number }
+  >();
+
+  for (const frage of skalaFragen) {
+    const subthema = frage.subthema as Subthema;
     const antwort = antworten.find((a) => a.frageId === frage.id);
-
-    // Wenn keine Antwort vorhanden, Score als 0 setzen
-    if (!antwort) {
-      return {
-        subthema: frage.subthema as Subthema,
-        erreichterScore: 0,
-        maxScore: 5 * frage.gewichtung,
-        prozent: 0,
-        hatVerbesserungspotenzial: true,
-      };
-    }
-
-    // Berechne erreichten Score (Antwortwert * Gewichtung)
-    const erreichterScore = antwort.wert * frage.gewichtung;
-
-    // Maximaler Score (5 * Gewichtung)
+    const wert = antwort?.wert ?? 0;
+    const erreichterScore = wert * frage.gewichtung;
     const maxScore = 5 * frage.gewichtung;
 
-    // Prozent berechnen
-    const prozent =
-      maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
-
-    return {
-      subthema: frage.subthema as Subthema,
-      erreichterScore: Math.round(erreichterScore),
-      maxScore: Math.round(maxScore),
-      prozent,
-      hatVerbesserungspotenzial: prozent < VERBESSERUNGS_SCORE,
+    const eintrag = aggregat.get(subthema) ?? {
+      erreichterScore: 0,
+      maxScore: 0,
     };
-  });
+    eintrag.erreichterScore += erreichterScore;
+    eintrag.maxScore += maxScore;
+    aggregat.set(subthema, eintrag);
+  }
+
+  return Array.from(aggregat.entries()).map(
+    ([subthema, { erreichterScore, maxScore }]) => {
+      const prozent =
+        maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
+      return {
+        subthema,
+        erreichterScore: Math.round(erreichterScore),
+        maxScore: Math.round(maxScore),
+        prozent,
+        hatVerbesserungspotenzial: prozent < VERBESSERUNGS_SCORE,
+      };
+    },
+  );
 }
 
 /**
@@ -61,21 +63,13 @@ export function getVerbesserungsvorschlaege(
   scores: SubthemaScore[],
   vorschlaege: {
     [subthema: string]: {
-      vorschlag: {
-        titel: string;
-        text: string;
-        tipps: string[];
-      };
+      vorschlag: Vorschlag;
     };
   },
 ): Array<{
   subthema: Subthema;
   score: SubthemaScore;
-  vorschlag: {
-    titel: string;
-    text: string;
-    tipps: string[];
-  };
+  vorschlag: Vorschlag;
 }> {
   // Nur Subthemen mit Potenzial (< VERBESSERUNGS_SCORE%)
   const scoresMitPotenzial = scores.filter(
@@ -105,11 +99,7 @@ export function getVerbesserungsvorschlaege(
       ): item is {
         subthema: Subthema;
         score: SubthemaScore;
-        vorschlag: {
-          titel: string;
-          text: string;
-          tipps: string[];
-        };
+        vorschlag: Vorschlag;
       } => item !== null,
     );
 }

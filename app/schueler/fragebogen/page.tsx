@@ -1,8 +1,9 @@
 "use client";
 
 import Header from "@/components/layout/Header";
+import Quellenverzeichnis from "@/components/schueler/Quellenverzeichnis";
 import { Progress } from "@/components/ui/progress";
-import { Antwort, Frage, GespeicherteAntworten } from "@/lib/types";
+import { Antwort, Frage, GespeicherteAntworten, Quellen } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -12,6 +13,7 @@ import fragebogenData from "@/data/fragebogen.json";
 export default function FragebogenPage() {
   const router = useRouter();
   const fragen = fragebogenData.fragen as Frage[];
+  const quellen = fragebogenData.quellen as Quellen;
   const [currentStep, setCurrentStep] = useState(0);
   const [antworten, setAntworten] = useState<Antwort[]>([]);
   const [isComplete, setIsComplete] = useState(false);
@@ -241,6 +243,8 @@ export default function FragebogenPage() {
               </span>
             )}
           </div>
+
+          <Quellenverzeichnis quellen={quellen} />
         </div>
       </main>
     </div>

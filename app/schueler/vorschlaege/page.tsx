@@ -2,6 +2,7 @@
 
 import Header from "@/components/layout/Header";
 import RoutingGuard from "@/components/layout/RoutingGuard";
+import QuellenListe from "@/components/schueler/QuellenListe";
 import {
   alleScoresGenugend,
   berechneScores,
@@ -14,6 +15,7 @@ import {
   Subthema,
   SubthemaScore,
   VerbesserungsvorschlaegeDaten,
+  Vorschlag,
 } from "@/lib/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,6 +23,7 @@ import { useEffect, useState } from "react";
 
 // Import data
 import fragebogenData from "@/data/fragebogen.json";
+import verbesserungsvorschlaegeData from "@/data/verbesserungsvorschlaege.json";
 
 export default function VorschlaegePage() {
   const router = useRouter();
@@ -29,11 +32,7 @@ export default function VorschlaegePage() {
     Array<{
       subthema: Subthema;
       score: SubthemaScore;
-      vorschlag: {
-        titel: string;
-        text: string;
-        tipps: string[];
-      };
+      vorschlag: Vorschlag;
     }>
   >([]);
 
@@ -67,7 +66,7 @@ export default function VorschlaegePage() {
     // Vorschläge holen
     const vorschlaegeListe = getVerbesserungsvorschlaege(
       berechneteScores,
-      fragebogenData.verbesserungsvorschlaege as VerbesserungsvorschlaegeDaten["verbesserungsvorschlaege"],
+      verbesserungsvorschlaegeData.verbesserungsvorschlaege as VerbesserungsvorschlaegeDaten["verbesserungsvorschlaege"],
     );
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setVorschlaege(vorschlaegeListe);
@@ -192,7 +191,10 @@ export default function VorschlaegePage() {
                         className="flex items-start gap-3 text-sm"
                       >
                         <span className="text-accent">▹</span>
-                        <span>{tip}</span>
+                        <span>
+                          {tip.text}{" "}
+                          <span className="text-[#8a847a]">{tip.quelle}</span>
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -207,6 +209,8 @@ export default function VorschlaegePage() {
                 </button>
               </Link>
             </div>
+
+            <QuellenListe quellen={verbesserungsvorschlaegeData.quellen} />
           </div>
         </main>
       </div>

@@ -1,0 +1,158 @@
+{
+  "verbesserungsvorschlaege": {
+    "Sozial- und Leistungsdruck": {
+      "vorschlag": {
+        "titel": "Stress Schritt für Schritt reduzieren",
+        "text": "Wenn dir alles zu viel wird, helfen dir diese Methoden:",
+        "tipps": [
+          {
+            "text": "Schreib alle deine Aufgaben auf und markiere die 2 wichtigsten zuerst",
+            "quelle": "(Zimmerman, 2002)"
+          },
+          {
+            "text": "Stell dir einen Timer auf 25 Minuten und arbeite nur an einer Aufgabe, danach mach 5 Minuten Pause",
+            "quelle": "(Cirillo, 2006)"
+          },
+          {
+            "text": "Teile grosse Aufgaben in kleine Schritte auf (z. B. zuerst 10 Minuten lesen, dann Notizen machen)",
+            "quelle": "(Zimmerman, 2002)"
+          },
+          {
+            "text": "Fang mit Aufgaben an, die du bald abgeben musst",
+            "quelle": "(Wellmann & Zelms, 1995)"
+          },
+          {
+            "text": "Wenn du nach etwa 10 Minuten nicht weiterkommst, frag jemanden um Hilfe",
+            "quelle": "(Lazarus & Folkman, 1984)"
+          },
+          {
+            "text": "Mach nach jeder Lernphase eine kurze Pause (z. B. aufstehen, trinken, bewegen)",
+            "quelle": "(Pascoe et al., 2020)"
+          }
+        ]
+      }
+    },
+    "Schülerzentriertheit": {
+      "vorschlag": {
+        "titel": "Aktiv im Unterricht werden",
+        "text": "So kannst du dich leichter einbringen.",
+        "tipps": [
+          {
+            "text": "Schreib dir während dem Unterricht eine Frage auf",
+            "quelle": "(Zimmerman, 2002)"
+          },
+          {
+            "text": "Melde dich mindestens einmal pro Stunde",
+            "quelle": "(Hattie, 2009)"
+          },
+          {
+            "text": "Sag einen Gedanken in der Gruppe",
+            "quelle": "(Hattie, 2009)"
+          },
+          {
+            "text": "Setz dich neben jemanden, der aktiv mitmacht",
+            "quelle": "(Hattie, 2009)"
+          },
+          {
+            "text": "Frag nach dem Unterricht nach, wenn etwas unklar ist",
+            "quelle": "(Zimmerman, 2002)"
+          }
+        ]
+      }
+    },
+    "Lerngemeinschaft": {
+      "vorschlag": {
+        "titel": "Die Klasse positiv beeinflussen",
+        "text": "Kleine Dinge machen einen Unterschied.",
+        "tipps": [
+          {
+            "text": "Frag deine Mitschüler:innen: 'Soll ich dir helfen?'",
+            "quelle": "(Thapa et al., 2013)"
+          },
+          {
+            "text": "Arbeite mit verschiedenen Mitschüler:innen",
+            "quelle": "(Bleck & Lipowsky, 2022) "
+          },
+          {
+            "text": "Sag einmal am Tag etwas Positives zu einem/einer Mitschüler:inn",
+            "quelle": "(Thapa et al., 2013)"
+          },
+          {
+            "text": "Warte kurz, bevor du jemanden unterbrichst",
+            "quelle": "(Thapa et al., 2013)"
+          },
+          {
+            "text": "Kläre bei Gruppenarbeiten: Wer macht was?",
+            "quelle": "(Hattie, 2009)"
+          }
+        ]
+      }
+    },
+    "Rivalität und Störneigung": {
+      "vorschlag": {
+        "titel": "Störungen und Konkurrenz gezielt bewältigen",
+        "text": "Wenn es laut wird oder Konkurrenz entsteht, helfen dir unterschiedliche Strategien – je nach Situation:",
+        "tipps": [
+          {
+            "text": "Wenn jemand stört: Schreib dir kurz auf, was du gerade machen wolltest, damit du danach wieder einsteigen kannst",
+            "quelle": "(Masicampo & Baumeister, 2011)"
+          },
+          {
+            "text": "Wenn du dich mit anderen vergleichst: Schreib auf, was DU heute schon geschafft hast",
+            "quelle": "(Hattie, 2009)"
+          },
+          {
+            "text": "Wenn dich jemand provoziert: Antworte nicht sofort, sondern zähle innerlich bis 5",
+            "quelle": "(Lazarus & Folkman, 1984)"
+          },
+          {
+            "text": "Sprich in Gruppen klar eine Aufgabe ab, damit weniger Chaos entsteht",
+            "quelle": "(Hattie, 2009)"
+          },
+          {
+            "text": "Wenn du merkst, dass du abschweifst: Stell dir einen Timer (z. B. 10 Minuten) und arbeite nur daran",
+            "quelle": "(Zimmerman, 2002)"
+          }
+        ]
+      }
+    }
+  },
+  "quellen": [
+    {
+      "autorJahr": "Bleck, V., & Lipowsky, F. (2022).",
+      "titel": "Kooperatives Lernen im Unterricht. In E. Wild & J. Möller (Eds.), Pädagogische Psychologie. Springer."
+    },
+    {
+      "autorJahr": "Cirillo, F. (2006).",
+      "titel": "The Pomodoro technique. Cirillo Consulting."
+    },
+    {
+      "autorJahr": "Hattie, J. (2009).",
+      "titel": "Visible learning: A synthesis of over 800 meta-analyses relating to achievement. Routledge."
+    },
+    {
+      "autorJahr": "Lazarus, R. S., & Folkman, S. (1984).",
+      "titel": "Stress, appraisal, and coping. Springer."
+    },
+    {
+      "autorJahr": "Masicampo, E. J., & Baumeister, R. F. (2011).",
+      "titel": "Consider it done! Plan making can eliminate the cognitive effects of unfinished goals. Journal of Personality and Social Psychology, 101(4), 667–683. https://doi.org/10.1037/a0024192"
+    },
+    {
+      "autorJahr": "Pascoe, M. C., Hetrick, S. E., & Parker, A. G. (2020).",
+      "titel": "The impact of stress on students in secondary school and higher education. International Journal of Adolescence and Youth, 25(1), 104–112. https://doi.org/10.1080/02673843.2019.1596823"
+    },
+    {
+      "autorJahr": "Thapa, A., Cohen, J., Guffey, S., & Higgins-D’Alessandro, A. (2013).",
+      "titel": "A review of school climate research. Review of Educational Research, 83(3), 357–385. https://doi.org/10.3102/0034654313483907"
+    },
+    {
+      "autorJahr": "Wellmann, H., & Zelms, H. (1995).",
+      "titel": "Zeitmanagement. Haufe."
+    },
+    {
+      "autorJahr": "Zimmerman, B. J. (2002).",
+      "titel": "Becoming a self-regulated learner: An overview. Theory Into Practice, 41(2), 64–70. https://doi.org/10.1207/s15430421tip4102_2"
+    }
+  ]
+}
