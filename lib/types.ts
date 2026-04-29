@@ -117,16 +117,59 @@ export interface Statistik {
   details: string;
 }
 
+export interface ThemaDetail {
+  untertitel: string;
+  text: string;
+}
+
 export interface ThemaBereich {
   titel: string;
   inhalt: string;
-  details: string;
+  details: ThemaDetail[];
+}
+
+export interface RelevanzFuerPeerbeziehungen {
+  titel: string;
+  aspekte: string[];
+}
+
+export interface DifferenzierungKlimabegriffe {
+  schulklima: string;
+  klassenklima: string;
+}
+
+export interface ZielgruppenspezifischeZuordnung {
+  begruendung: string;
+  lehrpersonen_schulklima: string;
+  schuelerinnen_klassenklima: string;
+}
+
+export interface DimensionenDesSchulklimas {
+  einleitung: string;
+  kernaussage: string;
+}
+
+export interface WissenschaftlicheGrundlagen {
+  relevanzFuerPeerbeziehungen: RelevanzFuerPeerbeziehungen;
+  differenzierungKlimabegriffe: DifferenzierungKlimabegriffe;
+  zielgruppenspezifischeZuordnung: ZielgruppenspezifischeZuordnung;
+  dimensionenDesSchulklimas: DimensionenDesSchulklimas;
+}
+
+export interface Studie {
+  id: string;
+  themenbereich: string;
+  titel: string;
+  beschreibung: string;
+  kernaussagen: string[];
+  praxisbeispiele: string[];
 }
 
 export interface StudienDaten {
-  einleitung: string;
-  statistiken: Statistik[];
+  wissenschaftlicheGrundlagen: WissenschaftlicheGrundlagen;
   themenBereiche: ThemaBereich[];
+  studien: Studie[];
+  quellen: QuelleEintrag[];
 }
 
 // ============================================================================

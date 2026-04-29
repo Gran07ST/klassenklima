@@ -1,49 +1,259 @@
 {
-  "einleitung": "Ein positives Lernklima ist entscheidend für den schulischen Erfolg. Studien zeigen, dass Schülerinnen und Schüler in Klassen mit einem guten Klima motivierter lernen, weniger Ausfallzeiten haben und bessere Noten erzielen.",
-  "statistiken": [
-    {
-      "id": "stat-001",
-      "zahl": "86%",
-      "aussage": "Der Klassenklima hat einen grossen Einfluss auf den Lernerfolg",
-      "quelle": "Hattie, 2009",
-      "details": " John Hatties grosse Meta-Studie zeigt: Das soziale Klima in der Klasse gehört zu den wichtigsten Faktoren für schulischen Erfolg. Ein positives Klassenklima kann den Lernerfolg um bis zu 87% steigern."
+  "wissenschaftlicheGrundlagen": {
+    "relevanzFuerPeerbeziehungen": {
+      "titel": "Warum das Klima entscheidend für Peerbeziehungen ist",
+      "aspekte": [
+        "Die Forschung beschreibt den Einfluss der Lehrkraft auf die sozialen Beziehungen unter Gleichaltrigen als 'unsichtbare Hand' (Endedijk et al., 2022).",
+        "Durch den Prozess der sozialen Referenzierung fungieren Lehrpersonen als soziale Orientierungspunkte; Mitschüler:innen bewerten ein Kind positiver, wenn die Lehrkraft wertschätzend mit ihm interagiert (Endedijk et al., 2022; Hughes et al., 2001).",
+        "Unterstützende Lehrer-Schüler-Beziehungen sind konsistent mit einer höheren sozialen Kompetenz und einer besseren Integration in die Peer-Gruppe verknüpft (Magro et al., 2024).",
+        "Ein positives Klima bietet einen 'sicheren Hafen', der es Schüler:innen ermöglicht, soziale Risiken einzugehen und Freundschaften aufzubauen (Magro et al., 2024; Verschueren & Koomen, 2012).",
+        "Die Dimension der Sicherheit trägt direkt dazu bei, Peer-Viktimisierung und Mobbing zu reduzieren, da Schüler:innen in einem unterstützenden Umfeld eher bereit sind, Hilfe zu suchen (Eliot et al., 2010; Thapa et al., 2013)."
+      ]
     },
-    {
-      "id": "stat-002",
-      "zahl": "40%",
-      "aussage": "Schülerinnen und Schüler mit starkem Zugehörigkeitsgefühl haben bessere Noten",
-      "quelle": "OECD, 2019",
-      "details": "Die internationale TIMSS-Studie zeigt: Schülerinnen und Schüler, die sich in ihrer Klasse wohl fühlen und eine starke Verbindung zur Klasse haben, erzielen im Durchschnitt 40% bessere Noten – selbst wenn sie vorher schwächere Leistungen gezeigt haben."
+    "differenzierungKlimabegriffe": {
+      "schulklima": "Ein übergeordnetes Konstrukt, das die Qualität der gesamten schulischen Umwelt aus Sicht aller Beteiligten beschreibt, einschliesslich der Schulleitung, der kollegialen Zusammenarbeit und der physischen Ausstattung (Hascher et al., 2022; Wang & Degol, 2016).",
+      "klassenklima": "Bezieht sich auf die spezifische soziale und lernbezogene Atmosphäre innerhalb einer einzelnen Klasse sowie die unmittelbaren Interaktionen zwischen Lehrperson und Lernenden (Eder, 2002; Hascher et al., 2022)."
     },
-    {
-      "id": "stat-003",
-      "zahl": "50%",
-      "aussage": "Ein positives Klima reduziert Schulvermeidungsverhalten",
-      "quelle": "Wentzel, 2020",
-      "details": "Forschungen zeigen, dass in Klassen mit einem wertschätzenden Klima die Schulvermeidung um 50% sinkt. Schülerinnen und Schüler fehlen seltener und kommen motivierter zur Schule."
+    "zielgruppenspezifischeZuordnung": {
+      "begruendung": "Die Trennung der Begriffe auf dieser Webseite folgt der unterschiedlichen Wahrnehmungsperspektive der Akteure (Hascher et al., 2022).",
+      "lehrpersonen_schulklima": "Lehrkräfte nehmen die Schule massgeblich als Institution und Arbeitsplatz wahr, weshalb für sie organisatorische Merkmale und das Klima im Kollegium zentral sind (Eder, 2018; Hascher et al., 2022).",
+      "schuelerinnen_klassenklima": "Für Kinder und Jugendliche ist die Schulklasse der primäre Lern- und Lebensraum, in dem ihr Wohlbefinden massgeblich von der sozialen Dynamik dieser spezifischen Gruppe abhängt (Eder, 2002; Hascher et al., 2022)."
+    },
+    "dimensionenDesSchulklimas": {
+      "einleitung": "Um das Schulklima gestaltbar zu machen, wird es in der Forschung in vier Kerndimensionen unterteilt: Academic (Lehren und Lernen), Community (Gemeinschaft), Safety (Sicherheit) und Institutional Environment (Umgebung) (Thapa et al., 2013; Wang & Degol, 2016).",
+      "kernaussage": "Ein positives Klima wirkt als Katalysator (Eder, 2002), der kognitive Fähigkeiten effektiver in tatsächliche Schulleistung umsetzt, was sich in SEL-Programmen durch eine Steigerung von 11 Perzentilpunkten zeigt (Durlak et al., 2011)."
     }
-  ],
+  },
+
   "themenBereiche": [
     {
       "titel": "Sicherheit",
       "inhalt": "Die Domäne Sicherheit umfasst die physische und emotionale Unversehrtheit sowie das Vorhandensein klarer Strukturen",
-      "details": "Emotionale Sicherheit: Abwesenheit von Mobbing und Belästigung sowie die Verfügbarkeit von unterstützenden Diensten (z. B. Beratung) für das psychische Wohlbefinden Ordnung und Disziplin: Die Klarheit, Fairness und Konsistenz von Schulregeln sowie der Umgang mit Disziplinarverstössen Physische Sicherheit: Das Ausmass an Schutz vor Gewalt und Aggression sowie die Umsetzung von Sicherheitsmassnahmen auf dem Schulgelände"
+      "details": [
+        {
+          "untertitel": "Emotionale Sicherheit",
+          "text": "Abwesenheit von Mobbing und Belästigung sowie die Verfügbarkeit von unterstützenden Diensten (z. B. Beratung) für das psychische Wohlbefinden"
+        },
+        {
+          "untertitel": "Ordnung und Disziplin",
+          "text": "Die Klarheit, Fairness und Konsistenz von Schulregeln sowie der Umgang mit Disziplinarverstössen"
+        },
+        {
+          "untertitel": "Physische Sicherheit",
+          "text": "Das Ausmass an Schutz vor Gewalt und Aggression sowie die Umsetzung von Sicherheitsmassnahmen auf dem Schulgelände"
+        }
+      ]
     },
     {
       "titel": "Gemeinschaft",
       "inhalt": "Dieser Bereich betont die Qualität der zwischenmenschlichen Beziehungen innerhalb der Schule",
-      "details": "Qualität der Beziehungen: Fokus auf Vertrauen, Respekt und gegenseitige Unterstützung zwischen Lehrpersonen, Schülern und dem gesamten Personal, Verbundenheit (Connectedness): Das Gefühl der Akzeptanz, Inklusion und Zugehörigkeit, das Lernende gegenüber ihrer Schule empfinden, Respekt für Diversität: Die Förderung von kulturellem Bewusstsein und die faire Behandlung aller Mitglieder der Schulgemeinschaft, unabhängig von Hintergrund oder Identität, Partnerschaften: Die aktive Einbindung von Eltern und Gemeindemitgliedern in den Schulalltag und Entscheidungsprozesse"
+      "details": [
+        {
+          "untertitel": "Qualität der Beziehungen",
+          "text": "Fokus auf Vertrauen, Respekt und gegenseitige Unterstützung zwischen Lehrpersonen, Schülern und dem gesamten Personal"
+        },
+        {
+          "untertitel": "Verbundenheit (Connectedness)",
+          "text": "Das Gefühl der Akzeptanz, Inklusion und Zugehörigkeit, das Lernende gegenüber ihrer Schule empfinden"
+        },
+        {
+          "untertitel": "Respekt für Diversität",
+          "text": "Die Förderung von kulturellem Bewusstsein und die faire Behandlung aller Mitglieder der Schulgemeinschaft, unabhängig von Hintergrund oder Identität"
+        },
+        {
+          "untertitel": "Partnerschaften",
+          "text": "Die aktive Einbindung von Eltern und Gemeindemitgliedern in den Schulalltag und Entscheidungsprozesse"
+        }
+      ]
     },
     {
       "titel": "Lehren und Lernen",
       "inhalt": "Dieser Bereich konzentriert sich auf die Qualität der akademischen Atmosphäre und wie Lehren und Lernen gefördert werden",
-      "details": "Schulleitung (Leadership): Bezieht sich auf die Rolle der Schulleitenden bei der Gestaltung einer Vision, der Unterstützung von Lehrpersonen und der Sicherstellung einer offenen Kommunikation, Lehren und Lernen (Teaching & Learning): Umfasst die Qualität des Unterrichts, die Erwartungen der Lehrpersonen an die Schülerinnen und Schüler sowie die Art der Leistungsbeurteilung, Professionelle Weiterentwicklung (Professional Development): Beinhaltet Programme und Möglichkeiten für das Kollegium, die Unterrichtsstrategien und die Lehrplangestaltung kontinuierlich zu verbessern"
+      "details": [
+        {
+          "untertitel": "Schulleitung (Leadership)",
+          "text": "Bezieht sich auf die Rolle der Schulleitenden bei der Gestaltung einer Vision, der Unterstützung von Lehrpersonen und der Sicherstellung einer offenen Kommunikation"
+        },
+        {
+          "untertitel": "Lehren und Lernen (Teaching & Learning)",
+          "text": "Umfasst die Qualität des Unterrichts, die Erwartungen der Lehrpersonen an die Schülerinnen und Schüler sowie die Art der Leistungsbeurteilung"
+        },
+        {
+          "untertitel": "Professionelle Weiterentwicklung (Professional Development)",
+          "text": "Beinhaltet Programme und Möglichkeiten für das Kollegium, die Unterrichtsstrategien und die Lehrplangestaltung kontinuierlich zu verbessern"
+        }
+      ]
     },
     {
       "titel": "Schule als Organisation",
       "inhalt": "Dieser Bereich reflektiert die organisatorischen und strukturellen Merkmale der Schulumgebung",
-      "details": "Angemessenheit der Umgebung (Environmental): Bezieht sich auf die physische Qualität des Gebäudes, einschliesslich Beleuchtung, Heizung, Sauberkeit und Instandhaltung, Strukturelle Organisation: Umfasst Rahmenbedingungen wie Klassengrössen, Schulgrösse und die Organisation von Stundenplänen, Verfügbarkeit von Ressourcen: Die Zugänglichkeit von Lehrmaterialien, Technologie und notwendiger Ausrüstung für einen effektiven Unterricht
-"
+      "details": [
+        {
+          "untertitel": "Angemessenheit der Umgebung (Environmental)",
+          "text": "Bezieht sich auf die physische Qualität des Gebäudes, einschliesslich Beleuchtung, Heizung, Sauberkeit und Instandhaltung"
+        },
+        {
+          "untertitel": "Strukturelle Organisation",
+          "text": "Umfasst Rahmenbedingungen wie Klassengrössen, Schulgrösse und die Organisation von Stundenplänen"
+        },
+        {
+          "untertitel": "Verfügbarkeit von Ressourcen",
+          "text": "Die Zugänglichkeit von Lehrmaterialien, Technologie und notwendiger Ausrüstung für einen effektiven Unterricht"
+        }
+      ]
+    },
+    {
+      "titel": "Autoritatives Schulklima",
+      "inhalt": "Dieser Bereich reflektiert die organisatorischen und strukturellen Merkmale der Schulumgebung",
+      "details": [
+        {
+          "untertitel": "Angemessenheit der Umgebung (Environmental)",
+          "text": "Bezieht sich auf die physische Qualität des Gebäudes, einschliesslich Beleuchtung, Heizung, Sauberkeit und Instandhaltung"
+        },
+        {
+          "untertitel": "Strukturelle Organisation",
+          "text": "Umfasst Rahmenbedingungen wie Klassengrössen, Schulgrösse und die Organisation von Stundenplänen"
+        },
+        {
+          "untertitel": "Verfügbarkeit von Ressourcen",
+          "text": "Die Zugänglichkeit von Lehrmaterialien, Technologie und notwendiger Ausrüstung für einen effektiven Unterricht"
+        }
+      ]
+    }
+  ],
+
+  "studien": [
+    {
+      "id": "studie-001",
+      "themenbereich": "Gemeinschaft",
+      "titel": "Zugehörigkeit und Beziehungen als Grundlage",
+      "beschreibung": "Diese Dimension beschreibt die Qualität der Beziehungen zwischen Schüler:innen und Lehrpersonen sowie das Gefühl, Teil der Gemeinschaft zu sein.",
+      "kernaussagen": [
+        "Lehrpersonen beeinflussen durch ihr Verhalten aktiv das soziale Gefüge der Klasse ('unsichtbare Hand'). (Endedijk et al., 2022)",
+        "Positive Lehrer-Schüler-Beziehungen stehen in Zusammenhang mit höherer sozialer Kompetenz unter Gleichaltrigen. (Magro et al., 2024)",
+        "Ein starkes Zugehörigkeitsgefühl reduziert depressive Symptome bei Jugendlichen. (Long et al., 2021)",
+        "Programme zur Förderung sozial-emotionaler Kompetenzen stärken Beziehungen und das Wohlbefinden. (Durlak et al., 2011)"
+      ],
+      "praxisbeispiele": [
+        "Schüler:innen trauen sich, bei Problemen Hilfe zu suchen (Eliot et al., 2010; Thapa et al., 2013).",
+        "Positive Rückmeldungen durch Lehrpersonen beeinflussen das Ansehen einzelner Schüler:innen in der Gruppe (Magro et al., 2024; Endedijk et al., 2022).",
+        "Gemeinsame Aktivitäten und eine geteilte Vision stärken das Zugehörigkeitsgefühl (Wang & Degol, 2016; Thapa et al., 2013)."
+      ]
+    },
+    {
+      "id": "studie-002",
+      "themenbereich": "Akademisches Klima",
+      "titel": "Unterstützung und Leistung im Gleichgewicht",
+      "beschreibung": "Ein positives akademisches Klima verbindet hohe Erwartungen mit Unterstützung, damit Schüler:innen erfolgreich lernen können.",
+      "kernaussagen": [
+        "Programme zum sozial-emotionalen Lernen steigern die Leistung um durchschnittlich 11 Perzentilpunkte. (Durlak et al., 2011)",
+        "Ein gutes Klassenklima verstärkt den Zusammenhang zwischen Fähigkeit und tatsächlicher Leistung. (Eder, 2002)",
+        "Viele Jugendliche fühlen sich emotional von der Schule entfremdet, weshalb Unterstützung besonders wichtig ist. (Durlak et al., 2011)"
+      ],
+      "praxisbeispiele": [
+        "Schüler:innen setzen sich eigene Lernziele und überwachen ihren Fortschritt (Zimmerman, 2002).",
+        "Lehrpersonen geben differenziertes, formatives Feedback zur Förderung des Lernprozesses (Wang & Degol, 2016).",
+        "Unterricht wird durch lebensnahe Projekte und kognitiv aktivierende Aufgaben gestaltet (Wang & Degol, 2016; Thapa et al., 2013)."
+      ]
+    },
+    {
+      "id": "studie-003",
+      "themenbereich": "Sicherheit",
+      "titel": "Strukturen schaffen Vertrauen",
+      "beschreibung": "Sicherheit bedeutet sowohl klare Regeln als auch emotionale Unterstützung im Unterricht.",
+      "kernaussagen": [
+        "Ein autoritatives Schulklima (klare Regeln + Unterstützung) reduziert Mobbing. (Wang & Degol, 2016)",
+        "Ein besseres Schulklima senkt problematisches Verhalten um etwa 7–8 %. (Wang et al., 2010)",
+        "Klare Regeln und konsequentes Verhalten zu Beginn des Schuljahres sind entscheidend. (Emmer et al., 1980)"
+      ],
+      "praxisbeispiele": [
+        "Regeln werden partizipativ festgelegt und konsequent sowie fair durchgesetzt (Wang & Degol, 2016; Thapa et al., 2013).",
+        "Lehrpersonen zeigen 'Withitness' und reagieren frühzeitig auf Störungen (Emmer et al., 1980).",
+        "Diskrete Kommunikation bei Sorgen schützt die emotionale Sicherheit (Wang & Degol, 2016; Endedijk et al., 2022)."
+      ]
+    },
+    {
+      "id": "studie-004",
+      "themenbereich": "Institutionelle Umgebung",
+      "titel": "Die Lernumgebung als Einflussfaktor",
+      "beschreibung": "Die physische und organisatorische Umgebung beeinflusst das Wohlbefinden und das Verhalten in der Schule.",
+      "kernaussagen": [
+        "Gute Umweltbedingungen (Licht, Temperatur, Sauberkeit) senken Stress. (Wang & Degol, 2016)",
+        "Kleinere und strukturierte Einheiten fördern Beziehungen und Zugehörigkeit. (Wang & Degol, 2016)",
+        "Ein fairer Zugang zu Ressourcen wird als Wertschätzung wahrgenommen. (Wang & Degol, 2016)"
+      ],
+      "praxisbeispiele": [
+        "Die Optimierung von Akustik und Beleuchtung verbessert die Konzentrationsfähigkeit (Uline & Tschannen-Moran, 2008; Wang & Degol, 2016).",
+        "Schulen bilden kleinere Lerncommunities, um die Verbundenheit zu erhöhen (Wang & Degol, 2016; Thapa et al., 2013).",
+        "Die gerechte Verteilung von modernen Materialien unterstützt das Lernen aller (Wang & Degol, 2016)."
+      ]
+    }
+  ],
+
+  "quellen": [
+    {
+      "autorJahr": "Cirillo, F. (2006).",
+      "titel": "The Pomodoro technique. Cirillo Consulting."
+    },
+    {
+      "autorJahr": "Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., & Schellinger, K. B. (2011).",
+      "titel": "The impact of enhancing students’ social and emotional learning: A meta-analysis of school-based universal interventions. Child Development, 82(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x"
+    },
+    {
+      "autorJahr": "Eder, F. (2002).",
+      "titel": "Unterrichtsklima und Unterrichtsqualität. Unterrichtswissenschaft, 30(3), 213–229."
+    },
+    {
+      "autorJahr": "Eder, F. (2018).",
+      "titel": "Schul- und Klassenklima. In D. H. Rost et al. (Eds.), Handwörterbuch Pädagogische Psychologie (6th ed.)."
+    },
+    {
+      "autorJahr": "Eliot, M., Cornell, D., Gregory, A., & Fan, X. (2010).",
+      "titel": "Supportive school climate and student willingness to seek help. Journal of School Psychology, 48(6), 533–553. https://doi.org/10.1016/j.jsp.2010.07.001"
+    },
+    {
+      "autorJahr": "Emmer, E. T., Evertson, C. M., & Anderson, L. M. (1980).",
+      "titel": "Effective classroom management at the beginning of the school year. The Elementary School Journal, 80(5), 219–231."
+    },
+    {
+      "autorJahr": "Endedijk, H. M., et al. (2022).",
+      "titel": "The teacher’s invisible hand. Review of Educational Research. https://doi.org/10.3102/00346543211051428"
+    },
+    {
+      "autorJahr": "Hascher, T., et al. (2022).",
+      "titel": "Schulklima und Schulkultur. Springer."
+    },
+    {
+      "autorJahr": "Hughes, J. N., et al. (2001).",
+      "titel": "Teacher-student relationship quality. Journal of School Psychology."
+    },
+    {
+      "autorJahr": "Long, E., et al. (2021).",
+      "titel": "School climate and mental health. Youth & Society. https://doi.org/10.1177/0044118X20970232"
+    },
+    {
+      "autorJahr": "Magro, S. W., et al. (2024).",
+      "titel": "Teacher-student relationship and peer competence. School Psychology Review."
+    },
+    {
+      "autorJahr": "Thapa, A., et al. (2013).",
+      "titel": "A review of school climate research. Review of Educational Research. https://doi.org/10.3102/0034654313483907"
+    },
+    {
+      "autorJahr": "Verschueren, K., & Koomen, H. M. Y. (2012).",
+      "titel": "Teacher–child relationships. Attachment & Human Development."
+    },
+    {
+      "autorJahr": "Wang, M.-T., & Degol, J. L. (2016).",
+      "titel": "School climate. Educational Psychology Review. https://doi.org/10.1007/s10648-015-9319-1"
+    },
+    {
+      "autorJahr": "Wang, M.-T., et al. (2010).",
+      "titel": "School climate and behavior. Journal of Research on Adolescence. https://doi.org/10.1111/j.1532-7795.2010.00648.x"
+    },
+    {
+      "autorJahr": "Zimmerman, B. J. (2002).",
+      "titel": "Becoming a self-regulated learner. Theory Into Practice. https://doi.org/10.1207/s15430421tip4102_2"
     }
   ]
 }
