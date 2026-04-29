@@ -179,6 +179,11 @@ export interface StudienDaten {
 export type ZeitBadge = "< 5 Min" | "5–15 Min" | "15–30 Min" | "> 30 Min";
 export type AlterBadge = "6–10 Jahre" | "10–13 Jahre" | "13–16 Jahre";
 
+export interface UebungSection {
+  sectionTitle: string;
+  content: string;
+}
+
 export interface Uebung {
   id: string;
   titel: string;
@@ -187,10 +192,10 @@ export interface Uebung {
   zeitBadge: ZeitBadge;
   alterBadge: AlterBadge[];
   subthemaBadge: Subthema[];
-  material?: string;
-  tipps?: string;
+  sections: UebungSection[];
 }
 
 export interface UebungenDaten {
   uebungen: Uebung[];
+  quellen: QuelleEintrag[];
 }

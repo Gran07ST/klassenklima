@@ -74,24 +74,16 @@ export default function UebungCard({ uebung }: UebungCardProps) {
                 <p className="leading-relaxed whitespace-pre-wrap">
                   {uebung.anleitung}
                 </p>
-                {uebung.material && (
-                  <div className="mt-4">
+                {uebung.sections.map((section) => (
+                  <div key={section.sectionTitle} className="mt-4">
                     <p className="text-sm text-accent font-normal mb-2">
-                      Material:
+                      {section.sectionTitle}:
                     </p>
-                    <p className=" text-sm leading-relaxed">
-                      {uebung.material}
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                      {section.content}
                     </p>
                   </div>
-                )}
-                {uebung.tipps && (
-                  <div className="mt-4">
-                    <p className="text-sm text-accent font-normal mb-2">
-                      Tipp:
-                    </p>
-                    <p className="text-sm leading-relaxed">{uebung.tipps}</p>
-                  </div>
-                )}
+                ))}
               </div>
             </div>
           )}

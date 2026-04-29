@@ -2,14 +2,22 @@
   "uebungen": [
     {
       "id": "ueb-001",
-      "titel": "Das Netz der Verbindungen",
-      "kurzbeschreibung": "Eine warm-up Übung, um die Klasse als Netzwerk zu erleben und Verbindungen zwischen den Mitgliedern sichtbar zu machen.",
-      "anleitung": "Alle Teilnehmer stehen im Kreis. Eine Person hält ein Garnknäuel und nennt ihren Namen. Dann wirft sie das Garn (ohne das Ende loszulassen) an eine andere Person und nennt deren Namen. Diese Person wiederholt den Vorgang. Am Ende entsteht ein Netz, das alle verbindet.\n\nAnschliessend wird diskutiert: Was passiert, wenn man eine Faden loslässt? Wie zeigt das unsere class community?",
+      "titel": "Die Dankbarkeits-Ecke",
+      "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
+      "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' mit einer Box gemacht. Schüler:innen schreiben Zettel mit Dingen, für die sie dankbar sind. Dies stärkt die Beziehungsqualität durch Vertrauen, Respekt und gegenseitige Fürsorge (Wang & Degol, 2016).\n\nWöchentlich werden einige Zettel vorgelesen (mit Erlaubnis).",
       "zeitBadge": "5–15 Min",
-      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
-      "subthemaBadge": ["Teamfähigkeit", "Soziale Kompetenz"],
-      "material": "Ein grosses Garnknäuel",
-      "tipps": "Für jüngere Klassen kann die Lehrkraft das Netz am Schluss wieder zusammenrollen und als Metapher für die Klasse verwenden."
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Notizbuch, Stifte, Box oder Korb"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Die Lehrkraft wirft selbst Zettel ein. Als 'unsichtbare Hand' steuert sie durch dieses Modellverhalten die soziale Akzeptanz und das Zugehörigkeitsgefühl innerhalb der Gruppe (Endedijk et al., 2022; Magro et al., 2024)."
+        }
+      ]
     },
     {
       "id": "ueb-002",
@@ -18,53 +26,509 @@
       "anleitung": "Jeder schreibt seinen Namen auf einen Zettel. Alle Zettel werden in einen Behälter gelegt. Jeder zieht einen Zettel (nicht den eigenen!) und schreibt ein echtes Kompliment dazu. Die Karten werden zurückgegeben.\n\nAbschliessend dürfen Freiwillige erzählen, wie es sich angefühlt hat, ein Kompliment zu bekommen.",
       "zeitBadge": "15–30 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
-      "subthemaBadge": ["Empathie", "Selbstbewusstsein"],
-      "material": "Zettel, Stift, Behälter",
-      "tipps": "Erinnere die Klasse an echte, respektvolle Komplimente – nichts Verletzliches oder Spöttisches."
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Zettel, Stift, Behälter"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Erinnere die Klasse an echte, respektvolle Komplimente – nichts Verletzliches oder Spöttisches.Fördert die Qualität der interpersonalen Beziehungen (Vertrauen, Respekt) und stärkt das Zugehörigkeitsgefühl (Wang & Degol, 2016; Durlak et al., 2011)."
+        }
+      ]
     },
     {
       "id": "ueb-003",
-      "titel": "Gefühls-Wetterbericht",
-      "kurzbeschreibung": "Ein kurzer Check-in, bei dem jede:r ihren aktuellen 'Wetterzustand' teilt.",
-      "anleitung": "Die Lehrkraft fragt: 'Welches Wetter hast du gerade?' Optionen: Sonnig (gut), Bewölkt (okay), Regnerisch (traurig), Stürmisch (wütend). Jede:r nennt kurz ihr 'Wetter' und warum.\n\nDie Lehrkraft fasst zusammen: 'Unser Klassenwetter ist heute gemischt – das ist normal!'",
-      "zeitBadge": "< 5 Min",
+      "titel": "Stärken-Detektiv:innen",
+      "kurzbeschreibung": "Ein Geheimauftrag, um positive Taten von Mitschüler:innen zu finden.",
+      "anleitung": "Jede Woche erhalten 3 Schüler:innen einen geheimen 'Detektiv-Auftrag'. Sie müssen beobachten, wer in der Klasse etwas besonders Hilfsbereites oder Nettes tut (ohne den Namen zu verraten).\n\nAm Freitag berichten die Detektiv:innen anonym: 'Ich habe jemanden gesehen, der beim Aufräumen geholfen hat.' Die Lehrkraft nutzt dies zur sozialen Referenzierung: Lobt sie positives Verhalten, steigt das Ansehen dieser Schüler:innen in der gesamten Gruppe (Magro et al., 2024; Endedijk et al., 2022).",
+      "zeitBadge": "5 Min (Bericht)",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
-      "subthemaBadge": ["Selbstregulation", "Kommunikation"],
-      "material": "Keine",
-      "tipps": "Diese Übung kann wöchentlich wiederholt werden – als Ritual am Montagmorgen."
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Detektiv-Ausweise (optional)"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Dies nutzt die 'unsichtbare Hand' der Lehrperson, um Peer-Beziehungen positiv zu steuern, ohne direkt einzugreifen (Endedijk et al., 2022)."
+        }
+      ]
     },
     {
       "id": "ueb-004",
-      "titel": "Das 'Ich mag dich'-Spiel",
-      "kurzbeschreibung": "Ein einfaches Spiel, um positive Aufmerksamkeiten zwischen den Klassenmitgliedern zu fördern.",
-      "anleitung": "Die Klasse sitzt im Kreis. Eine Person beginnt: 'Ich mag an [Name]..., dass er/sie...'. Beispiel: 'Ich mag an Lena, dass sie immer hilft.' Die genannte Person sagt dann: 'Ich mag an [nächste Person]..., dass...' \n\nAlle dürfen nur einmal genannt werden.",
-      "zeitBadge": "5–15 Min",
+      "titel": "Gefühls-Wetterbericht",
+      "kurzbeschreibung": "Ein kurzer Check-in, bei dem jede:r ihren aktuellen 'Wetterzustand' teilt.",
+      "anleitung": "Die Lehrperson fragt: 'Welches Wetter hast du gerade?' Optionen: Sonnig (gut), Bewölkt (okay), Regnerisch (traurig), Stürmisch (wütend). Jede:r nennt kurz ihr 'Wetter' und warum.\n\nDie Lehrkraft fasst zusammen: 'Unser Klassenwetter ist heute gemischt – das ist normal!'",
+      "zeitBadge": "< 5 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
-      "subthemaBadge": ["Empathie", "Soziale Kompetenz"],
-      "material": "Keine",
-      "tipps": "Falls jemand nicht genannt wird, kann die Lehrkraft helfen: 'Ich habe noch einen Tipp für [Name]...'"
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Keine"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Diese Übung kann wöchentlich wiederholt werden – als Ritual am Montagmorgen. Diese Übung dient der emotionalen Sicherheit und ist ein Baustein der Selbstregulation (Wang & Degol, 2016; Zimmerman, 2002)."
+        }
+      ]
     },
     {
       "id": "ueb-005",
-      "titel": "Konflikt-Ruheraum",
-      "kurzbeschreibung": "Eine Übung, um Strategien zu entwickeln, wie man sich in Konfliktsituationen ruhig verhalten kann.",
-      "anleitung": "In Kleingruppen (3–4 Personen) diskutieren die Schüler: 'Was hilft dir, wenn du wütend wirst?' Jede Gruppe notiert 3 Ideen (z.B. tief durchatmen, weggehen, mit Lehrkraft sprechen).\n\nAlle Ideen werden gesammelt und an der Tafel festgehalten – als 'Ruheraum-Regeln' für die Klasse.",
-      "zeitBadge": "15–30 Min",
-      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
-      "subthemaBadge": ["Selbstregulation", "Konfliktlösung"],
-      "material": "Blätter, Stifte, Tafel",
-      "tipps": "Die Regeln können als Poster im Klassenzimmer aufgehängt werden – als Erinnerung für alle."
+      "titel": "Das Kultur-Mosaik",
+      "kurzbeschreibung": "Ein spielerisches Kennenlernen der vielfältigen Hintergründe in der Klasse.",
+      "anleitung": "Jede:r Schüler:in erhält ein Puzzleteil aus Papier. Die Aufgabe lautet: 'Male oder schreibe etwas auf dein Teil, das deine Herkunft, ein Hobby oder eine Besonderheit zeigt (Respekt vor Diversität).' [1, 2]. \n\nDie Klasse setzt die Teile zu einem grossen Mosaik an der Wand zusammen. Die Lehrkraft moderiert: 'Jedes Teil ist anders, aber erst zusammen sind wir ein vollständiges Bild.'",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Papier-Puzzleteile, Stifte"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Wahrgenommene Inklusivität und Wertschätzung von Heterogenität fördern nachweislich die psychische Gesundheit (Long et al., 2021; Hascher et al., 2022)."
+        }
+      ]
     },
     {
       "id": "ueb-006",
-      "titel": "Die Dankbarkeits-Ecke",
-      "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
-      "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' gemacht. Dort gibt es ein Notizbuch oder eine Box. Schüler:innen können Zettel mit Dingen hineinschreiben, für die sie dankbar sind (z.B. 'Danke an Tom, der mir beim Heften geholfen hat').\n\nWöchentlich werden einige Zettel vorgelesen (mit Erlaubnis der Autoren).",
-      "zeitBadge": "5–15 Min",
+      "titel": "Die Empathie-Detektiv:innen",
+      "kurzbeschreibung": "Rollenspiel zur Förderung der Perspektivenübernahme.",
+      "anleitung": "In Kleingruppen erhalten die Schüler:innen 'Szenarien-Karten' (z. B. 'Ein neues Kind kommt in die Klasse'). \n\nSpiel: Ein Kind spielt das neue Kind, die anderen überlegen: 'Was fühlt diese Person gerade? Was würde ihr helfen, sich zugehörig zu fühlen?' (Soziale Kompetenz). [4]. \n\nDie Gruppen präsentieren ihre besten 'Willkommens-Strategien'.",
+      "zeitBadge": "20–30 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Szenarien-Karten"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Perspektivenübernahme ist eine Kernkompetenz des sozial-emotionalen Lernens (SEL) und verbessert das Miteinander (Durlak et al., 2011)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-007",
+      "titel": "Das Wir-Poster (Shared Vision)",
+      "kurzbeschreibung": "Gemeinsame Erarbeitung einer positiven Klassenzukunft.",
+      "anleitung": "Die Klasse wird als 'Team auf Forschungsreise' betrachtet. Gemeinsam wird die Frage beantwortet: 'Was macht uns als Gemeinschaft stark?' (Connectedness). \n\nIdeen werden gesammelt (z. B. 'Wir helfen uns bei Mathe', 'Wir lachen zusammen') und auf einem grossen 'Wir-Poster' visualisiert. Alle unterschreiben als Zeichen der Zugehörigkeit.",
+      "zeitBadge": "45 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
-      "subthemaBadge": ["Empathie", "Soziale Kompetenz"],
-      "material": "Notizbuch, Stifte, Box oder Korb",
-      "tipps": "Die Lehrkraft kann auch selbst Zettel einwerfen – als Vorbild."
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Grosses Plakat, Stifte"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Das Gefühl, ein integraler Teil einer Gemeinschaft mit gemeinsamer Vision zu sein, schützt vor emotionaler Entfremdung (Thapa et al., 2013; Wang & Degol, 2016)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-008",
+      "titel": "Das Netz der Verbindungen",
+      "kurzbeschreibung": "Visualisierung der Klasse als Netzwerk.",
+      "anleitung": "Ein Garnknäuel wird im Kreis zugeworfen (Namen nennen). Ein Netz entsteht. Diskussion: 'Was passiert, wenn ein Faden losgelassen wird?' (Wang & Degol, 2016).",
+      "zeitBadge": "5–15 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Gemeinschaft"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Garnknäuel"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Macht das abstrakte Konzept der 'Connectedness' physisch greifbar (Thapa et al., 2013)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-009",
+      "titel": "Meine Lern-Pyramide",
+      "kurzbeschreibung": "Schüler:innen setzen sich konkrete Ziele für die Woche.",
+      "anleitung": "Zu Beginn der Woche füllen die Schüler:innen eine Pyramide aus: \n1. Basis: Was muss ich diese Woche erledigen? \n2. Mitte: Wie gehe ich dabei vor (Strategie)? \n3. Spitze: Woran merke ich am Freitag, dass ich erfolgreich war?\n\nAm Ende der Woche erfolgt ein kurzer Abgleich (Self-Reflection Phase).",
+      "zeitBadge": "10–15 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Akademisches Klima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Arbeitsblatt mit Pyramiden-Grafik"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Die Lehrperson unterstützt hier, um realistische und 'proximale' Ziele zu formulieren (Zimmerman, 2002)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-010",
+      "titel": "Die Fokus-Tomate",
+      "kurzbeschreibung": "Eine Einführung in konzentriertes Arbeiten durch Zeit-Intervalle.",
+      "anleitung": "Die Lehrperson erklärt die Pomodoro-Technik: 25 Minuten voll konzentriert arbeiten, dann 5 Minuten Pause. Während der Arbeitsphase bleibt die 'Fokus-Tomate' (oder ein Timer) für alle sichtbar.\n\nRegel: Während der Fokus-Zeit gibt es keine Unterbrechungen. Wer eine Idee hat, die nichts mit der Aufgabe zu tun hat, schreibt sie kurz auf einen 'Später-Zettel' und arbeitet weiter.",
+      "zeitBadge": "30 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Akademisches Klima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Küchenwecker oder digitaler Timer, Papier"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Die Übung hilft gegen Prokrastination (Aufschub) und schult das Bewusstsein für die eigene Aufmerksamkeitsspanne (Cirillo, 2006)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-011",
+      "titel": "Die SMART-Quest",
+      "kurzbeschreibung": "Schüler:innen setzen sich messbare 'Level-Up'-Ziele.",
+      "anleitung": "Vor einer Lernphase formulieren die Schüler:innen ihr Ziel als Quest nach der SMART-Methode: \n- S (Spezifisch): Was genau lerne ich? \n- M (Messbar): Woran sehe ich, dass ich fertig bin? \n- A (Attraktiv): Welches 'Gadget' (Sticker/Lob) erhalte ich? \n- R (Realistisch): Ist es in dieser Zeit schaffbar? \n- T (Terminiert): In wie vielen Minuten?\n\nWer seine Quest erfüllt, darf seinen Sticker auf einem Klassen-Quest-Poster platzieren.",
+      "zeitBadge": "5–10 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Akademisches Klima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Quest-Karten, Sticker, Klassen-Poster"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Das Setzen von proximalen (nahen) Zielen steigert die Selbstwirksamkeit massiv (Zimmerman, 2002)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-012",
+      "titel": "Die Strategie-Börse",
+      "kurzbeschreibung": "Handel mit 'Lern-Tricks' statt mit richtigen Ergebnissen.",
+      "anleitung": "Nach einer schwierigen Phase in Mathe oder Deutsch tauschen S. ihre 'Werkzeuge' aus. \n\nFrage: 'Welcher Trick (Strategie) hat dir beim Lösen geholfen?' (z. B. Skizze zeichnen, lautes Vorsagen, Tabellen). \n\nJede neu genannte Strategie wird an die Tafel geschrieben. Die Klasse erhält 'Erfahrungspunkte', wenn sie eine neue Strategie erfolgreich bei einer anderen Aufgabe anwendet (Wang & Degol, 2016; Zimmerman, 2002).",
+      "zeitBadge": "5–10 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Akademisches Klima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Tafel"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Fördert die Einsicht, dass Erfolg durch steuerbare Prozesse (Strategien) und nicht durch feststehendes Talent entsteht (Zimmerman, 2002)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-013",
+      "titel": "Das Wachstums-Orakel",
+      "kurzbeschreibung": "Individuellen Fortschritt durch Vorhersagen sichtbar machen.",
+      "anleitung": "Schüler:innen schreiben am Montagmorgen eine geheime Vorhersage für sich selbst (Mastery-Ziel): 'Woran werde ich am Freitag merken, dass ich in [Fach] einen kleinen Schritt weiter bin als heute?' \n\nRegel: Es darf kein Noten-Ziel sein, sondern ein Verhaltens-Ziel (z. B. 'Ich habe mich 3x getraut zu fragen, wenn ich etwas nicht verstehe'). \n\nAm Freitag checken die Schüler:innen ihr Orakel. Ein positives Klima wirkt hier als Katalysator für diese individuellen Entwicklungen (Eder, 2002; Wang & Degol, 2016).",
+      "zeitBadge": "5–10 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Akademisches Klima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Kleine Briefumschläge oder Zettel"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Schulen, die individuellen Fortschritt über den sozialen Vergleich stellen, haben nachweislich motiviertere Schüler:innen (Eder, 2002; Wang & Degol, 2016; Zimmerman, 2002)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-014",
+      "titel": "Konflikt-Ruheraum",
+      "kurzbeschreibung": "Eine Übung, um Strategien zu entwickeln, wie man sich in Konfliktsituationen ruhig verhalten kann.",
+      "anleitung": "In Kleingruppen (3–4 Personen) diskutieren die Schüler:innen: 'Was hilft dir, wenn du wütend wirst?' Jede Gruppe notiert 3 Ideen (z.B. tief durchatmen, weggehen, mit Lehrperson sprechen). Dies fördert Kernkompetenzen zur Selbstregulation und den Umgang mit interpersonalen Situationen (Durlak et al., 2011; Zimmerman, 2002).\n\nAlle Ideen werden gesammelt und an der Tafel festgehalten – als 'Ruheraum-Regeln' für die Klasse.",
+      "zeitBadge": "15–30 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Blätter, Stifte, Tafel"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Die Regeln können als Poster im Klassenzimmer aufgehängt werden. Proaktives Classroom-Management und klare Regeln reduzieren nachweislich psychische Sicherheitsrisiken (Emmer et al., 1980; Wang & Degol, 2016)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-015",
+      "titel": "Die SMART-Regelfabrik",
+      "kurzbeschreibung": "Partizipative Erarbeitung fairer Klassenregeln.",
+      "anleitung": "Anstatt Regeln vorzugeben, werden die Schüler:innen zu 'Gesetzgeber:innen'. Sie entwerfen Regeln für ein faires Miteinander nach der SMART-Methode (Zimmerman, 2002): \n- Spezifisch: 'Wir melden uns' statt 'Wir sind brav'. \n- Terminiert: Die Regeln werden für eine Testphase von 2 Wochen eingeführt.\n\nDie Klasse stimmt über die 'fairsten' Regeln ab. Die Lehrkraft moderiert im autoritativen Stil: Hohe Erwartungen an die Einhaltung bei gleichzeitiger Unterstützung (Hascher et al., 2022; Wang & Degol, 2016).",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Plakate, Stifte"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Regeln, die Schüler:innen als fair wahrnehmen, senken die Wahrscheinlichkeit für problematisches Verhalten um 7 % bis 8 % (Wang et al., 2010)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-016",
+      "titel": "Die Upstander-Akademie",
+      "kurzbeschreibung": "Von passiven Beobachter:innen zu aktiven Helfer:innen ('Upstander').",
+      "anleitung": "Die Lehrperson erklärt den Unterschied zwischen Mitläufer:innen (bystander) und 'Upstander' (Personen, die bei Ungerechtigkeiten aufstehen) (Thapa et al., 2013). \n\nSpielerische Mission: Die Klasse sammelt in Gruppen 'Zivilcourage-Punkte'. Sie entwickeln für fiktive Szenarien (z. B. Ausgrenzung in der Pause) SMART-Handlungspläne: \n- Spezifisch: Was sage ich genau? \n- Messbar: Habe ich Hilfe geholt? \n- Realistisch: Ist es für mich sicher?\n\nDie besten Strategien werden als 'Goldene Regeln der Hilfe' prämiert.",
+      "zeitBadge": "20–30 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Szenarien-Karten"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Forschung zeigt: Die Förderung von Upstander-Verhalten reduziert Aggression, verbessert das Klassenklima und kann sogar die akademischen Leistungen steigern (Thapa et al., 2013; Long et al., 2021)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-017",
+      "titel": "Das Tresor-Gespräch",
+      "kurzbeschreibung": "Aufbau emotionaler Sicherheit durch diskrete Kommunikation.",
+      "anleitung": "Um die emotionale Sicherheit zu stärken, wird ein 'Kommunikations-Tresor' (eine Box) eingeführt. Schüler:innen können dort Zettel einwerfen, wenn sie Sorgen haben oder sich unsicher fühlen (Wang & Degol, 2016). \n\nDie Lehrperson nutzt das 'Coaching-Prinzip': Sie bespricht Erwartungen oder Konflikte diskret mit den Betroffenen ausserhalb der Sichtweite der gesamten Klasse, um negative soziale Referenzierung und Beschämung zu vermeiden (Endedijk et al., 2022).",
+      "zeitBadge": "5–10 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Feedback-Box, Zettel"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Das Vermeiden von öffentlicher Zurechtweisung schützt den sozialen Status des Kindes und stärkt die Lehrer-Schüler-Bindung (Endedijk et al., 2022; Magro et al., 2024)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-018",
+      "titel": "Radar-Rallye",
+      "kurzbeschreibung": "Detektivspiel zur Identifikation von Angsträumen.",
+      "anleitung": "Die Schüler:innen werden zu 'Radar-Agent:innen'. In Teams begehen sie das Schulgelände und markieren auf einem Plan Orte, an denen sie sich besonders sicher fühlen (Grün) und Orte, an denen sie sich unbeobachtet oder unsicher fühlen (Rot) (Thapa et al., 2013; Wang & Degol, 2016). \n\nIm Anschluss wird diskutiert: 'Wie können wir die roten Zonen durch mehr 'Withitness' (Präsenz der Lehrperson) oder Umgestaltung in grüne Zonen verwandeln?' (Emmer et al., 1980; Eder, 2002).",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Schulhaus-Plan, Klebepunkte"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Unüberwachte Orte sind oft Brennpunkte für Mobbing; das Bewusstsein dafür erhöht die reale Sicherheit (Thapa et al., 2013; Wang & Degol, 2016)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-019",
+      "titel": "Gefühls-Wetterbericht",
+      "kurzbeschreibung": "Ein kurzer Check-in zur Förderung der emotionalen Sicherheit.",
+      "anleitung": "Die Lehrperson fragt: 'Welches Wetter hast du gerade?' Optionen: Sonnig, Bewölkt, Regnerisch, Stürmisch. Jede:r nennt kurz sein 'Wetter'.\n\nDie Lehrperson signalisiert Akzeptanz: 'Jedes Wetter ist willkommen!' Dies schafft einen Raum, in dem Gefühle ohne Angst vor Herabsetzung geäussert werden dürfen (Wang & Degol, 2016).",
+      "zeitBadge": "5–10 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
+      "subthemaBadge": ["Sicherheit"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Keine"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Dient der emotionalen Sicherheit und ist ein Baustein der Selbstregulation in der 'Forethought Phase' (Wang & Degol, 2016; Zimmerman, 2002)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-020",
+      "titel": "Schulhaus-Kuratoren",
+      "kurzbeschreibung": "Partizipative Gestaltung der Flure und Gemeinschaftsräume.",
+      "anleitung": "Schüler:innen wählen Orte im Schulhaus aus, die sie 'unwirtlich' finden. \n\nSie planen eine Ausstellung eigener Werke oder die Gestaltung einer 'Wall of Fame' für positive Taten der Gemeinschaft (Thapa et al., 2013). \n\nDie Pflege und Gestaltung der Umgebung steigert die Identifikation mit der Schule.",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Institutionelle Umgebung"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Plakate, eigene Kunstwerke, Klebematerial"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Wenn jede Person zur Pflege der Umgebung beiträgt, verbessert sich das allgemeine Klima nachhaltig (Thapa et al., 2013)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-021",
+      "titel": "Die Akustik-Wächter:innen",
+      "kurzbeschreibung": "Sensibilisierung für die Lärmbelastung im Raum zur Stressreduktion.",
+      "anleitung": "Die Klasse misst während verschiedener Phasen (Gruppenarbeit vs. Stillarbeit) die Lautstärke (z.B. mit einer Lärm-Ampel). \n\nGemeinsam werden 'Acoustical Control'-Massnahmen nach der SMART-Methode geplant: \n- Spezifisch: Wir nutzen Filzgleiter für alle Stühle. \n- Terminiert: Bis zum nächsten Freitag umgesetzt (Wang & Degol, 2016).",
+      "zeitBadge": "20–30 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Institutionelle Umgebung"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Lärm-App oder Lärm-Ampel, Filzgleiter"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Gute Akustik senkt nachweislich das Stresslevel von Lehrpersonen und Schüler:innen."
+        }
+      ]
+    },
+    {
+      "id": "ueb-022",
+      "titel": "Die Raum-Architekt:innen",
+      "kurzbeschreibung": "Mitgestaltung der Lernumgebung zur Stressreduktion.",
+      "anleitung": "Die Schüler:innen bewerten in Kleingruppen die 'Wohlfühl-Faktoren' des Zimmers (Licht, Akustik, Sauberkeit). \n\nSie erhalten die Mission: 'Plant die Umgestaltung einer Ecke (z.B. Leseecke) nach SMART-Kriterien.' \n- Beispiel: Ein weicher Teppich und eine Lampe bis nächsten Freitag. \n\nEin Entwurf wird gemeinsam zur Umsetzung ausgewählt.",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Institutionelle Umgebung"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Papier, Skizzenmaterial"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Die Umweltqualität beeinflusst das Stresslevel von Schüler:innen und Lehrpersonen direkt (Wang & Degol, 2016)."
+        }
+      ]
+    },
+    {
+      "id": "ueb-023",
+      "titel": "Klassen-Innenarchitekten",
+      "kurzbeschreibung": "Optimierung der Lernumgebung für weniger Stress.",
+      "anleitung": "Die Schüler:innen bewerten in Gruppen die Umweltqualität ihres Zimmers: Temperatur, Licht, Akustik und Sauberkeit. [18]\n\nSie erstellen einen Entwurf zur Umgestaltung einer Ecke (z.B. Leseecke), um das Wohlbefinden zu steigern. [18]\n\nEin Vorschlag wird ausgewählt und gemeinsam mit vorhandenen Ressourcen umgesetzt.",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
+      "subthemaBadge": ["Institutionelle Umgebung"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Papier, Skizzenmaterial"
+        },
+        {
+          "sectionTitle": "Tipp",
+          "content": "Saubere und gut organisierte Räume senken nachweislich das Stresslevel und fördern die Bindung zur Schule. (Wang & Degol, 2016; Thapa et al., 2013)"
+        }
+      ]
+    },
+    {
+      "id": "ueb-024",
+      "titel": "Klassenklima gemeinsam verstehen",
+      "kurzbeschreibung": "Die Klasse füllt einen Fragebogen zum Klassenklima aus und reflektiert gemeinsam mögliche Verbesserungen.",
+      "anleitung": "Die Lehrperson erklärt zuerst, dass es bei dieser Aktivität nicht um Bewertung oder Kritik geht, sondern darum, gemeinsam das Klassenklima zu verstehen und zu verbessern.\n\nDie Schüler:innen füllen den Fragebogen individuell und ruhig aus.\n\nWichtig: Die Ergebnisse bleiben privat. Niemand muss seine Antworten zeigen oder teilen.\n\nAnschliessend kann die Lehrperson allgemeine Fragen in die Runde geben (z. B. 'Was hilft euch beim Lernen?' oder 'Was macht eine gute Klasse aus?').\n\nDie Klasse sammelt gemeinsam Ideen, wie das Miteinander verbessert werden kann. Es werden keine einzelnen Personen thematisiert.",
+      "zeitBadge": "45 Min",
+      "alterBadge": ["13–16 Jahre"],
+      "subthemaBadge": ["Reflexion Klassenklima"],
+      "sections": [
+        {
+          "sectionTitle": "Material",
+          "content": "Fragebogen (digital oder ausgedruckt)"
+        },
+        {
+          "sectionTitle": "Hinweis",
+          "content": "Die Teilnahme ist freiwillig. Die Antworten sind privat und müssen nicht geteilt werden. Es geht nicht darum, einzelne Personen zu kritisieren, sondern gemeinsam Lösungen zu finden."
+        },
+        {
+          "sectionTitle": "Didaktischer Hinweis",
+          "content": "Die Lehrperson sollte eine wertschätzende Atmosphäre schaffen und betonen, dass alle Rückmeldungen anonym gedacht sind. Fokus liegt auf gemeinsamen Verbesserungen, nicht auf Schuldzuweisungen."
+        },
+        {
+          "sectionTitle": "Wissenschaftlicher Bezug",
+          "content": "Der Fragebogen basiert auf validierten Items des Linzer Fragebogens zum Schul- und Klassenklima (Eder & Mayr, 2000), die für diese Anwendung sprachlich angepasst wurden. Solche Instrumente ermöglichen eine strukturierte Reflexion des Klassenklimas und unterstützen gezielte pädagogische Interventionen (Hank et al., 2021)."
+        }
+      ]
+    }
+  ],
+  "quellen": [
+    {
+      "autorJahr": "Cirillo, F. (2006).",
+      "titel": "The Pomodoro technique. Cirillo Consulting."
+    },
+    {
+      "autorJahr": "Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., & Schellinger, K. B. (2011).",
+      "titel": "The impact of enhancing students’ social and emotional learning: A meta-analysis of school-based universal interventions. Child Development, 82(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x"
+    },
+    {
+      "autorJahr": "Eder, F. (2002).",
+      "titel": "Unterrichtsklima und Unterrichtsqualität. Unterrichtswissenschaft, 30(3), 213–229. https://doi.org/10.25656/01:7686"
+    },
+    {
+      "autorJahr": "Eder, F., & Mayr, J. (2000).",
+      "titel": "Linzer Fragebogen zum Schul- und Klassenklima für die 4.–8. Klassenstufe (LFSK 4–8). Hogrefe."
+    },
+    {
+      "autorJahr": "Emmer, E. T., Evertson, C. M., & Anderson, L. M. (1980).",
+      "titel": "Effective classroom management at the beginning of the school year. The Elementary School Journal, 80(5), 219–231. https://doi.org/10.1086/461192"
+    },
+    {
+      "autorJahr": "Hank, P., Baltes-Götz, B., & Preckel, F. (2022).",
+      "titel": "Welche Klimadimensionen misst der Linzer Fragebogen zum Schul- und Klassenklima für die 4.–8. Klasse (LFSK 4–8; Eder, 2000)? Diagnostica, 68(1), 28–38. https://doi.org/10.1026/0012-1924/a000280"
+    },
+    {
+      "autorJahr": "Hascher, T., & Waber, J. (2022).",
+      "titel": "Schulklima und Wohlbefinden in der Schule. In E. Wild & J. Möller (Eds.), Pädagogische Psychologie. Springer."
+    },
+    {
+      "autorJahr": "Hattie, J., & Yates, G. C. R. (2014).",
+      "titel": "Visible learning and the science of how we learn. Routledge."
+    },
+    {
+      "autorJahr": "Long, A. C. J., Huebner, E. S., Wedell, D. H., & Hills, K. J. (2021).",
+      "titel": "Measuring school climate: A systematic review. Review of Educational Research, 91(1), 1–40. https://doi.org/10.3102/0034654320979804"
+    },
+    {
+      "autorJahr": "Magro, S. W., et al. (2024).",
+      "titel": "Teacher–student relationship quality and social competence: A systematic review. Educational Psychology Review."
+    },
+    {
+      "autorJahr": "Masicampo, E. J., & Baumeister, R. F. (2011).",
+      "titel": "Consider it done! Plan making can eliminate the cognitive effects of unfinished goals. Journal of Personality and Social Psychology, 101(4), 667–683. https://doi.org/10.1037/a0024192"
+    },
+    {
+      "autorJahr": "Pascoe, M. C., Hetrick, S. E., & Parker, A. G. (2020).",
+      "titel": "The impact of stress on students in secondary school and higher education. International Journal of Adolescence and Youth, 25(1), 104–112. https://doi.org/10.1080/02673843.2019.1596823"
+    },
+    {
+      "autorJahr": "Thapa, A., Cohen, J., Guffey, S., & Higgins-D’Alessandro, A. (2013).",
+      "titel": "A review of school climate research. Review of Educational Research, 83(3), 357–385. https://doi.org/10.3102/0034654313483907"
+    },
+    {
+      "autorJahr": "Wang, M. T., & Degol, J. L. (2016).",
+      "titel": "School climate: A review of the construct, measurement, and impact on student outcomes. Educational Psychology Review, 28(2), 315–352. https://doi.org/10.1007/s10648-015-9319-1"
+    },
+    {
+      "autorJahr": "Wang, M. T., Selman, R. L., Dishion, T. J., & Stormshak, E. A. (2010).",
+      "titel": "A tobit regression analysis of the covariation between middle school students’ perceived school climate and behavioral problems. Journal of Research on Adolescence, 20(2), 274–286. https://doi.org/10.1111/j.1532-7795.2010.00648.x"
+    },
+    {
+      "autorJahr": "Zimmerman, B. J. (2002).",
+      "titel": "Becoming a self-regulated learner: An overview. Theory Into Practice, 41(2), 64–70. https://doi.org/10.1207/s15430421tip4102_2"
     }
   ]
 }

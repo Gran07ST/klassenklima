@@ -3,14 +3,16 @@
 import Header from "@/components/layout/Header";
 import UebungCard from "@/components/lehrer/UebungCard";
 import UebungFilter from "@/components/lehrer/UebungFilter";
-import { Uebung } from "@/lib/types";
+import QuellenListe from "@/components/schueler/QuellenListe";
+import { Uebung, UebungenDaten } from "@/lib/types";
 import { useState } from "react";
 
 // Import data
 import uebungenData from "@/data/uebungen.json";
 
 export default function UebungenPage() {
-  const uebungen = uebungenData.uebungen as Uebung[];
+  const data = uebungenData as UebungenDaten;
+  const uebungen = data.uebungen;
   const [filtered, setFiltered] = useState<Uebung[]>(uebungen);
 
   return (
@@ -55,6 +57,8 @@ export default function UebungenPage() {
               ))
             )}
           </div>
+
+          <QuellenListe quellen={data.quellen} />
         </div>
       </main>
     </div>
