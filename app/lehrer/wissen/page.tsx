@@ -3,6 +3,7 @@
 import Header from "@/components/layout/Header";
 import StatCard from "@/components/lehrer/StatCard";
 import QuellenListe from "@/components/schueler/QuellenListe";
+import ZitiertText from "@/components/ZitiertText";
 import { StudienDaten } from "@/lib/types";
 import { useState } from "react";
 
@@ -17,7 +18,7 @@ export default function WissenPage() {
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
       <Header
         title="Wissen & Studien"
-        subtitle="Forschungsergebnisse zum Klassenklima"
+        subtitle="Forschungsergebnisse zum Schulklima"
       />
 
       <main className="flex-1 px-4 py-8 md:py-12">
@@ -38,7 +39,7 @@ export default function WissenPage() {
                 (aspekt, i) => (
                   <li key={i} className="flex gap-4 leading-relaxed">
                     <span className="text-accent shrink-0 select-none">—</span>
-                    <span>{aspekt}</span>
+                    <ZitiertText value={aspekt} />
                   </li>
                 ),
               )}
@@ -62,10 +63,12 @@ export default function WissenPage() {
                   Schulklima
                 </h3>
                 <p className="leading-relaxed">
-                  {
-                    data.wissenschaftlicheGrundlagen
-                      .differenzierungKlimabegriffe.schulklima
-                  }
+                  <ZitiertText
+                    value={
+                      data.wissenschaftlicheGrundlagen
+                        .differenzierungKlimabegriffe.schulklima
+                    }
+                  />
                 </p>
               </article>
               <article className="border-l-2 border-accent pl-5 md:pl-6">
@@ -76,10 +79,12 @@ export default function WissenPage() {
                   Klassenklima
                 </h3>
                 <p className="leading-relaxed">
-                  {
-                    data.wissenschaftlicheGrundlagen
-                      .differenzierungKlimabegriffe.klassenklima
-                  }
+                  <ZitiertText
+                    value={
+                      data.wissenschaftlicheGrundlagen
+                        .differenzierungKlimabegriffe.klassenklima
+                    }
+                  />
                 </p>
               </article>
             </div>
@@ -94,10 +99,12 @@ export default function WissenPage() {
               Wer schaut auf welches Klima?
             </h2>
             <p className="italic leading-relaxed mb-6 md:mb-8 max-w-3xl">
-              {
-                data.wissenschaftlicheGrundlagen.zielgruppenspezifischeZuordnung
-                  .begruendung
-              }
+              <ZitiertText
+                value={
+                  data.wissenschaftlicheGrundlagen
+                    .zielgruppenspezifischeZuordnung.begruendung
+                }
+              />
             </p>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <article>
@@ -111,10 +118,12 @@ export default function WissenPage() {
                   → Schulklima
                 </h3>
                 <p className="leading-relaxed">
-                  {
-                    data.wissenschaftlicheGrundlagen
-                      .zielgruppenspezifischeZuordnung.lehrpersonen_schulklima
-                  }
+                  <ZitiertText
+                    value={
+                      data.wissenschaftlicheGrundlagen
+                        .zielgruppenspezifischeZuordnung.lehrpersonen_schulklima
+                    }
+                  />
                 </p>
               </article>
               <article>
@@ -128,11 +137,13 @@ export default function WissenPage() {
                   → Klassenklima
                 </h3>
                 <p className="leading-relaxed">
-                  {
-                    data.wissenschaftlicheGrundlagen
-                      .zielgruppenspezifischeZuordnung
-                      .schuelerinnen_klassenklima
-                  }
+                  <ZitiertText
+                    value={
+                      data.wissenschaftlicheGrundlagen
+                        .zielgruppenspezifischeZuordnung
+                        .schuelerinnen_klassenklima
+                    }
+                  />
                 </p>
               </article>
             </div>
@@ -147,10 +158,12 @@ export default function WissenPage() {
               Vier Dimensionen des Schulklimas
             </h2>
             <p className="leading-relaxed mb-6 md:mb-8">
-              {
-                data.wissenschaftlicheGrundlagen.dimensionenDesSchulklimas
-                  .einleitung
-              }
+              <ZitiertText
+                value={
+                  data.wissenschaftlicheGrundlagen.dimensionenDesSchulklimas
+                    .einleitung
+                }
+              />
             </p>
           </section>
 
@@ -211,7 +224,7 @@ export default function WissenPage() {
                             <span className="text-accent shrink-0 select-none">
                               —
                             </span>
-                            <span>{kern}</span>
+                            <ZitiertText value={kern} />
                           </li>
                         ))}
                       </ul>
@@ -229,7 +242,7 @@ export default function WissenPage() {
                             <span className="text-accent shrink-0 select-none">
                               —
                             </span>
-                            <span>{bsp}</span>
+                            <ZitiertText value={bsp} />
                           </li>
                         ))}
                       </ul>

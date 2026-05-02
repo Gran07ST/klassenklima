@@ -8,10 +8,10 @@ Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Schu
 
 ### Lehrbereich
 - **Wissen & Studien**: Wissenschaftliche Grundlagen, Themenbereiche und Studien zum Schul- und Klassenklima
-- **Übungen**: Übungskatalog zur Förderung des Klassenklimas (filterbar nach Zeit, Alter und Subthema)
+- **Übungen**: Übungskatalog zur Förderung des Schulklimas (filterbar nach Zeit, Alter und Subthema)
 
 ### Schülerbereich
-- **Fragebogen**: Selbsteinschätzung zum erlebten Klassenklima
+- **Fragebogen**: Selbsteinschätzung zum erlebten Schulklima
 - **Auswertung**: Radar-Diagramm zeigt Ergebnisse pro Subthema
 - **Vorschläge**: Personalisierte Verbesserungsvorschläge für Subthemen mit Verbesserungspotenzial
 
@@ -179,11 +179,13 @@ Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftli
 - `studien`: Array einzelner Studien mit Kernaussagen und Praxisbeispielen
 - `quellen`: Literaturverzeichnis (Autor:innen-Jahr und Titel)
 
+**Zitiert-Text-Pattern:** Mehrere Felder verwenden den gemeinsamen Typ `ZitiertText` = `{ text: string, quelle?: string }`. Das `quelle`-Feld enthält die komplette Zitatklammer (z. B. `"(Wang & Degol, 2016)"`) und wird in der UI grau dargestellt. Mehrere Zitate werden mit `;` innerhalb einer einzigen Klammer kombiniert (z. B. `"(Hascher et al., 2022; Wang & Degol, 2016)"`).
+
 **`wissenschaftlicheGrundlagen` (Objekt):**
-- `relevanzFuerPeerbeziehungen`: `{ titel, aspekte[] }`
-- `differenzierungKlimabegriffe`: `{ schulklima, klassenklima }`
-- `zielgruppenspezifischeZuordnung`: `{ begruendung, lehrpersonen_schulklima, schuelerinnen_klassenklima }`
-- `dimensionenDesSchulklimas`: `{ einleitung }`
+- `relevanzFuerPeerbeziehungen`: `{ titel, aspekte: ZitiertText[] }`
+- `differenzierungKlimabegriffe`: `{ schulklima: ZitiertText, klassenklima: ZitiertText }`
+- `zielgruppenspezifischeZuordnung`: `{ begruendung: ZitiertText, lehrpersonen_schulklima: ZitiertText, schuelerinnen_klassenklima: ZitiertText }`
+- `dimensionenDesSchulklimas`: `{ einleitung: ZitiertText }`
 
 **Studien-Struktur:**
 ```json
@@ -192,19 +194,24 @@ Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftli
   "themenbereich": "Sicherheit",
   "titel": "…",
   "beschreibung": "…",
-  "kernaussagen": ["…", "…"],
-  "praxisbeispiele": ["…", "…"]
+  "kernaussagen": [
+    { "text": "…", "quelle": "(Wang & Degol, 2016)" },
+    { "text": "…" }
+  ],
+  "praxisbeispiele": [
+    { "text": "…", "quelle": "(Thapa et al., 2013; Wang & Degol, 2016)" }
+  ]
 }
 ```
 
-`themenbereich` ist ein freier String, der auf der Wissen-Seite als Badge angezeigt wird.
+`themenbereich` ist ein freier String, der auf der Wissen-Seite als Badge angezeigt wird. `quelle` ist optional — Einträge ohne Beleg lassen es einfach weg.
 
 **Quelle:**
 ```json
 { "autorJahr": "Wang, M. T., & Degol, J. L. (2016).", "titel": "School climate: …" }
 ```
 
-Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein. Die exakte TypeScript-Form ist in `lib/types.ts` (`StudienDaten`, `WissenschaftlicheGrundlagen`, `Studie`, `QuelleEintrag`) definiert.
+Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein. Die exakte TypeScript-Form ist in `lib/types.ts` (`StudienDaten`, `WissenschaftlicheGrundlagen`, `Studie`, `ZitiertText`, `QuelleEintrag`) definiert.
 
 ---
 
@@ -217,13 +224,25 @@ Enthält den Übungskatalog für den Lehrbereich. Top-Level-Keys sind `uebungen`
   "id": "ueb-001",
   "titel": "Die Dankbarkeits-Ecke",
   "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
-  "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' …",
+  "anleitung": {
+    "text": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' …",
+    "quelle": "(Wang & Degol, 2016)"
+  },
   "zeitBadge": "5–15 Min",
   "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
   "subthemaBadge": ["Gemeinschaft"],
   "sections": [
-    { "sectionTitle": "Material", "content": "Notizbuch, Stifte, Box oder Korb" },
-    { "sectionTitle": "Tipp",     "content": "Die Lehrperson wirft selbst Zettel ein …" }
+    {
+      "sectionTitle": "Material",
+      "content": { "text": "Notizbuch, Stifte, Box oder Korb" }
+    },
+    {
+      "sectionTitle": "Tipp",
+      "content": {
+        "text": "Die Lehrperson wirft selbst Zettel ein …",
+        "quelle": "(Endedijk et al., 2022)"
+      }
+    }
   ]
 }
 ```
@@ -232,11 +251,11 @@ Enthält den Übungskatalog für den Lehrbereich. Top-Level-Keys sind `uebungen`
 - `id`: Eindeutige ID (`ueb-001`, `ueb-002`, …)
 - `titel`: Name der Übung
 - `kurzbeschreibung`: Kurze Einleitung (erscheint in der Übersicht)
-- `anleitung`: Detaillierte Schritte (`\n` für Zeilenumbrüche, wird mit `whitespace-pre-wrap` gerendert)
+- `anleitung`: `ZitiertText`-Objekt — `text` enthält die Anleitung (`\n` für Zeilenumbrüche, mit `whitespace-pre-wrap` gerendert), `quelle` (optional) wird grau dargestellt
 - `zeitBadge`: Zeitspanne als Text (z. B. `5–15 Min`)
 - `alterBadge`: Array von Altersgruppen (`6–10 Jahre`, `10–13 Jahre`, `13–16 Jahre`)
 - `subthemaBadge`: Array von Subthemen, die gefördert werden
-- `sections`: Array von Abschnitten mit `sectionTitle` und `content`. Übliche Titel: `Material`, `Tipp`, `Hinweis`, `Didaktischer Hinweis`, `Wissenschaftlicher Bezug`. Beliebig erweiterbar.
+- `sections`: Array von Abschnitten mit `sectionTitle` und `content` (jeweils `ZitiertText`). Übliche Titel: `Material`, `Tipp`, `Hinweis`, `Didaktischer Hinweis`, `Wissenschaftlicher Bezug`. Beliebig erweiterbar.
 
 **Neue Übung hinzufügen:** neues Objekt im `uebungen`-Array ergänzen, `id` muss eindeutig sein.
 

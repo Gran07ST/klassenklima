@@ -3,27 +3,59 @@
     "relevanzFuerPeerbeziehungen": {
       "titel": "Warum das Klima entscheidend für Peerbeziehungen ist",
       "aspekte": [
-        "Die Forschung beschreibt den Einfluss der Lehrperson auf die sozialen Beziehungen unter Gleichaltrigen als \"unsichtbare Hand\" (Endedijk et al., 2022).",
-        "Durch den Prozess der sozialen Referenzierung fungieren Lehrpersonen als soziale Orientierungspunkte; Mitschüler:innen bewerten ein Kind positiver, wenn die Lehrperson wertschätzend mit ihm interagiert (Endedijk et al., 2022; Hughes et al., 2001).",
-        "Unterstützende Lehrer-Schüler-Beziehungen sind konsistent mit einer höheren sozialen Kompetenz und einer besseren Integration in die Peer-Gruppe verknüpft (Magro et al., 2024).",
-        "Ein positives Klima bietet einen \"sicheren Hafen\", der es Schüler:innen ermöglicht, soziale Risiken einzugehen und Freundschaften aufzubauen (Magro et al., 2024; Verschueren & Koomen, 2012).",
-        "Die Dimension der Sicherheit trägt direkt dazu bei, Peer-Viktimisierung und Mobbing zu reduzieren, da Schüler:innen in einem unterstützenden Umfeld eher bereit sind, Hilfe zu suchen (Eliot et al., 2010; Thapa et al., 2013)."
+        {
+          "text": "Die Forschung beschreibt den Einfluss der Lehrperson auf die sozialen Beziehungen unter Gleichaltrigen als \"unsichtbare Hand\".",
+          "quelle": "(Endedijk et al., 2022)"
+        },
+        {
+          "text": "Durch den Prozess der sozialen Referenzierung fungieren Lehrpersonen als soziale Orientierungspunkte; Mitschüler:innen bewerten ein Kind positiver, wenn die Lehrperson wertschätzend mit ihm interagiert.",
+          "quelle": "(Endedijk et al., 2022; Hughes et al., 2001)"
+        },
+        {
+          "text": "Unterstützende Lehrer-Schüler-Beziehungen sind konsistent mit einer höheren sozialen Kompetenz und einer besseren Integration in die Peer-Gruppe verknüpft.",
+          "quelle": "(Magro et al., 2024)"
+        },
+        {
+          "text": "Ein positives Klima bietet einen \"sicheren Hafen\", der es Schüler:innen ermöglicht, soziale Risiken einzugehen und Freundschaften aufzubauen.",
+          "quelle": "(Magro et al., 2024; Verschueren & Koomen, 2012)"
+        },
+        {
+          "text": "Die Dimension der Sicherheit trägt direkt dazu bei, Peer-Viktimisierung und Mobbing zu reduzieren, da Schüler:innen in einem unterstützenden Umfeld eher bereit sind, Hilfe zu suchen.",
+          "quelle": "(Eliot et al., 2010; Thapa et al., 2013)"
+        }
       ]
     },
     "differenzierungKlimabegriffe": {
-      "schulklima": "Ein übergeordnetes Konstrukt, das die Qualität der gesamten schulischen Umwelt aus Sicht aller Beteiligten beschreibt, einschliesslich der Schulleitung, der kollegialen Zusammenarbeit und der physischen Ausstattung (Hascher et al., 2022; Wang & Degol, 2016).",
-      "klassenklima": "Bezieht sich auf die spezifische soziale und lernbezogene Atmosphäre innerhalb einer einzelnen Klasse sowie die unmittelbaren Interaktionen zwischen Lehrperson und Lernenden (Eder, 2002; Hascher et al., 2022)."
+      "schulklima": {
+        "text": "Ein übergeordnetes Konstrukt, das die Qualität der gesamten schulischen Umwelt aus Sicht aller Beteiligten beschreibt, einschliesslich der Schulleitung, der kollegialen Zusammenarbeit und der physischen Ausstattung.",
+        "quelle": "(Hascher et al., 2022; Wang & Degol, 2016)"
+      },
+      "klassenklima": {
+        "text": "Bezieht sich auf die spezifische soziale und lernbezogene Atmosphäre innerhalb einer einzelnen Klasse sowie die unmittelbaren Interaktionen zwischen Lehrperson und Lernenden.",
+        "quelle": "(Eder, 2002; Hascher et al., 2022)"
+      }
     },
     "zielgruppenspezifischeZuordnung": {
-      "begruendung": "Die Trennung der Begriffe auf dieser Webseite folgt der unterschiedlichen Wahrnehmungsperspektive der Akteure (Hascher et al., 2022).",
-      "lehrpersonen_schulklima": "Lehrkräfte nehmen die Schule massgeblich als Institution und Arbeitsplatz wahr, weshalb für sie organisatorische Merkmale und das Klima im Kollegium zentral sind (Eder, 2018; Hascher et al., 2022).",
-      "schuelerinnen_klassenklima": "Für Kinder und Jugendliche ist die Schulklasse der primäre Lern- und Lebensraum, in dem ihr Wohlbefinden massgeblich von der sozialen Dynamik dieser spezifischen Gruppe abhängt (Eder, 2002; Hascher et al., 2022)."
+      "begruendung": {
+        "text": "Die Trennung der Begriffe auf dieser Webseite folgt der unterschiedlichen Wahrnehmungsperspektive der Akteure.",
+        "quelle": "(Hascher et al., 2022)"
+      },
+      "lehrpersonen_schulklima": {
+        "text": "Lehrkräfte nehmen die Schule massgeblich als Institution und Arbeitsplatz wahr, weshalb für sie organisatorische Merkmale und das Klima im Kollegium zentral sind.",
+        "quelle": "(Eder, 2018; Hascher et al., 2022)"
+      },
+      "schuelerinnen_klassenklima": {
+        "text": "Für Kinder und Jugendliche ist die Schulklasse der primäre Lern- und Lebensraum, in dem ihr Wohlbefinden massgeblich von der sozialen Dynamik dieser spezifischen Gruppe abhängt.",
+        "quelle": "(Eder, 2002; Hascher et al., 2022)"
+      }
     },
     "dimensionenDesSchulklimas": {
-      "einleitung": "Um das Schulklima gestaltbar zu machen, wird es in der Forschung in vier Kerndimensionen unterteilt: Academic (Lehren und Lernen), Community (Gemeinschaft), Safety (Sicherheit) und Institutional Environment (Umgebung) (Thapa et al., 2013; Wang & Degol, 2016)."
+      "einleitung": {
+        "text": "Um das Schulklima gestaltbar zu machen, wird es in der Forschung in vier Kerndimensionen unterteilt: Academic (Lehren und Lernen), Community (Gemeinschaft), Safety (Sicherheit) und Institutional Environment (Umgebung).",
+        "quelle": "(Thapa et al., 2013; Wang & Degol, 2016)"
+      }
     }
   },
-
   "studien": [
     {
       "id": "studie-001",
@@ -31,15 +63,36 @@
       "titel": "Zugehörigkeit und Beziehungen als Grundlage",
       "beschreibung": "Diese Dimension beschreibt die Qualität der Beziehungen zwischen Schüler:innen und Lehrpersonen sowie das Gefühl, Teil der Gemeinschaft zu sein.",
       "kernaussagen": [
-        "Lehrpersonen beeinflussen durch ihr Verhalten aktiv das soziale Gefüge der Klasse (\"unsichtbare Hand\"). (Endedijk et al., 2022)",
-        "Positive Lehrer-Schüler-Beziehungen stehen in Zusammenhang mit höherer sozialer Kompetenz unter Gleichaltrigen. (Magro et al., 2024)",
-        "Ein starkes Zugehörigkeitsgefühl reduziert depressive Symptome bei Jugendlichen. (Long et al., 2021)",
-        "Programme zur Förderung sozial-emotionaler Kompetenzen stärken Beziehungen und das Wohlbefinden. (Durlak et al., 2011)"
+        {
+          "text": "Lehrpersonen beeinflussen durch ihr Verhalten aktiv das soziale Gefüge der Klasse (\"unsichtbare Hand\").",
+          "quelle": "(Endedijk et al., 2022)"
+        },
+        {
+          "text": "Positive Lehrer-Schüler-Beziehungen stehen in Zusammenhang mit höherer sozialer Kompetenz unter Gleichaltrigen.",
+          "quelle": "(Magro et al., 2024)"
+        },
+        {
+          "text": "Ein starkes Zugehörigkeitsgefühl reduziert depressive Symptome bei Jugendlichen.",
+          "quelle": "(Long et al., 2021)"
+        },
+        {
+          "text": "Programme zur Förderung sozial-emotionaler Kompetenzen stärken Beziehungen und das Wohlbefinden.",
+          "quelle": "(Durlak et al., 2011)"
+        }
       ],
       "praxisbeispiele": [
-        "Schüler:innen trauen sich, bei Problemen Hilfe zu suchen (Eliot et al., 2010; Thapa et al., 2013).",
-        "Positive Rückmeldungen durch Lehrpersonen beeinflussen das Ansehen einzelner Schüler:innen in der Gruppe (Magro et al., 2024; Endedijk et al., 2022).",
-        "Gemeinsame Aktivitäten und eine geteilte Vision stärken das Zugehörigkeitsgefühl (Wang & Degol, 2016; Thapa et al., 2013)."
+        {
+          "text": "Schüler:innen trauen sich, bei Problemen Hilfe zu suchen.",
+          "quelle": "(Eliot et al., 2010; Thapa et al., 2013)"
+        },
+        {
+          "text": "Positive Rückmeldungen durch Lehrpersonen beeinflussen das Ansehen einzelner Schüler:innen in der Gruppe.",
+          "quelle": "(Magro et al., 2024; Endedijk et al., 2022)"
+        },
+        {
+          "text": "Gemeinsame Aktivitäten und eine geteilte Vision stärken das Zugehörigkeitsgefühl.",
+          "quelle": "(Wang & Degol, 2016; Thapa et al., 2013)"
+        }
       ]
     },
     {
@@ -48,14 +101,32 @@
       "titel": "Unterstützung und Leistung im Gleichgewicht",
       "beschreibung": "Ein positives akademisches Klima verbindet hohe Erwartungen mit Unterstützung, damit Schüler:innen erfolgreich lernen können.",
       "kernaussagen": [
-        "Programme zum sozial-emotionalen Lernen steigern die Leistung um durchschnittlich 11 Perzentilpunkte. (Durlak et al., 2011)",
-        "Ein gutes Klassenklima verstärkt den Zusammenhang zwischen Fähigkeit und tatsächlicher Leistung. (Eder, 2002)",
-        "Viele Jugendliche fühlen sich emotional von der Schule entfremdet, weshalb Unterstützung besonders wichtig ist. (Durlak et al., 2011)"
+        {
+          "text": "Programme zum sozial-emotionalen Lernen steigern die Leistung um durchschnittlich 11 Perzentilpunkte.",
+          "quelle": "(Durlak et al., 2011)"
+        },
+        {
+          "text": "Ein gutes Schulklima verstärkt den Zusammenhang zwischen Fähigkeit und tatsächlicher Leistung.",
+          "quelle": "(Eder, 2002)"
+        },
+        {
+          "text": "Viele Jugendliche fühlen sich emotional von der Schule entfremdet, weshalb Unterstützung besonders wichtig ist.",
+          "quelle": "(Durlak et al., 2011)"
+        }
       ],
       "praxisbeispiele": [
-        "Schüler:innen setzen sich eigene Lernziele und überwachen ihren Fortschritt (Zimmerman, 2002).",
-        "Lehrpersonen geben differenziertes, formatives Feedback zur Förderung des Lernprozesses (Wang & Degol, 2016).",
-        "Unterricht wird durch lebensnahe Projekte und kognitiv aktivierende Aufgaben gestaltet (Wang & Degol, 2016; Thapa et al., 2013)."
+        {
+          "text": "Schüler:innen setzen sich eigene Lernziele und überwachen ihren Fortschritt.",
+          "quelle": "(Zimmerman, 2002)"
+        },
+        {
+          "text": "Lehrpersonen geben differenziertes, formatives Feedback zur Förderung des Lernprozesses.",
+          "quelle": "(Wang & Degol, 2016)"
+        },
+        {
+          "text": "Unterricht wird durch lebensnahe Projekte und kognitiv aktivierende Aufgaben gestaltet.",
+          "quelle": "(Wang & Degol, 2016; Thapa et al., 2013)"
+        }
       ]
     },
     {
@@ -64,14 +135,32 @@
       "titel": "Strukturen schaffen Vertrauen",
       "beschreibung": "Sicherheit bedeutet sowohl klare Regeln als auch emotionale Unterstützung im Unterricht.",
       "kernaussagen": [
-        "Ein autoritatives Schulklima (klare Regeln + Unterstützung) reduziert Mobbing. (Wang & Degol, 2016)",
-        "Ein besseres Schulklima senkt problematisches Verhalten um etwa 7–8 %. (Wang et al., 2010)",
-        "Klare Regeln und konsequentes Verhalten zu Beginn des Schuljahres sind entscheidend. (Emmer et al., 1980)"
+        {
+          "text": "Ein autoritatives Schulklima (klare Regeln + Unterstützung) reduziert Mobbing.",
+          "quelle": "(Wang & Degol, 2016)"
+        },
+        {
+          "text": "Ein besseres Schulklima senkt problematisches Verhalten um etwa 7–8 %.",
+          "quelle": "(Wang et al., 2010)"
+        },
+        {
+          "text": "Klare Regeln und konsequentes Verhalten zu Beginn des Schuljahres sind entscheidend.",
+          "quelle": "(Emmer et al., 1980)"
+        }
       ],
       "praxisbeispiele": [
-        "Regeln werden partizipativ festgelegt und konsequent sowie fair durchgesetzt (Wang & Degol, 2016; Thapa et al., 2013).",
-        "Lehrpersonen zeigen \"Withitness\" und reagieren frühzeitig auf Störungen (Emmer et al., 1980).",
-        "Diskrete Kommunikation bei Sorgen schützt die emotionale Sicherheit (Wang & Degol, 2016; Endedijk et al., 2022)."
+        {
+          "text": "Regeln werden partizipativ festgelegt und konsequent sowie fair durchgesetzt.",
+          "quelle": "(Wang & Degol, 2016; Thapa et al., 2013)"
+        },
+        {
+          "text": "Lehrpersonen zeigen \"Withitness\" und reagieren frühzeitig auf Störungen.",
+          "quelle": "(Emmer et al., 1980)"
+        },
+        {
+          "text": "Diskrete Kommunikation bei Sorgen schützt die emotionale Sicherheit.",
+          "quelle": "(Wang & Degol, 2016; Endedijk et al., 2022)"
+        }
       ]
     },
     {
@@ -80,18 +169,35 @@
       "titel": "Die Lernumgebung als Einflussfaktor",
       "beschreibung": "Die physische und organisatorische Umgebung beeinflusst das Wohlbefinden und das Verhalten in der Schule.",
       "kernaussagen": [
-        "Gute Umweltbedingungen (Licht, Temperatur, Sauberkeit) senken Stress. (Wang & Degol, 2016)",
-        "Kleinere und strukturierte Einheiten fördern Beziehungen und Zugehörigkeit. (Wang & Degol, 2016)",
-        "Ein fairer Zugang zu Ressourcen wird als Wertschätzung wahrgenommen. (Wang & Degol, 2016)"
+        {
+          "text": "Gute Umweltbedingungen (Licht, Temperatur, Sauberkeit) senken Stress.",
+          "quelle": "(Wang & Degol, 2016)"
+        },
+        {
+          "text": "Kleinere und strukturierte Einheiten fördern Beziehungen und Zugehörigkeit.",
+          "quelle": "(Wang & Degol, 2016)"
+        },
+        {
+          "text": "Ein fairer Zugang zu Ressourcen wird als Wertschätzung wahrgenommen.",
+          "quelle": "(Wang & Degol, 2016)"
+        }
       ],
       "praxisbeispiele": [
-        "Die Optimierung von Akustik und Beleuchtung verbessert die Konzentrationsfähigkeit (Uline & Tschannen-Moran, 2008; Wang & Degol, 2016).",
-        "Schulen bilden kleinere Lerncommunities, um die Verbundenheit zu erhöhen (Wang & Degol, 2016; Thapa et al., 2013).",
-        "Die gerechte Verteilung von modernen Materialien unterstützt das Lernen aller (Wang & Degol, 2016)."
+        {
+          "text": "Die Optimierung von Akustik und Beleuchtung verbessert die Konzentrationsfähigkeit.",
+          "quelle": "(Uline & Tschannen-Moran, 2008; Wang & Degol, 2016)"
+        },
+        {
+          "text": "Schulen bilden kleinere Lerncommunities, um die Verbundenheit zu erhöhen.",
+          "quelle": "(Wang & Degol, 2016; Thapa et al., 2013)"
+        },
+        {
+          "text": "Die gerechte Verteilung von modernen Materialien unterstützt das Lernen aller.",
+          "quelle": "(Wang & Degol, 2016)"
+        }
       ]
     }
   ],
-
   "quellen": [
     {
       "autorJahr": "Cirillo, F. (2006).",
