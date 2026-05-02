@@ -17,6 +17,11 @@ export type Subthema =
 
 export type Rolle = "lehrer" | "schueler";
 
+export interface ZitiertText {
+  text: string;
+  quelle?: string;
+}
+
 // ============================================================================
 // Fragebogen-Typen
 // ============================================================================
@@ -130,23 +135,22 @@ export interface ThemaBereich {
 
 export interface RelevanzFuerPeerbeziehungen {
   titel: string;
-  aspekte: string[];
+  aspekte: ZitiertText[];
 }
 
 export interface DifferenzierungKlimabegriffe {
-  schulklima: string;
-  klassenklima: string;
+  schulklima: ZitiertText;
+  klassenklima: ZitiertText;
 }
 
 export interface ZielgruppenspezifischeZuordnung {
-  begruendung: string;
-  lehrpersonen_schulklima: string;
-  schuelerinnen_klassenklima: string;
+  begruendung: ZitiertText;
+  lehrpersonen_schulklima: ZitiertText;
+  schuelerinnen_klassenklima: ZitiertText;
 }
 
 export interface DimensionenDesSchulklimas {
-  einleitung: string;
-  kernaussage: string;
+  einleitung: ZitiertText;
 }
 
 export interface WissenschaftlicheGrundlagen {
@@ -161,13 +165,12 @@ export interface Studie {
   themenbereich: string;
   titel: string;
   beschreibung: string;
-  kernaussagen: string[];
-  praxisbeispiele: string[];
+  kernaussagen: ZitiertText[];
+  praxisbeispiele: ZitiertText[];
 }
 
 export interface StudienDaten {
   wissenschaftlicheGrundlagen: WissenschaftlicheGrundlagen;
-  themenBereiche: ThemaBereich[];
   studien: Studie[];
   quellen: QuelleEintrag[];
 }
@@ -181,14 +184,14 @@ export type AlterBadge = "6–10 Jahre" | "10–13 Jahre" | "13–16 Jahre";
 
 export interface UebungSection {
   sectionTitle: string;
-  content: string;
+  content: ZitiertText;
 }
 
 export interface Uebung {
   id: string;
   titel: string;
   kurzbeschreibung: string;
-  anleitung: string;
+  anleitung: ZitiertText;
   zeitBadge: ZeitBadge;
   alterBadge: AlterBadge[];
   subthemaBadge: Subthema[];

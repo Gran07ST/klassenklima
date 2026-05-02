@@ -19,7 +19,7 @@ export default function UebungenPage() {
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
       <Header
         title="Übungen"
-        subtitle="Übungskatalog für ein positives Klassenklima"
+        subtitle="Übungskatalog für ein positives Schulklima"
       />
 
       <main className="flex-1 px-4 py-8 md:py-12">
@@ -28,7 +28,7 @@ export default function UebungenPage() {
           <div className="mb-6 md:mb-8">
             <p className="text-[#6b665f] text-sm md:text-base leading-relaxed">
               Hier findest du eine Sammlung von Übungen zur Förderung des
-              Klassenklimas. Filtere nach Zeit, Alter oder Thema.
+              Schulklimas. Filtere nach Zeit, Alter oder Thema.
             </p>
           </div>
 

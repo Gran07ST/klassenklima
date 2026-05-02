@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import {
   PolarAngleAxis,
   PolarGrid,
+  PolarRadiusAxis,
   Radar,
   RadarChart,
   ResponsiveContainer,
@@ -107,6 +108,12 @@ export default function AuswertungPage() {
                     <PolarAngleAxis
                       dataKey="subthema"
                       tick={{ fill: "#6b665f", fontSize: 12 }}
+                    />
+                    <PolarRadiusAxis
+                      angle={90}
+                      domain={[0, 100]}
+                      tick={false}
+                      axisLine={false}
                     />
                     <Radar
                       name="Prozent"

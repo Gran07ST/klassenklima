@@ -1,17 +1,17 @@
 # PeerConnect
 
-Eine kleine Web-App für ein grosses Thema: Das Klassenklima an Schulen.
+Eine kleine Web-App für ein grosses Thema: Das Schulklima an Schulen.
 
 ## Über das Projekt
 
-Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Klassenklima zu fördern. Sie besteht aus zwei Bereichen:
+Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Schulklima zu fördern. Sie besteht aus zwei Bereichen:
 
 ### Lehrbereich
 - **Wissen & Studien**: Wissenschaftliche Grundlagen, Themenbereiche und Studien zum Schul- und Klassenklima
-- **Übungen**: Übungskatalog zur Förderung des Klassenklimas (filterbar nach Zeit, Alter und Subthema)
+- **Übungen**: Übungskatalog zur Förderung des Schulklimas (filterbar nach Zeit, Alter und Subthema)
 
 ### Schülerbereich
-- **Fragebogen**: Selbsteinschätzung zum erlebten Klassenklima
+- **Fragebogen**: Selbsteinschätzung zum erlebten Schulklima
 - **Auswertung**: Radar-Diagramm zeigt Ergebnisse pro Subthema
 - **Vorschläge**: Personalisierte Verbesserungsvorschläge für Subthemen mit Verbesserungspotenzial
 
@@ -61,10 +61,12 @@ bunx serve out
 ```
 PeerConnect/
 ├── app/
+│   ├── layout.tsx               # Root-Layout (Header, Footer, globale Styles)
+│   ├── globals.css              # Globale Tailwind-Styles
 │   ├── page.tsx                 # Landing page (Lehrperson vs. Schüler:in)
 │   ├── lehrer/
 │   │   ├── page.tsx             # Lehrbereich-Übersicht
-│   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen, Themenbereiche, Studien
+│   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen & Studien
 │   │   └── uebungen/page.tsx    # Übungskatalog
 │   └── schueler/
 │       ├── page.tsx             # Schülerbereich-Übersicht
@@ -89,8 +91,8 @@ PeerConnect/
 ├── data/
 │   ├── fragebogen.json          # Fragen für die Selbsteinschätzung
 │   ├── verbesserungsvorschlaege.json # Tipps pro Subthema
-│   ├── studien.json             # Wissenschaftliche Grundlagen, Themenbereiche, Studien
-│   └── uebungen.json            # Übungskatalog
+│   ├── studien.json             # Wissenschaftliche Grundlagen, Studien & Quellen
+│   └── uebungen.json            # Übungskatalog & Quellen
 ├── lib/
 │   ├── types.ts                 # TypeScript-Typdefinitionen
 │   ├── scoring.ts               # Scoring-Logik für Fragebogen
@@ -170,25 +172,20 @@ Die Vorschläge werden auf der Vorschläge-Seite nur dann angezeigt, wenn das je
 
 ### Studien (`data/studien.json`)
 
-Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftliche Grundlagen, Themenbereiche, einzelne Studien und das Quellenverzeichnis.
+Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftliche Grundlagen, einzelne Studien und das Quellenverzeichnis.
 
-**Hauptstrukturen:**
-- `wissenschaftlicheGrundlagen`: Einleitende Texte zu Relevanz, Begriffsdifferenzierung und Klimadimensionen
-- `themenBereiche`: Array thematischer Bereiche (z. B. Sicherheit, Gemeinschaft) mit Untertiteln
+**Top-Level-Struktur:**
+- `wissenschaftlicheGrundlagen`: Objekt mit einleitenden Texten (siehe unten)
 - `studien`: Array einzelner Studien mit Kernaussagen und Praxisbeispielen
 - `quellen`: Literaturverzeichnis (Autor:innen-Jahr und Titel)
 
-**Themenbereich-Struktur:**
-```json
-{
-  "titel": "Sicherheit",
-  "inhalt": "Die Domäne Sicherheit umfasst die physische und emotionale Unversehrtheit …",
-  "details": [
-    { "untertitel": "Emotionale Sicherheit", "text": "Abwesenheit von Mobbing …" },
-    { "untertitel": "Ordnung und Disziplin", "text": "Klarheit, Fairness und Konsistenz …" }
-  ]
-}
-```
+**Zitiert-Text-Pattern:** Mehrere Felder verwenden den gemeinsamen Typ `ZitiertText` = `{ text: string, quelle?: string }`. Das `quelle`-Feld enthält die komplette Zitatklammer (z. B. `"(Wang & Degol, 2016)"`) und wird in der UI grau dargestellt. Mehrere Zitate werden mit `;` innerhalb einer einzigen Klammer kombiniert (z. B. `"(Hascher et al., 2022; Wang & Degol, 2016)"`).
+
+**`wissenschaftlicheGrundlagen` (Objekt):**
+- `relevanzFuerPeerbeziehungen`: `{ titel, aspekte: ZitiertText[] }`
+- `differenzierungKlimabegriffe`: `{ schulklima: ZitiertText, klassenklima: ZitiertText }`
+- `zielgruppenspezifischeZuordnung`: `{ begruendung: ZitiertText, lehrpersonen_schulklima: ZitiertText, schuelerinnen_klassenklima: ZitiertText }`
+- `dimensionenDesSchulklimas`: `{ einleitung: ZitiertText }`
 
 **Studien-Struktur:**
 ```json
@@ -197,36 +194,55 @@ Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftli
   "themenbereich": "Sicherheit",
   "titel": "…",
   "beschreibung": "…",
-  "kernaussagen": ["…", "…"],
-  "praxisbeispiele": ["…", "…"]
+  "kernaussagen": [
+    { "text": "…", "quelle": "(Wang & Degol, 2016)" },
+    { "text": "…" }
+  ],
+  "praxisbeispiele": [
+    { "text": "…", "quelle": "(Thapa et al., 2013; Wang & Degol, 2016)" }
+  ]
 }
 ```
+
+`themenbereich` ist ein freier String, der auf der Wissen-Seite als Badge angezeigt wird. `quelle` ist optional — Einträge ohne Beleg lassen es einfach weg.
 
 **Quelle:**
 ```json
 { "autorJahr": "Wang, M. T., & Degol, J. L. (2016).", "titel": "School climate: …" }
 ```
 
-Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein.
+Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein. Die exakte TypeScript-Form ist in `lib/types.ts` (`StudienDaten`, `WissenschaftlicheGrundlagen`, `Studie`, `ZitiertText`, `QuelleEintrag`) definiert.
 
 ---
 
 ### Übungen (`data/uebungen.json`)
 
-Enthält den Übungskatalog für den Lehrbereich. Jede Übung verwendet eine flexible `sections`-Struktur, sodass beliebig viele Zusatzabschnitte (z. B. Material, Tipp, Hinweis, Wissenschaftlicher Bezug) ergänzt werden können.
+Enthält den Übungskatalog für den Lehrbereich. Top-Level-Keys sind `uebungen` (Array der Übungen) und `quellen` (Literaturverzeichnis im selben Format wie in `studien.json`). Jede Übung verwendet eine flexible `sections`-Struktur, sodass beliebig viele Zusatzabschnitte (z. B. Material, Tipp, Hinweis, Wissenschaftlicher Bezug) ergänzt werden können.
 
 ```json
 {
   "id": "ueb-001",
   "titel": "Die Dankbarkeits-Ecke",
   "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
-  "anleitung": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' …",
+  "anleitung": {
+    "text": "Eine Ecke des Raums wird zur 'Dankbarkeits-Ecke' …",
+    "quelle": "(Wang & Degol, 2016)"
+  },
   "zeitBadge": "5–15 Min",
   "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
   "subthemaBadge": ["Gemeinschaft"],
   "sections": [
-    { "sectionTitle": "Material", "content": "Notizbuch, Stifte, Box oder Korb" },
-    { "sectionTitle": "Tipp",     "content": "Die Lehrkraft wirft selbst Zettel ein …" }
+    {
+      "sectionTitle": "Material",
+      "content": { "text": "Notizbuch, Stifte, Box oder Korb" }
+    },
+    {
+      "sectionTitle": "Tipp",
+      "content": {
+        "text": "Die Lehrperson wirft selbst Zettel ein …",
+        "quelle": "(Endedijk et al., 2022)"
+      }
+    }
   ]
 }
 ```
@@ -235,11 +251,11 @@ Enthält den Übungskatalog für den Lehrbereich. Jede Übung verwendet eine fle
 - `id`: Eindeutige ID (`ueb-001`, `ueb-002`, …)
 - `titel`: Name der Übung
 - `kurzbeschreibung`: Kurze Einleitung (erscheint in der Übersicht)
-- `anleitung`: Detaillierte Schritte (`\n` für Zeilenumbrüche, wird mit `whitespace-pre-wrap` gerendert)
+- `anleitung`: `ZitiertText`-Objekt — `text` enthält die Anleitung (`\n` für Zeilenumbrüche, mit `whitespace-pre-wrap` gerendert), `quelle` (optional) wird grau dargestellt
 - `zeitBadge`: Zeitspanne als Text (z. B. `5–15 Min`)
 - `alterBadge`: Array von Altersgruppen (`6–10 Jahre`, `10–13 Jahre`, `13–16 Jahre`)
 - `subthemaBadge`: Array von Subthemen, die gefördert werden
-- `sections`: Array von Abschnitten mit `sectionTitle` und `content`. Übliche Titel: `Material`, `Tipp`, `Hinweis`, `Didaktischer Hinweis`, `Wissenschaftlicher Bezug`. Beliebig erweiterbar.
+- `sections`: Array von Abschnitten mit `sectionTitle` und `content` (jeweils `ZitiertText`). Übliche Titel: `Material`, `Tipp`, `Hinweis`, `Didaktischer Hinweis`, `Wissenschaftlicher Bezug`. Beliebig erweiterbar.
 
 **Neue Übung hinzufügen:** neues Objekt im `uebungen`-Array ergänzen, `id` muss eindeutig sein.
 

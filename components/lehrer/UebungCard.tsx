@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import ZitiertText from "@/components/ZitiertText";
 import { Uebung } from "@/lib/types";
 
 interface UebungCardProps {
@@ -72,7 +73,7 @@ export default function UebungCard({ uebung }: UebungCardProps) {
             <div className="mt-6 pt-6 border-t border-accent animate-fade-in-up">
               <div className="prose prose-sm max-w-none">
                 <p className="leading-relaxed whitespace-pre-wrap">
-                  {uebung.anleitung}
+                  <ZitiertText value={uebung.anleitung} />
                 </p>
                 {uebung.sections.map((section) => (
                   <div key={section.sectionTitle} className="mt-4">
@@ -80,7 +81,7 @@ export default function UebungCard({ uebung }: UebungCardProps) {
                       {section.sectionTitle}:
                     </p>
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                      {section.content}
+                      <ZitiertText value={section.content} />
                     </p>
                   </div>
                 ))}
