@@ -5,7 +5,7 @@
       "titel": "Die Dankbarkeits-Ecke",
       "kurzbeschreibung": "Ein fester Ort im Klassenzimmer, an dem sich Schüler:innen für etwas bedanken können.",
       "anleitung": {
-        "text": "Eine Ecke des Raums wird zur \"Dankbarkeits-Ecke\" mit einer Box gemacht. Schüler:innen schreiben Zettel mit Dingen, für die sie dankbar sind. Dies stärkt die Beziehungsqualität durch Vertrauen, Respekt und gegenseitige Fürsorge.\n\nWöchentlich werden einige Zettel vorgelesen (mit Erlaubnis).",
+        "text": "Eine Ecke des Raums wird zur \"Dankbarkeits-Ecke\" mit einer Box gemacht. Schüler:innen schreiben Zettel mit Dingen, für die sie dankbar sind. Dies stärkt die Beziehungsqualität durch Vertrauen, Respekt und gegenseitige Fürsorge.\n\nWöchentlich werden einige Zettel vorgelesen (mit Erlaubnis und anonym).",
         "quelle": "(Wang & Degol, 2016)"
       },
       "zeitBadge": "5–15 Min",
@@ -32,7 +32,7 @@
       "titel": "Kompliment-Karte",
       "kurzbeschreibung": "Jedes Mitglied der Klasse bekommt eine positive Rückmeldung von einem anderen.",
       "anleitung": {
-        "text": "Jeder schreibt seinen Namen auf einen Zettel. Alle Zettel werden in einen Behälter gelegt. Jeder zieht einen Zettel (nicht den eigenen!) und schreibt ein echtes Kompliment dazu. Die Karten werden zurückgegeben.\n\nAbschliessend dürfen Freiwillige erzählen, wie es sich angefühlt hat, ein Kompliment zu bekommen."
+        "text": "Jede:r schreibt seinen Namen auf einen Zettel. Alle Zettel werden in einen Behälter gelegt. Alle ziehen einen Zettel (nicht den eigenen!) und schreiben ein echtes Kompliment dazu. Die Karten werden zurückgegeben.\n\nAbschliessend dürfen Freiwillige erzählen, wie es sich angefühlt hat, ein Kompliment zu bekommen."
       },
       "zeitBadge": "15–30 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
@@ -58,10 +58,10 @@
       "titel": "Stärken-Detektiv:innen",
       "kurzbeschreibung": "Ein Geheimauftrag, um positive Taten von Mitschüler:innen zu finden.",
       "anleitung": {
-        "text": "Jede Woche erhalten 3 Schüler:innen einen geheimen \"Detektiv-Auftrag\". Sie müssen beobachten, wer in der Klasse etwas besonders Hilfsbereites oder Nettes tut (ohne den Namen zu verraten).\n\nAm Freitag berichten die Detektiv:innen anonym: \"Ich habe jemanden gesehen, der beim Aufräumen geholfen hat.\" Die Lehrperson nutzt dies zur sozialen Referenzierung: Lobt sie positives Verhalten, steigt das Ansehen dieser Schüler:innen in der gesamten Gruppe.",
+        "text": "Jede Woche erhalten 3 Schüler:innen einen geheimen \"Detektiv-Auftrag\". Sie müssen beobachten, wer in der Klasse etwas besonders Hilfsbereites oder Nettes tut (ohne den Namen zu verraten).\n\nAm Freitag berichten die Detektiv:innen anonym: \"Ich habe jemanden gesehen, der beim Aufräumen geholfen hat.\" Die Lehrperson nutzt dies zur sozialen Referenzierung: Lobt sie positives Verhalten, steigt das Ansehen dieses Verhaltens in der gesamten Gruppe.",
         "quelle": "(Magro et al., 2024; Endedijk et al., 2022)"
       },
-      "zeitBadge": "5 Min (Bericht)",
+      "zeitBadge": "10 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
       "subthemaBadge": ["Gemeinschaft"],
       "sections": [
@@ -83,9 +83,9 @@
     {
       "id": "ueb-004",
       "titel": "Gefühls-Wetterbericht",
-      "kurzbeschreibung": "Ein kurzer Check-in, bei dem jede:r ihren aktuellen \"Wetterzustand\" teilt.",
+      "kurzbeschreibung": "Ein kurzer Check-in, bei dem alle den eigenen aktuellen \"Wetterzustand\" teilen.",
       "anleitung": {
-        "text": "Die Lehrperson fragt: \"Welches Wetter hast du gerade?\" Optionen: Sonnig (gut), Bewölkt (okay), Regnerisch (traurig), Stürmisch (wütend). Jede:r nennt kurz ihr \"Wetter\" und warum.\n\nDie Lehrperson fasst zusammen: \"Unser Klassenwetter ist heute gemischt – das ist normal!\""
+        "text": "Die Lehrperson fragt: \"Welches Wetter hast du gerade?\" Optionen: Sonnig (gut), Bewölkt (okay), Regnerisch (traurig), Stürmisch (wütend). Alle nennen kurz das eigene \"Wetter\" und warum.\n\nDie Lehrperson fasst zusammen: \"Unser Klassenwetter ist heute gemischt – das ist normal!\""
       },
       "zeitBadge": "< 5 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
@@ -94,13 +94,13 @@
         {
           "sectionTitle": "Material",
           "content": {
-            "text": "Keine"
+            "text": "evtl. Schablonen mit Wettersymbolen (z.B. Mond für Müdigkeit)"
           }
         },
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Diese Übung kann wöchentlich wiederholt werden – als Ritual am Montagmorgen. Diese Übung dient der emotionalen Sicherheit und ist ein Baustein der Selbstregulation.",
+            "text": "Diese Übung kann wöchentlich wiederholt werden (z.B. als Ritual am Montagmorgen). Diese Übung dient der emotionalen Sicherheit und ist ein Baustein der Selbstregulation. Wenn man die Anonymität wahren möchte, können die Schüler:innen das Symbol anonym in den Morgenkreis legen.",
             "quelle": "(Wang & Degol, 2016; Zimmerman, 2002)"
           }
         }
@@ -111,7 +111,7 @@
       "titel": "Das Kultur-Mosaik",
       "kurzbeschreibung": "Ein spielerisches Kennenlernen der vielfältigen Hintergründe in der Klasse.",
       "anleitung": {
-        "text": "Jede:r Schüler:in erhält ein Puzzleteil aus Papier. Die Aufgabe lautet: \"Male oder schreibe etwas auf dein Teil, das deine Herkunft, ein Hobby oder eine Besonderheit zeigt (Respekt vor Diversität).\" [1, 2].\n\nDie Klasse setzt die Teile zu einem grossen Mosaik an der Wand zusammen. Die Lehrperson moderiert: \"Jedes Teil ist anders, aber erst zusammen sind wir ein vollständiges Bild.\""
+        "text": "Jede:r Schüler:in erhält ein Puzzleteil aus Papier. Die Aufgabe lautet: \"Male oder schreibe etwas auf dein Teil, das deine Herkunft, ein Hobby oder eine Besonderheit zeigt (Respekt vor Diversität).\n\nDie Klasse setzt die Teile zu einem grossen Mosaik an der Wand zusammen. Die Lehrperson moderiert: \"Jedes Teil ist anders, aber erst zusammen sind wir ein vollständiges Bild.\""
       },
       "zeitBadge": "45 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
@@ -137,7 +137,7 @@
       "titel": "Die Empathie-Detektiv:innen",
       "kurzbeschreibung": "Rollenspiel zur Förderung der Perspektivenübernahme.",
       "anleitung": {
-        "text": "In Kleingruppen erhalten die Schüler:innen \"Szenarien-Karten\" (z. B. \"Ein neues Kind kommt in die Klasse\").\n\nSpiel: Ein Kind spielt das neue Kind, die anderen überlegen: \"Was fühlt diese Person gerade? Was würde ihr helfen, sich zugehörig zu fühlen?\" (Soziale Kompetenz). [4].\n\nDie Gruppen präsentieren ihre besten \"Willkommens-Strategien\"."
+        "text": "In Kleingruppen erhalten die Schüler:innen \"Szenarien-Karten\" (z. B. \"Ein neues Kind kommt in die Klasse\").\n\nSpiel: Ein Kind spielt das neue Kind, die anderen überlegen: \"Was fühlt diese Person gerade? Was würde ihr helfen, sich zugehörig zu fühlen?\" (Soziale Kompetenz).\n\nDie Gruppen präsentieren ihre besten \"Willkommens-Strategien\"."
       },
       "zeitBadge": "20–30 Min",
       "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
@@ -160,10 +160,10 @@
     },
     {
       "id": "ueb-007",
-      "titel": "Das Wir-Poster (Shared Vision)",
+      "titel": "Das Wir-Poster",
       "kurzbeschreibung": "Gemeinsame Erarbeitung einer positiven Klassenzukunft.",
       "anleitung": {
-        "text": "Die Klasse wird als \"Team auf Forschungsreise\" betrachtet. Gemeinsam wird die Frage beantwortet: \"Was macht uns als Gemeinschaft stark?\" (Connectedness).\n\nIdeen werden gesammelt (z. B. \"Wir helfen uns bei Mathe\", \"Wir lachen zusammen\") und auf einem grossen \"Wir-Poster\" visualisiert. Alle unterschreiben als Zeichen der Zugehörigkeit."
+        "text": "Die Klasse wird als \"Team auf Forschungsreise\" betrachtet. Gemeinsam wird die Frage beantwortet: \"Was macht uns als Gemeinschaft stark?\" (Verbundenheit).\n\nIdeen werden gesammelt (z. B. \"Wir helfen uns bei Mathe\", \"Wir lachen zusammen\") und auf einem grossen \"Wir-Poster\" visualisiert. Alle unterschreiben als Zeichen der Zugehörigkeit."
       },
       "zeitBadge": "45 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
@@ -205,7 +205,7 @@
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Macht das abstrakte Konzept der \"Connectedness\" physisch greifbar.",
+            "text": "Macht das abstrakte Konzept der \"Verbundenheit\" physisch greifbar.",
             "quelle": "(Thapa et al., 2013)"
           }
         }
@@ -231,7 +231,7 @@
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Die Lehrperson unterstützt hier, um realistische und \"proximale\" Ziele zu formulieren.",
+            "text": "Die Lehrperson unterstützt hier, um realistische und konkrete Ziele zu formulieren.",
             "quelle": "(Zimmerman, 2002)"
           }
         }
@@ -257,7 +257,7 @@
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Die Übung hilft gegen Prokrastination (Aufschub) und schult das Bewusstsein für die eigene Aufmerksamkeitsspanne.",
+            "text": "Die Übung hilft gegen Aufschieben (Prokrastination) und schult das Bewusstsein für die eigene Aufmerksamkeitsspanne.",
             "quelle": "(Cirillo, 2006)"
           }
         }
@@ -268,7 +268,7 @@
       "titel": "Die SMART-Quest",
       "kurzbeschreibung": "Schüler:innen setzen sich messbare \"Level-Up\"-Ziele.",
       "anleitung": {
-        "text": "Vor einer Lernphase formulieren die Schüler:innen ihr Ziel als Quest nach der SMART-Methode:\n- S (Spezifisch): Was genau lerne ich?\n- M (Messbar): Woran sehe ich, dass ich fertig bin?\n- A (Attraktiv): Welches \"Gadget\" (Sticker/Lob) erhalte ich?\n- R (Realistisch): Ist es in dieser Zeit schaffbar?\n- T (Terminiert): In wie vielen Minuten?\n\nWer seine Quest erfüllt, darf seinen Sticker auf einem Klassen-Quest-Poster platzieren."
+        "text": "Vor einer Lernphase formulieren die Schüler:innen ihr Ziel als Quest nach der SMART-Methode:\n- S (Spezifisch): Was genau lerne ich?\n- M (Messbar): Woran sehe ich, dass ich fertig bin?\n- A (Attraktiv): Welches \"Gadget\" (Sticker/Lob) erhalte ich? (ein Beispiel für die Primarstufe)\n- R (Realistisch): Ist es in dieser Zeit schaffbar?\n- T (Terminiert): In wie vielen Minuten?\n\nWer seine Quest erfüllt, darf seinen Sticker auf dem Übungsblatt platzieren."
       },
       "zeitBadge": "5–10 Min",
       "alterBadge": ["10–13 Jahre", "13–16 Jahre"],
@@ -277,13 +277,13 @@
         {
           "sectionTitle": "Material",
           "content": {
-            "text": "Quest-Karten, Sticker, Klassen-Poster"
+            "text": "Quest-Karten, Sticker, Übungsblatt"
           }
         },
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Das Setzen von proximalen (nahen) Zielen steigert die Selbstwirksamkeit massiv.",
+            "text": "Das Setzen von konkreten Zielen steigert die Selbstwirksamkeit massiv.",
             "quelle": "(Zimmerman, 2002)"
           }
         }
@@ -294,7 +294,7 @@
       "titel": "Die Strategie-Börse",
       "kurzbeschreibung": "Handel mit \"Lern-Tricks\" statt mit richtigen Ergebnissen.",
       "anleitung": {
-        "text": "Nach einer schwierigen Phase in Mathe oder Deutsch tauschen S. ihre \"Werkzeuge\" aus.\n\nFrage: \"Welcher Trick (Strategie) hat dir beim Lösen geholfen?\" (z. B. Skizze zeichnen, lautes Vorsagen, Tabellen).\n\nJede neu genannte Strategie wird an die Tafel geschrieben. Die Klasse erhält \"Erfahrungspunkte\", wenn sie eine neue Strategie erfolgreich bei einer anderen Aufgabe anwendet.",
+        "text": "Nach einer schwierigen Phase in Mathe oder Deutsch tauschen Schüler:innen \"Werkzeuge\" aus.\n\nFrage: \"Welcher Trick (Strategie) hat dir beim Lösen geholfen?\" (z. B. Skizze zeichnen, lautes Vorsagen, Tabellen).\n\nJede neu genannte Strategie wird an die Tafel geschrieben. Dann werden Ziele gesetzt, wie neue Strategien bei den nächsten Aufgaben angewendet werden können.",
         "quelle": "(Wang & Degol, 2016; Zimmerman, 2002)"
       },
       "zeitBadge": "5–10 Min",
@@ -402,7 +402,7 @@
       "titel": "Die Upstander-Akademie",
       "kurzbeschreibung": "Von passiven Beobachter:innen zu aktiven Helfer:innen (\"Upstander\").",
       "anleitung": {
-        "text": "Die Lehrperson erklärt den Unterschied zwischen Mitläufer:innen (bystander) und \"Upstander\" (Personen, die bei Ungerechtigkeiten aufstehen).\n\nSpielerische Mission: Die Klasse sammelt in Gruppen \"Zivilcourage-Punkte\". Sie entwickeln für fiktive Szenarien (z. B. Ausgrenzung in der Pause) SMART-Handlungspläne:\n- Spezifisch: Was sage ich genau?\n- Messbar: Habe ich Hilfe geholt?\n- Realistisch: Ist es für mich sicher?\n\nDie besten Strategien werden als \"Goldene Regeln der Hilfe\" prämiert.",
+        "text": "Die Lehrperson erklärt den Unterschied zwischen Mitläufer:innen (bystander) und \"Upstander\" (Personen, die bei Ungerechtigkeiten aufstehen).\n\nSpielerische Mission: Sie entwickeln für fiktive Szenarien (z. B. Ausgrenzung in der Pause) SMART-Handlungspläne:\n- Spezifisch: Was sage ich genau?\n- Messbar: Habe ich Hilfe geholt?\n- Realistisch: Ist es für mich sicher?\n\nDie Strategien werden als \"Goldene Regeln der Hilfe\" festgehaltet.",
         "quelle": "(Thapa et al., 2013)"
       },
       "zeitBadge": "20–30 Min",
@@ -472,7 +472,7 @@
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Unüberwachte Orte sind oft Brennpunkte für Mobbing; das Bewusstsein dafür erhöht die reale Sicherheit.",
+            "text": "Unüberwachte Orte sind oft Brennpunkte für Mobbing; das Bewusstsein dafür erhöht die reale Sicherheit. Wichtig: Fokus auf Orte, nicht auf Personen (z. B. statt \"Dort sind immer XY\" lieber: \"Dort fehlt Aufsicht\"). Diskussion konsequent lösungsorientiert moderieren.",
             "quelle": "(Thapa et al., 2013; Wang & Degol, 2016)"
           }
         }
@@ -480,10 +480,10 @@
     },
     {
       "id": "ueb-019",
-      "titel": "Schulhaus-Kuratoren",
+      "titel": "Schulhaus-Gestalter:innen",
       "kurzbeschreibung": "Partizipative Gestaltung der Flure und Gemeinschaftsräume.",
       "anleitung": {
-        "text": "Schüler:innen wählen Orte im Schulhaus aus, die sie \"unwirtlich\" finden.\n\nSie planen eine Ausstellung eigener Werke oder die Gestaltung einer \"Wall of Fame\" für positive Taten der Gemeinschaft.\n\nDie Pflege und Gestaltung der Umgebung steigert die Identifikation mit der Schule.",
+        "text": "Schüler:innen wählen Orte im Schulhaus aus, die sie kahl und unschön finden.\n\nSie planen eine Ausstellung eigener Werke.\n\nDie Pflege und Gestaltung der Umgebung steigert die Identifikation mit der Schule.",
         "quelle": "(Thapa et al., 2013)"
       },
       "zeitBadge": "45 Min",
@@ -510,8 +510,7 @@
       "titel": "Die Akustik-Wächter:innen",
       "kurzbeschreibung": "Sensibilisierung für die Lärmbelastung im Raum zur Stressreduktion.",
       "anleitung": {
-        "text": "Die Klasse misst während verschiedener Phasen (Gruppenarbeit vs. Stillarbeit) die Lautstärke (z.B. mit einer Lärm-Ampel).\n\nGemeinsam werden \"Acoustical Control\"-Massnahmen nach der SMART-Methode geplant:\n- Spezifisch: Wir nutzen Filzgleiter für alle Stühle.\n- Terminiert: Bis zum nächsten Freitag umgesetzt.",
-        "quelle": "(Wang & Degol, 2016)"
+        "text": "Die Klasse misst während verschiedener Phasen (Gruppenarbeit vs. Stillarbeit) die Lautstärke (z.B. mit einer Lärm-Ampel).\n\nGemeinsam werden \"Acoustical Control\"-Massnahmen nach der SMART-Methode geplant:\n- Spezifisch: Wir nutzen Filzgleiter für alle Stühle.\n- Terminiert: Bis zum nächsten Freitag umgesetzt."
       },
       "zeitBadge": "20–30 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],
@@ -526,7 +525,8 @@
         {
           "sectionTitle": "Tipp",
           "content": {
-            "text": "Gute Akustik senkt nachweislich das Stresslevel von Lehrpersonen und Schüler:innen."
+            "text": "Gute Akustik senkt nachweislich das Stresslevel von Lehrpersonen und Schüler:innen.",
+            "quelle": "(Wang & Degol, 2016)"
           }
         }
       ]
@@ -559,10 +559,10 @@
     },
     {
       "id": "ueb-022",
-      "titel": "Klassen-Innenarchitekten",
+      "titel": "Klassen-Innenarchitekt:innen",
       "kurzbeschreibung": "Optimierung der Lernumgebung für weniger Stress.",
       "anleitung": {
-        "text": "Die Schüler:innen bewerten in Gruppen die Umweltqualität ihres Zimmers: Temperatur, Licht, Akustik und Sauberkeit. [18]\n\nSie erstellen einen Entwurf zur Umgestaltung einer Ecke (z.B. Leseecke), um das Wohlbefinden zu steigern. [18]\n\nEin Vorschlag wird ausgewählt und gemeinsam mit vorhandenen Ressourcen umgesetzt."
+        "text": "Die Schüler:innen bewerten in Gruppen die Umweltqualität ihres Zimmers: Temperatur, Licht, Akustik und Sauberkeit. \n\nSie erstellen einen Entwurf zur Umgestaltung einer Ecke (z.B. Leseecke), um das Wohlbefinden zu steigern. [18]\n\nEin Vorschlag wird ausgewählt und gemeinsam mit vorhandenen Ressourcen umgesetzt."
       },
       "zeitBadge": "45 Min",
       "alterBadge": ["6–10 Jahre", "10–13 Jahre", "13–16 Jahre"],

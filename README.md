@@ -10,7 +10,7 @@ Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Schu
 - **Wissen & Studien**: Wissenschaftliche Grundlagen, Themenbereiche und Studien zum Schul- und Klassenklima
 - **Übungen**: Übungskatalog zur Förderung des Schulklimas (filterbar nach Zeit, Alter und Subthema)
 
-### Schülerbereich
+### Schüler:innenbereich
 - **Fragebogen**: Selbsteinschätzung zum erlebten Schulklima
 - **Auswertung**: Radar-Diagramm zeigt Ergebnisse pro Subthema
 - **Vorschläge**: Personalisierte Verbesserungsvorschläge für Subthemen mit Verbesserungspotenzial
@@ -69,7 +69,7 @@ PeerConnect/
 │   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen & Studien
 │   │   └── uebungen/page.tsx    # Übungskatalog
 │   └── schueler/
-│       ├── page.tsx             # Schülerbereich-Übersicht
+│       ├── page.tsx             # Schüler:innenbereich-Übersicht
 │       ├── fragebogen/page.tsx  # Fragebogen
 │       ├── auswertung/page.tsx  # Ergebnisse (Radar-Chart)
 │       └── vorschlaege/page.tsx # Verbesserungsvorschläge

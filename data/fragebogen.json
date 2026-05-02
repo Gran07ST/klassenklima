@@ -40,8 +40,8 @@
       "aussage": "Ich fühle mich durch die Schule unter Druck gesetzt.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt gar nicht",
-        "5": "Stimmt voll"
+        "1": "Stimmt voll",
+        "5": "Stimmt gar nicht"
       }
     },
     {
@@ -51,16 +51,16 @@
       "frage": "Wie stark erlebst du den Leistungsdruck?",
       "gewichtung": 1,
       "optionen": [
-        { "text": "Sehr stark", "wert": 5 },
-        { "text": "Eher stark", "wert": 4 },
+        { "text": "Sehr stark", "wert": 1 },
+        { "text": "Eher stark", "wert": 2 },
         { "text": "Mittel", "wert": 3 },
-        { "text": "Eher wenig", "wert": 2 },
-        { "text": "Gar nicht", "wert": 1 }
+        { "text": "Eher wenig", "wert": 4 },
+        { "text": "Gar nicht", "wert": 5 }
       ]
     },
     {
       "id": "q-006",
-      "subthema": "Schülerzentriertheit",
+      "subthema": "Schüler:innenzentriertheit",
       "type": "skala",
       "aussage": "Wir können im Unterricht mitentscheiden.",
       "gewichtung": 1,
@@ -71,7 +71,7 @@
     },
     {
       "id": "q-007",
-      "subthema": "Schülerzentriertheit",
+      "subthema": "Schüler:innenzentriertheit",
       "type": "skala",
       "aussage": "Den Lehrpersonen ist wichtig, dass wir den Stoff verstehen.",
       "gewichtung": 1,
@@ -82,7 +82,7 @@
     },
     {
       "id": "q-008",
-      "subthema": "Schülerzentriertheit",
+      "subthema": "Schüler:innenzentriertheit",
       "type": "skala",
       "aussage": "Wir dürfen eigene Ideen im Unterricht einbringen.",
       "gewichtung": 1,
@@ -93,7 +93,7 @@
     },
     {
       "id": "q-009",
-      "subthema": "Schülerzentriertheit",
+      "subthema": "Schüler:innenzentriertheit",
       "type": "skala",
       "aussage": "Die Lehrpersonen unterstützen uns beim Lernen.",
       "gewichtung": 1,
@@ -156,8 +156,8 @@
       "aussage": "Manche freuen sich, wenn andere Fehler machen.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt gar nicht",
-        "5": "Stimmt voll"
+        "1": "Stimmt voll",
+        "5": "Stimmt gar nicht"
       }
     },
     {
@@ -167,23 +167,9 @@
       "aussage": "Der Unterricht wird oft gestört.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt gar nicht",
-        "5": "Stimmt voll"
+        "1": "Stimmt voll",
+        "5": "Stimmt gar nicht"
       }
-    },
-    {
-      "id": "q-016",
-      "subthema": "Rivalität und Störneigung",
-      "type": "single_choice",
-      "frage": "Wie oft wird der Unterricht gestört?",
-      "gewichtung": 1,
-      "optionen": [
-        { "text": "Sehr oft", "wert": 5 },
-        { "text": "Oft", "wert": 4 },
-        { "text": "Manchmal", "wert": 3 },
-        { "text": "Selten", "wert": 2 },
-        { "text": "Nie", "wert": 1 }
-      ]
     }
   ],
 
