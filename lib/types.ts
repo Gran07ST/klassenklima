@@ -11,7 +11,7 @@ export type Subthema =
   | "Soziale Kompetenz"
   | "Selbstbewusstsein"
   | "Sozial- und Leistungsdruck"
-  | "Schülerzentriertheit"
+  | "Schüler:innenzentriertheit"
   | "Lerngemeinschaft"
   | "Rivalität und Störneigung";
 

@@ -5,7 +5,7 @@ export default function SchuelerPage() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
       <Header
-        title="Schülerbereich"
+        title="Schüler:innenbereich"
         subtitle="Dein Weg zu einem besseren Klassenklima"
       />
 
