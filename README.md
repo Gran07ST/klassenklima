@@ -61,10 +61,12 @@ bunx serve out
 ```
 PeerConnect/
 ├── app/
+│   ├── layout.tsx               # Root-Layout (Header, Footer, globale Styles)
+│   ├── globals.css              # Globale Tailwind-Styles
 │   ├── page.tsx                 # Landing page (Lehrperson vs. Schüler:in)
 │   ├── lehrer/
 │   │   ├── page.tsx             # Lehrbereich-Übersicht
-│   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen, Themenbereiche, Studien
+│   │   ├── wissen/page.tsx      # Wissenschaftliche Grundlagen & Studien
 │   │   └── uebungen/page.tsx    # Übungskatalog
 │   └── schueler/
 │       ├── page.tsx             # Schülerbereich-Übersicht
@@ -89,8 +91,8 @@ PeerConnect/
 ├── data/
 │   ├── fragebogen.json          # Fragen für die Selbsteinschätzung
 │   ├── verbesserungsvorschlaege.json # Tipps pro Subthema
-│   ├── studien.json             # Wissenschaftliche Grundlagen, Themenbereiche, Studien
-│   └── uebungen.json            # Übungskatalog
+│   ├── studien.json             # Wissenschaftliche Grundlagen, Studien & Quellen
+│   └── uebungen.json            # Übungskatalog & Quellen
 ├── lib/
 │   ├── types.ts                 # TypeScript-Typdefinitionen
 │   ├── scoring.ts               # Scoring-Logik für Fragebogen
@@ -170,25 +172,18 @@ Die Vorschläge werden auf der Vorschläge-Seite nur dann angezeigt, wenn das je
 
 ### Studien (`data/studien.json`)
 
-Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftliche Grundlagen, Themenbereiche, einzelne Studien und das Quellenverzeichnis.
+Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftliche Grundlagen, einzelne Studien und das Quellenverzeichnis.
 
-**Hauptstrukturen:**
-- `wissenschaftlicheGrundlagen`: Einleitende Texte zu Relevanz, Begriffsdifferenzierung und Klimadimensionen
-- `themenBereiche`: Array thematischer Bereiche (z. B. Sicherheit, Gemeinschaft) mit Untertiteln
+**Top-Level-Struktur:**
+- `wissenschaftlicheGrundlagen`: Objekt mit einleitenden Texten (siehe unten)
 - `studien`: Array einzelner Studien mit Kernaussagen und Praxisbeispielen
 - `quellen`: Literaturverzeichnis (Autor:innen-Jahr und Titel)
 
-**Themenbereich-Struktur:**
-```json
-{
-  "titel": "Sicherheit",
-  "inhalt": "Die Domäne Sicherheit umfasst die physische und emotionale Unversehrtheit …",
-  "details": [
-    { "untertitel": "Emotionale Sicherheit", "text": "Abwesenheit von Mobbing …" },
-    { "untertitel": "Ordnung und Disziplin", "text": "Klarheit, Fairness und Konsistenz …" }
-  ]
-}
-```
+**`wissenschaftlicheGrundlagen` (Objekt):**
+- `relevanzFuerPeerbeziehungen`: `{ titel, aspekte[] }`
+- `differenzierungKlimabegriffe`: `{ schulklima, klassenklima }`
+- `zielgruppenspezifischeZuordnung`: `{ begruendung, lehrpersonen_schulklima, schuelerinnen_klassenklima }`
+- `dimensionenDesSchulklimas`: `{ einleitung }`
 
 **Studien-Struktur:**
 ```json
@@ -202,18 +197,20 @@ Enthält die Inhalte für den Lehrbereich „Wissen & Studien“: wissenschaftli
 }
 ```
 
+`themenbereich` ist ein freier String, der auf der Wissen-Seite als Badge angezeigt wird.
+
 **Quelle:**
 ```json
 { "autorJahr": "Wang, M. T., & Degol, J. L. (2016).", "titel": "School climate: …" }
 ```
 
-Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein.
+Neue Inhalte werden in das jeweilige Array ergänzt; `id` muss bei Studien eindeutig sein. Die exakte TypeScript-Form ist in `lib/types.ts` (`StudienDaten`, `WissenschaftlicheGrundlagen`, `Studie`, `QuelleEintrag`) definiert.
 
 ---
 
 ### Übungen (`data/uebungen.json`)
 
-Enthält den Übungskatalog für den Lehrbereich. Jede Übung verwendet eine flexible `sections`-Struktur, sodass beliebig viele Zusatzabschnitte (z. B. Material, Tipp, Hinweis, Wissenschaftlicher Bezug) ergänzt werden können.
+Enthält den Übungskatalog für den Lehrbereich. Top-Level-Keys sind `uebungen` (Array der Übungen) und `quellen` (Literaturverzeichnis im selben Format wie in `studien.json`). Jede Übung verwendet eine flexible `sections`-Struktur, sodass beliebig viele Zusatzabschnitte (z. B. Material, Tipp, Hinweis, Wissenschaftlicher Bezug) ergänzt werden können.
 
 ```json
 {
