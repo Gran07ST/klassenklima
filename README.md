@@ -226,7 +226,7 @@ Enthält den Übungskatalog für den Lehrbereich. Jede Übung verwendet eine fle
   "subthemaBadge": ["Gemeinschaft"],
   "sections": [
     { "sectionTitle": "Material", "content": "Notizbuch, Stifte, Box oder Korb" },
-    { "sectionTitle": "Tipp",     "content": "Die Lehrkraft wirft selbst Zettel ein …" }
+    { "sectionTitle": "Tipp",     "content": "Die Lehrperson wirft selbst Zettel ein …" }
   ]
 }
 ```
