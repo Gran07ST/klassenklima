@@ -344,25 +344,6 @@
     },
     {
       "id": "ueb-019",
-      "titel": "Gefühls-Wetterbericht",
-      "kurzbeschreibung": "Ein kurzer Check-in zur Förderung der emotionalen Sicherheit.",
-      "anleitung": "Die Lehrperson fragt: 'Welches Wetter hast du gerade?' Optionen: Sonnig, Bewölkt, Regnerisch, Stürmisch. Jede:r nennt kurz sein 'Wetter'.\n\nDie Lehrperson signalisiert Akzeptanz: 'Jedes Wetter ist willkommen!' Dies schafft einen Raum, in dem Gefühle ohne Angst vor Herabsetzung geäussert werden dürfen (Wang & Degol, 2016).",
-      "zeitBadge": "5–10 Min",
-      "alterBadge": ["6–10 Jahre", "10–13 Jahre"],
-      "subthemaBadge": ["Sicherheit"],
-      "sections": [
-        {
-          "sectionTitle": "Material",
-          "content": "Keine"
-        },
-        {
-          "sectionTitle": "Tipp",
-          "content": "Dient der emotionalen Sicherheit und ist ein Baustein der Selbstregulation in der 'Forethought Phase' (Wang & Degol, 2016; Zimmerman, 2002)."
-        }
-      ]
-    },
-    {
-      "id": "ueb-020",
       "titel": "Schulhaus-Kuratoren",
       "kurzbeschreibung": "Partizipative Gestaltung der Flure und Gemeinschaftsräume.",
       "anleitung": "Schüler:innen wählen Orte im Schulhaus aus, die sie 'unwirtlich' finden. \n\nSie planen eine Ausstellung eigener Werke oder die Gestaltung einer 'Wall of Fame' für positive Taten der Gemeinschaft (Thapa et al., 2013). \n\nDie Pflege und Gestaltung der Umgebung steigert die Identifikation mit der Schule.",
@@ -381,7 +362,7 @@
       ]
     },
     {
-      "id": "ueb-021",
+      "id": "ueb-020",
       "titel": "Die Akustik-Wächter:innen",
       "kurzbeschreibung": "Sensibilisierung für die Lärmbelastung im Raum zur Stressreduktion.",
       "anleitung": "Die Klasse misst während verschiedener Phasen (Gruppenarbeit vs. Stillarbeit) die Lautstärke (z.B. mit einer Lärm-Ampel). \n\nGemeinsam werden 'Acoustical Control'-Massnahmen nach der SMART-Methode geplant: \n- Spezifisch: Wir nutzen Filzgleiter für alle Stühle. \n- Terminiert: Bis zum nächsten Freitag umgesetzt (Wang & Degol, 2016).",
@@ -400,7 +381,7 @@
       ]
     },
     {
-      "id": "ueb-022",
+      "id": "ueb-021",
       "titel": "Die Raum-Architekt:innen",
       "kurzbeschreibung": "Mitgestaltung der Lernumgebung zur Stressreduktion.",
       "anleitung": "Die Schüler:innen bewerten in Kleingruppen die 'Wohlfühl-Faktoren' des Zimmers (Licht, Akustik, Sauberkeit). \n\nSie erhalten die Mission: 'Plant die Umgestaltung einer Ecke (z.B. Leseecke) nach SMART-Kriterien.' \n- Beispiel: Ein weicher Teppich und eine Lampe bis nächsten Freitag. \n\nEin Entwurf wird gemeinsam zur Umsetzung ausgewählt.",
@@ -419,7 +400,7 @@
       ]
     },
     {
-      "id": "ueb-023",
+      "id": "ueb-022",
       "titel": "Klassen-Innenarchitekten",
       "kurzbeschreibung": "Optimierung der Lernumgebung für weniger Stress.",
       "anleitung": "Die Schüler:innen bewerten in Gruppen die Umweltqualität ihres Zimmers: Temperatur, Licht, Akustik und Sauberkeit. [18]\n\nSie erstellen einen Entwurf zur Umgestaltung einer Ecke (z.B. Leseecke), um das Wohlbefinden zu steigern. [18]\n\nEin Vorschlag wird ausgewählt und gemeinsam mit vorhandenen Ressourcen umgesetzt.",
@@ -438,7 +419,7 @@
       ]
     },
     {
-      "id": "ueb-024",
+      "id": "ueb-023",
       "titel": "Klassenklima gemeinsam verstehen",
       "kurzbeschreibung": "Die Klasse füllt einen Fragebogen zum Klassenklima aus und reflektiert gemeinsam mögliche Verbesserungen.",
       "anleitung": "Die Lehrperson erklärt zuerst, dass es bei dieser Aktivität nicht um Bewertung oder Kritik geht, sondern darum, gemeinsam das Klassenklima zu verstehen und zu verbessern.\n\nDie Schüler:innen füllen den Fragebogen individuell und ruhig aus.\n\nWichtig: Die Ergebnisse bleiben privat. Niemand muss seine Antworten zeigen oder teilen.\n\nAnschliessend kann die Lehrperson allgemeine Fragen in die Runde geben (z. B. 'Was hilft euch beim Lernen?' oder 'Was macht eine gute Klasse aus?').\n\nDie Klasse sammelt gemeinsam Ideen, wie das Miteinander verbessert werden kann. Es werden keine einzelnen Personen thematisiert.",

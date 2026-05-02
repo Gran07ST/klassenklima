@@ -1,10 +1,10 @@
 # PeerConnect
 
-Eine kleine Web-App für ein grosses Thema: Das Klassenklima an Schulen.
+Eine kleine Web-App für ein grosses Thema: Das Schulklima an Schulen.
 
 ## Über das Projekt
 
-Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Klassenklima zu fördern. Sie besteht aus zwei Bereichen:
+Diese App unterstützt Lehrpersonen und Schüler:innen dabei, ein positives Schulklima zu fördern. Sie besteht aus zwei Bereichen:
 
 ### Lehrbereich
 - **Wissen & Studien**: Wissenschaftliche Grundlagen, Themenbereiche und Studien zum Schul- und Klassenklima

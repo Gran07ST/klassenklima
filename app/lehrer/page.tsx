@@ -6,7 +6,7 @@ export default function LehrerPage() {
     <div className="min-h-screen bg-[#faf9f6] text-[#2d2a26] flex flex-col">
       <Header
         title="Lehrerbereich"
-        subtitle="Übungen und Studien für ein positives Klassenklima"
+        subtitle="Übungen und Studien für ein positives Schulklima"
       />
 
       <main className="flex-1 px-4 py-12">
@@ -21,7 +21,7 @@ export default function LehrerPage() {
             </h2>
             <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               Hier findest du Übungen für den Unterricht und interessante
-              Studien zum Thema Klassenklima.
+              Studien zum Thema Schulklima.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function LehrerPage() {
               </div>
               <div className="p-6 md:p-8">
                 <p className=" text-sm md:text-base leading-relaxed">
-                  Entdecke Studien und Fakten zum Thema Klassenklima
+                  Entdecke Studien und Fakten zum Thema Schulklima
                 </p>
               </div>
             </Link>

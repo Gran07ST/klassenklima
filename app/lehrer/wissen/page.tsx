@@ -28,7 +28,10 @@ export default function WissenPage() {
               className="text-xl md:text-2xl font-light tracking-tight mb-6 md:mb-8"
               style={{ fontFamily: '"Playfair Display", serif' }}
             >
-              {data.wissenschaftlicheGrundlagen.relevanzFuerPeerbeziehungen.titel}
+              {
+                data.wissenschaftlicheGrundlagen.relevanzFuerPeerbeziehungen
+                  .titel
+              }
             </h2>
             <ul className="space-y-3 md:space-y-4">
               {data.wissenschaftlicheGrundlagen.relevanzFuerPeerbeziehungen.aspekte.map(
@@ -60,8 +63,8 @@ export default function WissenPage() {
                 </h3>
                 <p className="leading-relaxed">
                   {
-                    data.wissenschaftlicheGrundlagen.differenzierungKlimabegriffe
-                      .schulklima
+                    data.wissenschaftlicheGrundlagen
+                      .differenzierungKlimabegriffe.schulklima
                   }
                 </p>
               </article>
@@ -74,8 +77,8 @@ export default function WissenPage() {
                 </h3>
                 <p className="leading-relaxed">
                   {
-                    data.wissenschaftlicheGrundlagen.differenzierungKlimabegriffe
-                      .klassenklima
+                    data.wissenschaftlicheGrundlagen
+                      .differenzierungKlimabegriffe.klassenklima
                   }
                 </p>
               </article>
@@ -109,8 +112,8 @@ export default function WissenPage() {
                 </h3>
                 <p className="leading-relaxed">
                   {
-                    data.wissenschaftlicheGrundlagen.zielgruppenspezifischeZuordnung
-                      .lehrpersonen_schulklima
+                    data.wissenschaftlicheGrundlagen
+                      .zielgruppenspezifischeZuordnung.lehrpersonen_schulklima
                   }
                 </p>
               </article>
@@ -126,7 +129,8 @@ export default function WissenPage() {
                 </h3>
                 <p className="leading-relaxed">
                   {
-                    data.wissenschaftlicheGrundlagen.zielgruppenspezifischeZuordnung
+                    data.wissenschaftlicheGrundlagen
+                      .zielgruppenspezifischeZuordnung
                       .schuelerinnen_klassenklima
                   }
                 </p>
@@ -148,86 +152,9 @@ export default function WissenPage() {
                   .einleitung
               }
             </p>
-            <blockquote
-              className="border-l-2 border-accent pl-6 md:pl-8 py-1 italic text-base md:text-lg leading-relaxed text-[#4a403a]"
-              style={{ fontFamily: '"Playfair Display", serif' }}
-            >
-              {
-                data.wissenschaftlicheGrundlagen.dimensionenDesSchulklimas
-                  .kernaussage
-              }
-            </blockquote>
           </section>
 
-          {/* Thematic Areas */}
-          <h2
-            className="text-xl md:text-2xl font-light tracking-tight mb-6 md:mb-8"
-            style={{ fontFamily: '"Playfair Display", serif' }}
-          >
-            Themenbereiche
-          </h2>
-
-          <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
-            {data.themenBereiche.map((thema, index) => (
-              <div
-                key={index}
-                className="border-b border-accent pb-6 md:pb-8 last:border-b-0"
-              >
-                <h3
-                  className="text-lg md:text-xl font-light tracking-tight mb-3 md:mb-4"
-                  style={{ fontFamily: '"Playfair Display", serif' }}
-                >
-                  {thema.titel}
-                </h3>
-                <p className=" leading-relaxed">{thema.inhalt}</p>
-
-                {/* Expandable details */}
-                <button
-                  onClick={() =>
-                    setExpanded(expanded === thema.titel ? null : thema.titel)
-                  }
-                  className="mt-3 md:mt-4 group inline-flex items-center gap-2  hover:text-[#4a403a] transition-colors duration-300"
-                >
-                  <span className="text-xs md:text-sm font-normal">
-                    {expanded === thema.titel
-                      ? "Weniger zeigen"
-                      : "Mehr erfahren"}
-                  </span>
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      expanded === thema.titel ? "rotate-180" : ""
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="M 6 9 L 12 15 L 18 9" stroke="currentColor" />
-                  </svg>
-                </button>
-
-                {expanded === thema.titel && (
-                  <div className="mt-4 ml-4 md:ml-6 border-l-2 border-accent pl-6 md:pl-8 animate-fade-in-up space-y-4">
-                    {thema.details.map((detail, detailIndex) => (
-                      <div key={detailIndex}>
-                        <h4 className="font-medium mb-1 text-accent">{detail.untertitel}</h4>
-                        <p className=" leading-relaxed">{detail.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
           {/* Studien */}
-          <h2
-            className="text-xl md:text-2xl font-light tracking-tight mb-6 md:mb-8"
-            style={{ fontFamily: '"Playfair Display", serif' }}
-          >
-            Studien
-          </h2>
-
           <div className="space-y-6 md:space-y-8">
             {data.studien.map((studie) => (
               <article

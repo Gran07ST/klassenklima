@@ -255,7 +255,7 @@ export default function Home() {
                   className="text-xl md:text-2xl font-light tracking-tight text-[#2d2a26] mt-4 md:mt-6 text-center"
                   style={{ fontFamily: '"Playfair Display", serif' }}
                 >
-                  Schüler/in
+                  Schüler:in
                 </h3>
               </div>
               <div className="p-6 md:p-8">
@@ -267,9 +267,13 @@ export default function Home() {
                     <span className="text-[#b8afa7]">▸</span>
                     Fragebogen
                   </div>
+                  <div className="flex items-center gap-3  text-sm">
+                    <span className="text-[#b8afa7]">▸</span>
+                    Auswertung
+                  </div>
                   <div className="flex items-center gap-3 text-sm">
                     <span className="text-[#b8afa7]">▸</span>
-                    Verbessertungstipps
+                    Anregungen
                   </div>
                 </div>
               </div>

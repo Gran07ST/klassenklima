@@ -146,7 +146,6 @@ export interface ZielgruppenspezifischeZuordnung {
 
 export interface DimensionenDesSchulklimas {
   einleitung: string;
-  kernaussage: string;
 }
 
 export interface WissenschaftlicheGrundlagen {
@@ -167,7 +166,6 @@ export interface Studie {
 
 export interface StudienDaten {
   wissenschaftlicheGrundlagen: WissenschaftlicheGrundlagen;
-  themenBereiche: ThemaBereich[];
   studien: Studie[];
   quellen: QuelleEintrag[];
 }
