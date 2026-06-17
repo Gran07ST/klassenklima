@@ -31,6 +31,7 @@ export interface Frage {
   subthema: Subthema;
   type: "skala" | "single_choice";
   gewichtung: number;
+  reverse?: boolean;
   aussage?: string;
   frage?: string;
   skalaLabels?: {
