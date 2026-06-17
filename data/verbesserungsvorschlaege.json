@@ -6,9 +6,14 @@
         "text": "Wenn dir alles zu viel wird, helfen dir diese Methoden:",
         "tipps": [
           {
-            "text": "Schreib alle deine Aufgaben auf und markiere die 2 wichtigsten zuerst",
-            "quelle": "(Zimmerman, 2002)"
-          },
+              "text": "Schreib alle deine Aufgaben auf und markiere die 2 wichtigsten zuerst",
+              "quelle": "(Zimmerman, 2002)",
+              "beispiele": [
+                "Markiere die 2 wichtigsten Aufgaben des Tages.",
+                "Setze dir 3 konkrete Ziele für die nächsten 30 Minuten.",
+                "Schreibe jeden Morgen ein Ziel für das Tagesende auf."
+      ]
+      },
           {
             "text": "Stell dir einen Timer auf 25 Minuten und arbeite nur an einer Aufgabe, danach mach 5 Minuten Pause",
             "quelle": "(Cirillo, 2006)"
