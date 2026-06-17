@@ -14,7 +14,11 @@ export function berechneScores(
   fragen: Frage[],
 ): SubthemaScore[] {
   // Nur Skala-Fragen verwenden (keine single_choice)
-  const skalaFragen = fragen.filter((frage) => frage.type === "skala");
+const bewerteteFragen = fragen.filter(
+  (frage) =>
+    frage.type === "skala" ||
+    frage.type === "single_choice",
+);
 
   // Aggregiere pro Subthema (Summe erreichter Score und Max-Score über alle Fragen)
   const aggregat = new Map<
@@ -22,7 +26,7 @@ export function berechneScores(
     { erreichterScore: number; maxScore: number }
   >();
 
-  for (const frage of skalaFragen) {
+for (const frage of bewerteteFragen) {
     const subthema = frage.subthema as Subthema;
     const antwort = antworten.find((a) => a.frageId === frage.id);
     let wert = antwort?.wert ?? 0;
@@ -43,8 +47,16 @@ export function berechneScores(
 
   return Array.from(aggregat.entries()).map(
     ([subthema, { erreichterScore, maxScore }]) => {
-      const prozent =
-        maxScore > 0 ? Math.round((erreichterScore / maxScore) * 100) : 0;
+const minScore = maxScore / 5;
+
+const prozent =
+  maxScore > minScore
+    ? Math.round(
+        ((erreichterScore - minScore) /
+          (maxScore - minScore)) *
+          100,
+      )
+    : 0;
       return {
         subthema,
         erreichterScore: Math.round(erreichterScore),
