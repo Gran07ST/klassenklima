@@ -32,7 +32,7 @@ export default function Home() {
             className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6 animate-fade-in-up"
             style={{ fontFamily: '"Playfair Display", serif' }}
           >
-            Klassenklima
+            Schulklima
           </h1>
           <p
             className="text-lg md:text-xl  font-normal leading-relaxed animate-fade-in"
