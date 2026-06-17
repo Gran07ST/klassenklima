@@ -13,115 +13,127 @@
                 "Setze dir 3 konkrete Ziele für die nächsten 30 Minuten (z. B. „3 Vokabeln lernen“).",
                 "Schreibe jeden Morgen ein Ziel auf, das du bis zum Abend geschafft haben willst."
       ]
-      },
+            },
           {
-            "text": "Stell dir einen Timer auf 25 Minuten und arbeite nur an einer Aufgabe, danach mach 5 Minuten Pause",
-            "quelle": "(Cirillo, 2006)"
-          },
-          {
-            "text": "Teile grosse Aufgaben in kleine Schritte auf (z. B. zuerst 10 Minuten lesen, dann Notizen machen)",
-            "quelle": "(Zimmerman, 2002)"
-          },
-          {
-            "text": "Fang mit Aufgaben an, die du bald abgeben musst",
-            "quelle": "(Wellmann & Zelms, 1995)"
-          },
-          {
-            "text": "Wenn du nach etwa 10 Minuten nicht weiterkommst, frag jemanden um Hilfe",
-            "quelle": "(Lazarus & Folkman, 1984)"
-          },
-          {
-            "text": "Mach nach jeder Lernphase eine kurze Pause (z. B. aufstehen, trinken, bewegen)",
-            "quelle": "(Pascoe et al., 2020)"
-          }
-        ]
-      }
-    },
-    "Schüler:innenzentriertheit": {
-      "vorschlag": {
-        "titel": "Aktiv im Unterricht werden",
-        "text": "So kannst du dich leichter einbringen.",
-        "tipps": [
-          {
-            "text": "Schreib dir während dem Unterricht eine Frage auf",
-            "quelle": "(Zimmerman, 2002)"
-          },
-          {
-            "text": "Melde dich mindestens einmal pro Stunde",
-            "quelle": "(Hattie, 2009)"
-          },
-          {
-            "text": "Sag einen Gedanken in der Gruppe",
-            "quelle": "(Hattie, 2009)"
-          },
-          {
-            "text": "Setz dich neben jemanden, der aktiv mitmacht",
-            "quelle": "(Hattie, 2009)"
-          },
-          {
-            "text": "Frag nach dem Unterricht nach, wenn etwas unklar ist",
-            "quelle": "(Zimmerman, 2002)"
-          }
-        ]
-      }
-    },
-    "Lerngemeinschaft": {
-      "vorschlag": {
-        "titel": "Die Klasse positiv beeinflussen",
-        "text": "Kleine Dinge machen einen Unterschied.",
-        "tipps": [
-          {
-            "text": "Frag deine Mitschüler:innen: \"Soll ich dir helfen?\"",
-            "quelle": "(Thapa et al., 2013)"
-          },
-          {
-            "text": "Arbeite mit verschiedenen Mitschüler:innen",
-            "quelle": "(Bleck & Lipowsky, 2022) "
-          },
-          {
-            "text": "Sag einmal am Tag etwas Positives zu einem/einer Mitschüler:inn",
-            "quelle": "(Thapa et al., 2013)"
-          },
-          {
-            "text": "Warte kurz, bevor du jemanden unterbrichst",
-            "quelle": "(Thapa et al., 2013)"
-          },
-          {
-            "text": "Kläre bei Gruppenarbeiten: Wer macht was?",
-            "quelle": "(Hattie, 2009)"
-          }
-        ]
-      }
-    },
-    "Rivalität und Störneigung": {
-      "vorschlag": {
-        "titel": "Störungen und Konkurrenz gezielt bewältigen",
-        "text": "Wenn es laut wird oder Konkurrenz entsteht, helfen dir unterschiedliche Strategien – je nach Situation:",
-        "tipps": [
-          {
-            "text": "Wenn jemand stört: Schreib dir kurz auf, was du gerade machen wolltest, damit du danach wieder einsteigen kannst",
-            "quelle": "(Masicampo & Baumeister, 2011)"
-          },
-          {
-            "text": "Wenn du dich mit anderen vergleichst: Schreib auf, was DU heute schon geschafft hast",
-            "quelle": "(Hattie, 2009)"
-          },
-          {
-            "text": "Wenn dich jemand provoziert: Antworte nicht sofort, sondern zähle innerlich bis 5",
-            "quelle": "(Lazarus & Folkman, 1984)"
-          },
-          {
-            "text": "Sprich in Gruppen klar eine Aufgabe ab, damit weniger Chaos entsteht",
-            "quelle": "(Hattie, 2009)"
-          },
-          {
-            "text": "Wenn du merkst, dass du abschweifst: Stell dir einen Timer (z. B. 10 Minuten) und arbeite nur daran",
-            "quelle": "(Zimmerman, 2002)"
-          }
-        ]
+            "text": "Teile grosse Aufgaben in kleine Schritte auf",
+            "quelle": "(Zimmerman, 2002)",
+            "beispiele": [
+              "Mache aus einem Referat kleine Etappen.",
+              "Lies zuerst 10 Minuten.",
+              "Mache danach 10 Minuten Notizen."
+      ]
+            },
+        {
+          "text": "Nutze Pausen zur Erholung",
+          "quelle": "(Pascoe et al., 2020)",
+          "beispiele": [
+            "Steh nach einer Lernphase kurz auf und bewege dich.",
+            "Trink ein Glas Wasser.",
+            "Lüfte das Zimmer vor der nächsten Lernphase."
+     ]
+   }
+             ]
       }
     }
   },
+"Schüler:innenzentriertheit": {
+  "vorschlag": {
+    "titel": "Nimm dein Lernen selbst in die Hand",
+    "text": "Selbstreguliertes Lernen bedeutet, dass du selbst die Initiative ergreifst und dein Lernen aktiv steuerst. Wenn du dich aktiv am Unterricht beteiligst, erhöhst du deine Chancen auf bessere Leistungen (Zimmerman, 2002; Hattie, 2009).",
+    "tipps": [
+      {
+        "text": "Nutze die Selbstbeobachtung während der Stunde",
+        "quelle": "(Zimmerman, 2002)",
+        "beispiele": [
+          "Schreib dir sofort eine Frage auf, wenn du im Unterricht etwas nicht verstehst.",
+          "Markiere dir Stellen in deinen Notizen, die noch unklar sind."
+        ]
+      },
+      {
+        "text": "Hol dir aktiv die Informationen, die du brauchst",
+        "quelle": "(Zimmerman, 2002)",
+        "beispiele": [
+          "Geh nach der Stunde kurz zur Lehrperson und kläre eine offene Frage.",
+          "Wenn du feststeckst: Frag jemanden gezielt um Hilfe oder suche aktiv nach Infos im Internet oder Buch."
+        ]
+      },
+      {
+        "text": "Beteilige dich schrittweise am Unterricht",
+        "quelle": "(Hattie, 2009)",
+        "beispiele": [
+          "Melde dich mindestens einmal pro Stunde – auch wenn es nur eine kurze Antwort ist.",
+          "Sag einen Gedanken laut in deiner Arbeitsgruppe, um gemeinsam eine Lösung zu finden."
+        ]
+      }
+    ]
+  }
+},
+"Rivalität und Störneigung": {
+"vorschlag": {
+"titel": "Fokus auf dich, nicht auf andere",
+"text": "Um dich nicht ablenken zu lassen, hilft es, deine Lernumgebung bewusst so zu gestalten, dass sie zu deinen Zielen passt. Wenn du dich an deinen eigenen Fortschritten misst statt an anderen, bist du zufriedener mit deinem Lernen (Zimmerman, 2002; Hattie, 2009).",
+"tipps": [
+{
+"text": "Stärke deine Konzentration gegen Ablenkungen",
+"quelle": "(Zimmerman, 2002)",
+"beispiele": [
+"Wenn du merkst, dass du abschweifst: Stell dir einen Timer (z. B. 10 Minuten) und arbeite nur an dieser einen Sache.",
+"Beobachte dich selbst: Mach einen Strich auf ein Blatt, wenn du zum Handy greifst, um dein Verhalten besser zu kontrollieren."
+]
+},
+{
+"text": "Bau dir deine perfekte Lern-Zone",
+"quelle": "(Zimmerman, 2002)",
+"beispiele": [
+"Lege dein Handy in einen anderen Raum, damit es dich nicht ablenkt.",
+"Räume deinen Tisch leer, bevor du startest, um den Fokus zu behalten."
+]
+},
+{
+"text": "Bleib cool bei Provokationen",
+"quelle": "(Lazarus & Folkman, 1984)",
+"beispiele": [
+"Antworte nicht sofort, wenn dich jemand nervt, sondern atme tief durch oder zähle innerlich bis 5.",
+"Konzentriere dich auf DEINEN Fortschritt: Schreib auf, was DU heute schon besser kannst als gestern."
+]
+      }
+    ]
+  }
+},
+"Lerngemeinschaft": {
+"vorschlag": {
+"titel": "Gemeinsam lernt es sich besser",
+"text": "Ein positives Klassenklima, in dem man sich gegenseitig respektiert, wirkt wie ein Schutzfaktor und fördert deine Entwicklung. Die Zusammenarbeit im Team steigert nicht nur die Leistung, sondern kann auch deine Motivation erhöhen (Thapa et al., 2013; Bleck & Lipowsky, 2022).",
+"tipps": [
+{
+"text": "Arbeite aktiv und fair mit anderen zusammen",
+"quelle": "(Bleck & Lipowsky, 2022)",
+"beispiele": [
+"Arbeite immer mal wieder mit verschiedenen Mitschüler zusammen, nicht nur mit deinen besten Freunden.",
+"Hör dir die Ideen der anderen erst mal an, bevor du deine eigene Meinung sagst."
+]
+},
+{
+"text": "Stärke das Gemeinschaftsgefühl",
+"quelle": "(Thapa et al., 2013)",
+"beispiele": [
+"Frag deine Sitznachbarn aktiv: „Soll ich dir helfen?“ – gegenseitige Unterstützung ist ein Zeichen von Stärke.",
+"Sag einmal am Tag etwas Positives zu jemandem aus deiner Klasse.",
+"Warte kurz und hör aktiv zu, bevor du jemanden unterbrichst."
+]
+},
+{
+"text": "Schaffe Struktur bei Gruppenarbeiten",
+"quelle": "(Hattie, 2009)",
+"beispiele": [
+"Kläre am Anfang: „Wer übernimmt welche Aufgabe?“, damit kein Chaos entsteht.",
+"Hake erledigte Schritte in der Gruppe gemeinsam ab, um den Erfolg zu sehen."
+]
+}
+]
+}
+}
+    
   "quellen": [
     {
       "autorJahr": "Bleck, V., & Lipowsky, F. (2022).",
