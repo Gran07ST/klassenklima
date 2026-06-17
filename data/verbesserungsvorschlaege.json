@@ -3,17 +3,17 @@
     "Sozial- und Leistungsdruck": {
       "vorschlag": {
         "titel": "Weniger Stress durch kleine Ziele",
-        "text": " Stress im Zusammenhang mit schulischen Anforderungen kann deine Leistung verringern und deine Motivation senken. Wenn du dir jedoch kleine, erreichbare Ziele setzt, fühlst du dich kompetenter und bleibst eher am Ball (Pascoe et al., 2020; Zimmerman, 2002).",
+        "text": "Stress im Zusammenhang mit schulischen Anforderungen kann deine Leistung verringern und deine Motivation senken. Wenn du dir jedoch kleine, erreichbare Ziele setzt, fühlst du dich kompetenter und bleibst eher am Ball (Pascoe et al., 2020; Zimmerman, 2002).",
         "tipps": [
           {
-              "text": "Setz dir kleine „Heute-Ziele“",
-              "quelle": "(Zimmerman, 2002)",
-              "beispiele": [
-                "Markiere die 2 wichtigsten Aufgaben des Tages farbig.",
-                "Setze dir 3 konkrete Ziele für die nächsten 30 Minuten (z. B. „3 Vokabeln lernen“).",
-                "Schreibe jeden Morgen ein Ziel auf, das du bis zum Abend geschafft haben willst."
-      ]
-            },
+            "text": "Setz dir kleine „Heute-Ziele“",
+            "quelle": "(Zimmerman, 2002)",
+            "beispiele": [
+              "Markiere die 2 wichtigsten Aufgaben des Tages farbig.",
+              "Setze dir 3 konkrete Ziele für die nächsten 30 Minuten (z. B. „3 Vokabeln lernen“).",
+              "Schreibe jeden Morgen ein Ziel auf, das du bis zum Abend geschafft haben willst."
+            ]
+          },
           {
             "text": "Teile grosse Aufgaben in kleine Schritte auf",
             "quelle": "(Zimmerman, 2002)",
@@ -21,21 +21,20 @@
               "Mache aus einem Referat kleine Etappen.",
               "Lies zuerst 10 Minuten.",
               "Mache danach 10 Minuten Notizen."
-      ]
-            },
-        {
-          "text": "Nutze Pausen zur Erholung",
-          "quelle": "(Pascoe et al., 2020)",
-          "beispiele": [
-            "Steh nach einer Lernphase kurz auf und bewege dich.",
-            "Trink ein Glas Wasser.",
-            "Lüfte das Zimmer vor der nächsten Lernphase."
-     ]
-   }
-             ]
+            ]
+          },
+          {
+            "text": "Nutze Pausen zur Erholung",
+            "quelle": "(Pascoe et al., 2020)",
+            "beispiele": [
+              "Steh nach einer Lernphase kurz auf und bewege dich.",
+              "Trink ein Glas Wasser.",
+              "Lüfte das Zimmer vor der nächsten Lernphase."
+            ]
+          }
+        ]
       }
-    }
-  },
+    },
 "Schüler:innenzentriertheit": {
   "vorschlag": {
     "titel": "Nimm dein Lernen selbst in die Hand",
@@ -69,71 +68,70 @@
   }
 },
 "Rivalität und Störneigung": {
-"vorschlag": {
-"titel": "Fokus auf dich, nicht auf andere",
-"text": "Um dich nicht ablenken zu lassen, hilft es, deine Lernumgebung bewusst so zu gestalten, dass sie zu deinen Zielen passt. Wenn du dich an deinen eigenen Fortschritten misst statt an anderen, bist du zufriedener mit deinem Lernen (Zimmerman, 2002; Hattie, 2009).",
-"tipps": [
-{
-"text": "Stärke deine Konzentration gegen Ablenkungen",
-"quelle": "(Zimmerman, 2002)",
-"beispiele": [
-"Wenn du merkst, dass du abschweifst: Stell dir einen Timer (z. B. 10 Minuten) und arbeite nur an dieser einen Sache.",
-"Beobachte dich selbst: Mach einen Strich auf ein Blatt, wenn du zum Handy greifst, um dein Verhalten besser zu kontrollieren."
-]
-},
-{
-"text": "Bau dir deine perfekte Lern-Zone",
-"quelle": "(Zimmerman, 2002)",
-"beispiele": [
-"Lege dein Handy in einen anderen Raum, damit es dich nicht ablenkt.",
-"Räume deinen Tisch leer, bevor du startest, um den Fokus zu behalten."
-]
-},
-{
-"text": "Bleib cool bei Provokationen",
-"quelle": "(Lazarus & Folkman, 1984)",
-"beispiele": [
-"Antworte nicht sofort, wenn dich jemand nervt, sondern atme tief durch oder zähle innerlich bis 5.",
-"Konzentriere dich auf DEINEN Fortschritt: Schreib auf, was DU heute schon besser kannst als gestern."
-]
+  "vorschlag": {
+    "titel": "Fokus auf dich, nicht auf andere",
+    "text": "Um dich nicht ablenken zu lassen, hilft es, deine Lernumgebung bewusst so zu gestalten, dass sie zu deinen Zielen passt. Wenn du dich an deinen eigenen Fortschritten misst statt an anderen, bist du zufriedener mit deinem Lernen (Zimmerman, 2002; Hattie, 2009).",
+    "tipps": [
+      {
+        "text": "Stärke deine Konzentration gegen Ablenkungen",
+        "quelle": "(Zimmerman, 2002)",
+        "beispiele": [
+          "Wenn du merkst, dass du abschweifst: Stell dir einen Timer (z. B. 10 Minuten) und arbeite nur an dieser einen Sache.",
+          "Beobachte dich selbst: Mach einen Strich auf ein Blatt, wenn du zum Handy greifst, um dein Verhalten besser zu kontrollieren."
+        ]
+      },
+      {
+        "text": "Bau dir deine perfekte Lern-Zone",
+        "quelle": "(Zimmerman, 2002)",
+        "beispiele": [
+          "Lege dein Handy in einen anderen Raum, damit es dich nicht ablenkt.",
+          "Räume deinen Tisch leer, bevor du startest, um den Fokus zu behalten."
+        ]
+      },
+      {
+        "text": "Bleib cool bei Provokationen",
+        "quelle": "(Lazarus & Folkman, 1984)",
+        "beispiele": [
+          "Antworte nicht sofort, wenn dich jemand nervt, sondern atme tief durch oder zähle innerlich bis 5.",
+          "Konzentriere dich auf DEINEN Fortschritt: Schreib auf, was DU heute schon besser kannst als gestern."
+        ]
       }
     ]
   }
 },
 "Lerngemeinschaft": {
-"vorschlag": {
-"titel": "Gemeinsam lernt es sich besser",
-"text": "Ein positives Klassenklima, in dem man sich gegenseitig respektiert, wirkt wie ein Schutzfaktor und fördert deine Entwicklung. Die Zusammenarbeit im Team steigert nicht nur die Leistung, sondern kann auch deine Motivation erhöhen (Thapa et al., 2013; Bleck & Lipowsky, 2022).",
-"tipps": [
-{
-"text": "Arbeite aktiv und fair mit anderen zusammen",
-"quelle": "(Bleck & Lipowsky, 2022)",
-"beispiele": [
-"Arbeite immer mal wieder mit verschiedenen Mitschüler zusammen, nicht nur mit deinen besten Freunden.",
-"Hör dir die Ideen der anderen erst mal an, bevor du deine eigene Meinung sagst."
-]
+  "vorschlag": {
+    "titel": "Gemeinsam lernt es sich besser",
+    "text": "Ein positives Klassenklima, in dem man sich gegenseitig respektiert, wirkt wie ein Schutzfaktor und fördert deine Entwicklung. Die Zusammenarbeit im Team steigert nicht nur die Leistung, sondern kann auch deine Motivation erhöhen (Thapa et al., 2013; Bleck & Lipowsky, 2022).",
+    "tipps": [
+      {
+        "text": "Arbeite aktiv und fair mit anderen zusammen",
+        "quelle": "(Bleck & Lipowsky, 2022)",
+        "beispiele": [
+          "Arbeite immer mal wieder mit verschiedenen Mitschüler zusammen, nicht nur mit deinen besten Freunden.",
+          "Hör dir die Ideen der anderen erst mal an, bevor du deine eigene Meinung sagst."
+        ]
+      },
+      {
+        "text": "Stärke das Gemeinschaftsgefühl",
+        "quelle": "(Thapa et al., 2013)",
+        "beispiele": [
+          "Frag deine Sitznachbarn aktiv: „Soll ich dir helfen?“ – gegenseitige Unterstützung ist ein Zeichen von Stärke.",
+          "Sag einmal am Tag etwas Positives zu jemandem aus deiner Klasse.",
+          "Warte kurz und hör aktiv zu, bevor du jemanden unterbrichst."
+        ]
+      },
+      {
+        "text": "Schaffe Struktur bei Gruppenarbeiten",
+        "quelle": "(Hattie, 2009)",
+        "beispiele": [
+          "Kläre am Anfang: „Wer übernimmt welche Aufgabe?“, damit kein Chaos entsteht.",
+          "Hake erledigte Schritte in der Gruppe gemeinsam ab, um den Erfolg zu sehen."
+         }
+    ]
+  }
+}
 },
-{
-"text": "Stärke das Gemeinschaftsgefühl",
-"quelle": "(Thapa et al., 2013)",
-"beispiele": [
-"Frag deine Sitznachbarn aktiv: „Soll ich dir helfen?“ – gegenseitige Unterstützung ist ein Zeichen von Stärke.",
-"Sag einmal am Tag etwas Positives zu jemandem aus deiner Klasse.",
-"Warte kurz und hör aktiv zu, bevor du jemanden unterbrichst."
-]
-},
-{
-"text": "Schaffe Struktur bei Gruppenarbeiten",
-"quelle": "(Hattie, 2009)",
-"beispiele": [
-"Kläre am Anfang: „Wer übernimmt welche Aufgabe?“, damit kein Chaos entsteht.",
-"Hake erledigte Schritte in der Gruppe gemeinsam ab, um den Erfolg zu sehen."
-]
-}
-]
-}
-}
-    
   "quellen": [
     {
       "autorJahr": "Bleck, V., & Lipowsky, F. (2022).",
