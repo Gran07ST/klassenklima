@@ -25,7 +25,10 @@ export function berechneScores(
   for (const frage of skalaFragen) {
     const subthema = frage.subthema as Subthema;
     const antwort = antworten.find((a) => a.frageId === frage.id);
-    const wert = antwort?.wert ?? 0;
+    let wert = antwort?.wert ?? 0;
+    if (frage.reverse) {
+      wert = 6 - wert;
+    }
     const erreichterScore = wert * frage.gewichtung;
     const maxScore = 5 * frage.gewichtung;
 
