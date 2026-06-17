@@ -76,6 +76,7 @@ export interface GespeicherteScores {
 export interface Tipp {
   text: string;
   quelle: string;
+  beispiele?: string[];
 }
 
 export interface Vorschlag {
