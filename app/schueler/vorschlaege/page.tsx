@@ -185,18 +185,36 @@ export default function VorschlaegePage() {
                     <p className="text-accent text-sm font-normal mb-3">
                       Tipps:
                     </p>
-                    {item.vorschlag.tipps.map((tip, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start gap-3 text-sm"
-                      >
+                  {item.vorschlag.tipps.map((tip, index) => (
+                    <details
+                      key={index}
+                      className="border border-[#e8e5df] rounded-xl p-3"
+                    >
+                      <summary className="cursor-pointer list-none flex items-start gap-3">
                         <span className="text-accent">▹</span>
+                  
                         <span>
                           {tip.text}{" "}
-                          <span className="text-[#8a847a]">{tip.quelle}</span>
+                          <span className="text-[#8a847a]">
+                            {tip.quelle}
+                          </span>
                         </span>
-                      </div>
-                    ))}
+                      </summary>
+                  
+                      {tip.beispiele && (
+                        <div className="mt-4 ml-6">
+                          <ul className="space-y-2 text-sm">
+                            {tip.beispiele.map((beispiel, i) => (
+                              <li key={i} className="flex gap-2">
+                                <span>•</span>
+                                <span>{beispiel}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </details>
+                  ))}
                   </div>
                 </div>
               ))}
