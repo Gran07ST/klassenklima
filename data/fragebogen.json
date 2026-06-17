@@ -15,6 +15,7 @@
       "id": "q-002",
       "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
+      "reverse": true,
       "aussage": "Wenn jemand nicht gut mitarbeitet, wird schnell mit schlechten Noten gedroht.",
       "gewichtung": 1,
       "skalaLabels": {
@@ -24,6 +25,7 @@
     },
     {
       "id": "q-003",
+      "reverse": true,
       "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
       "aussage": "Leistungen werden in der Klasse oft miteinander verglichen.",
@@ -35,17 +37,19 @@
     },
     {
       "id": "q-004",
+      "reverse": true,
       "subthema": "Sozial- und Leistungsdruck",
       "type": "skala",
       "aussage": "Ich fühle mich durch die Schule unter Druck gesetzt.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt voll",
-        "5": "Stimmt gar nicht"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-005",
+      "reverse": true,
       "subthema": "Sozial- und Leistungsdruck",
       "type": "single_choice",
       "frage": "Wie stark erlebst du den Leistungsdruck?",
@@ -151,24 +155,26 @@
     },
     {
       "id": "q-014",
+      "reverse": true,
       "subthema": "Rivalität und Störneigung",
       "type": "skala",
       "aussage": "Manche freuen sich, wenn andere Fehler machen.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt voll",
-        "5": "Stimmt gar nicht"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     },
     {
       "id": "q-015",
+      "reverse": true,
       "subthema": "Rivalität und Störneigung",
       "type": "skala",
       "aussage": "Der Unterricht wird oft gestört.",
       "gewichtung": 1,
       "skalaLabels": {
-        "1": "Stimmt voll",
-        "5": "Stimmt gar nicht"
+        "1": "Stimmt gar nicht",
+        "5": "Stimmt voll"
       }
     }
   ],
