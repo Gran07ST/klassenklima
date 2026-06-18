@@ -597,13 +597,13 @@
         {
           "sectionTitle": "Material",
           "content": {
-            "text": "Fragebogen (digital oder ausgedruckt)"
+            "text": "Fragebogen (digital auf dem Laptop oder Smartphone möglich)"
           }
         },
         {
           "sectionTitle": "Hinweis",
           "content": {
-            "text": "Die Teilnahme ist freiwillig. Die Antworten sind privat und müssen nicht geteilt werden. Es geht nicht darum, einzelne Personen zu kritisieren, sondern gemeinsam Lösungen zu finden."
+            "text": "Die Antworten sind privat und müssen nicht geteilt werden. Es geht nicht darum, einzelne Personen zu kritisieren, sondern gemeinsam Lösungen zu finden."
           }
         },
         {
@@ -615,7 +615,7 @@
         {
           "sectionTitle": "Wissenschaftlicher Bezug",
           "content": {
-            "text": "Der Fragebogen basiert auf validierten Items des Linzer Fragebogens zum Schul- und Klassenklima, die für diese Anwendung sprachlich angepasst wurden. Solche Instrumente ermöglichen eine strukturierte Reflexion des Klassenklimas und unterstützen gezielte pädagogische Interventionen.",
+            "text": "Der Fragebogen basiert auf validierten Items des Linzer Fragebogens zum Schul- und Klassenklima, die für diese Anwendung angepasst wurden. Solche Instrumente ermöglichen eine strukturierte Reflexion des Klassenklimas und unterstützen gezielte pädagogische Interventionen.",
             "quelle": "(Eder & Mayr, 2000; Hank et al., 2021)"
           }
         }
